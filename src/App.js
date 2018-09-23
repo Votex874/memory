@@ -5,9 +5,9 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <Board>
-
-      </Board>
+      <Board
+      number={20}
+       />
     );
   }
 }
