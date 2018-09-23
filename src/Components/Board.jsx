@@ -10,62 +10,68 @@ class Board extends Component {
 
         this.state = {
             array,
+
         };
     }
 
     createMemoryArray = () => {
-        const {number} = this.props;
+        //tworzy nam tablice z propsu który bedziemy podawac jako wielkosc tablicy , na podstawie tej tablicy
+        // bedzie sprawdzał program czy sa odkryte karty czy nie, przekazuje z propsa id danej karty
+        const {number,idArray} = this.props;
+        this.shuffle(idArray);
+
+
+        console.log(idArray);
         let array = [];
 
         for (let i = 0; i < number; i++) {
-            array.push(false);
+            array.push({
+                flipped: false,
+                id: idArray[i],
+            });
         }
         return array;
     };
 
-
-    simpleLoop = () => {
-        const a = 5;
-        const b = 5;
-
-
-        for(let i = 0; i < a ; i++ ){
-            console.log(i);
-            for(let j = 0; j < b; j++){
-                console.log(j);
-            }
+    shuffle = (a) => {
+        //funkcja miesza nam tablice
+        for (let i = a.length; i; i--) {
+            let j = Math.floor(Math.random() * i);
+            [a[i - 1], a[j]] = [a[j], a[i - 1]];
         }
     };
 
+
+
+
     creatingBoard = () => {
+        //pobieram ilosc kart i dziele tak aby wyszly mi wiersze
         const rows = Math.ceil(this.props.number / 5);
+        //pobieram cała tablice false
         const memoryCards = this.state.array;
 
         const boardArray = [];
         let arraySliced = [];
-        console.log(memoryCards.slice(16, 20));
 
         for(let i = 0; i <= rows; i++){
             arraySliced[i] = memoryCards.slice((i*4), 4*(i+1));
-            console.log(arraySliced[i]);
-            console.log((i*4));
-            console.log(4*(i +1) +1);
         }
-        console.log(arraySliced);
 
-
-        // for(let i = 0; i < rows; i++){
-        //     boardArray[i] = <div className='row'>
-        //         {memoryCards.map(e => {
-        //             return <div>
-        //                 {e}
-        //             </div>
-        //         })}
-        //     </div>
-        // }
-        //
-        //
-        // return boardArray;
+        //zrobienie planszy pierwsza petla tworzy wiersze a w danym wierszu mapujemy po tablicy z falsami
+        for(let i = 0; i <= rows; i++){
+            boardArray[i] = <div key={i} className='row'>
+                {arraySliced[i].map((e,j) => {
+                    return <div
+                        key={j}
+                        className='card'
+                        id={e.id}
+                    >
+                        {e.id}
+                    </div>
+                })}
+            </div>
+        }
+        return boardArray;
     };
 
 

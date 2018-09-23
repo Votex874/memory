@@ -1,8 +1,21 @@
 .mainContainer{
   .board{
     width: 800px;
-    height: 400px;
+    height: 600px;
     background-color: lightblue;
     margin: 100px auto;
+    .row{
+      display: flex;
+      flex-direction: row;
+      .card{
+        width: 70px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        background-color: deepskyblue;
+        margin: 10px 40px;
+        border-radius: 15px;
+      }
+    }
   }
 }
