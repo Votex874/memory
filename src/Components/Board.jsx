@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from './Card'
 import './Board.css'
 
 
@@ -10,7 +11,6 @@ class Board extends Component {
 
         this.state = {
             array,
-
         };
     }
 
@@ -20,14 +20,13 @@ class Board extends Component {
         const {number,idArray} = this.props;
         this.shuffle(idArray);
 
-
-        console.log(idArray);
         let array = [];
 
         for (let i = 0; i < number; i++) {
             array.push({
                 flipped: false,
                 id: idArray[i],
+                guessed: false,
             });
         }
         return array;
@@ -42,6 +41,28 @@ class Board extends Component {
     };
 
 
+    handleCheckFlip = (i,flipped) => {
+      //funkcja zmienia falsz na prawde w tablicy array
+
+      const array = [...this.state.array];
+
+      console.log(array);
+      let numberOfTrues = array.filter(e =>{
+         return e.flipped === true
+      });
+        if(numberOfTrues.length <= 1){
+            if(array[i].flipped === false) {
+                array[i].flipped = true;
+            }
+        }else{}
+      console.log(numberOfTrues.length);
+      console.log();
+
+
+      this.setState({
+          array: array,
+      })
+    };
 
 
     creatingBoard = () => {
@@ -61,13 +82,15 @@ class Board extends Component {
         for(let i = 0; i <= rows; i++){
             boardArray[i] = <div key={i} className='row'>
                 {arraySliced[i].map((e,j) => {
-                    return <div
+                    return <Card
                         key={j}
-                        className='card'
+                        className='containerFlip'
+                        flipped={e.flipped}
                         id={e.id}
-                    >
-                        {e.id}
-                    </div>
+                        onCheck={this.handleCheckFlip}
+                        index={(4*i)+j}
+                     />
+
                 })}
             </div>
         }

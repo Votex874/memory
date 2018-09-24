@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <Board
-      number={20}
+      number={8}
       idArray={this.state.idArray}
        />
     );
