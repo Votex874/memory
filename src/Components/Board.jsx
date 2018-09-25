@@ -11,19 +11,23 @@ class Board extends Component {
         const indexArray = [];
         const identifyArray = [];
         const allGuessed = false;
+        const widthBoard = 6;
+
 
         this.state = {
             array,
             indexArray,
             identifyArray,
             allGuessed,
-        };
+            widthBoard,
+            };
     }
 
     createMemoryArray = () => {
         //tworzy nam tablice z propsu który bedziemy podawac jako wielkosc tablicy , na podstawie tej tablicy
         // bedzie sprawdzał program czy sa odkryte karty czy nie, przekazuje z propsa id danej karty
-        const {number,idArray} = this.props;
+        const {idArray,number} = this.props;
+
         this.shuffle(idArray);
 
         let array = [];
@@ -37,7 +41,6 @@ class Board extends Component {
         }
         return array;
     };
-
     shuffle = (a) => {
         //funkcja miesza nam tablice
         for (let i = a.length; i; i--) {
@@ -45,7 +48,6 @@ class Board extends Component {
             [a[i - 1], a[j]] = [a[j], a[i - 1]];
         }
     };
-
 
     handleCheckFlip = (i,flipped,guessed) => {
       //funkcja zmienia falsz na prawde w tablicy mainArray
@@ -77,9 +79,9 @@ class Board extends Component {
                           return e.guessed === true
                       });
                       if(numberOfGuessed.length === this.props.number){
-                          this.setState({
-                              allGuessed: true,
-                          })
+                              this.setState({
+                                  allGuessed: 'wygrałes',
+                              })
                       }
                   }
                   idArray = [];
@@ -98,7 +100,6 @@ class Board extends Component {
               }
           }
       }
-
       this.setState({
           array: mainArray,
           indexArray: iArray,
@@ -106,55 +107,62 @@ class Board extends Component {
       })
     };
 
-
-
     creatingBoard = () => {
-        //pobieram ilosc kart i dziele tak aby wyszly mi wiersze
-        const rows = Math.ceil(this.props.number / 5);
-        //pobieram cała tablice false
-        const memoryCards = this.state.array;
+        const {widthBoard, array} = this.state;
+        const {number} = this.props;
+            //pobieram ilosc kart i dziele tak aby wyszly mi wiersze
+            const rows = Math.ceil(number / 6);
 
-        const boardArray = [];
-        let arraySliced = [];
+            //pobieram cała tablice false
+            const memoryCards = array;
 
-        for(let i = 0; i <= rows; i++){
-            arraySliced[i] = memoryCards.slice((i*4), 4*(i+1));
-        }
+            const boardArray = [];
+            let arraySliced = [];
 
-        //zrobienie planszy pierwsza petla tworzy wiersze a w danym wierszu mapujemy po tablicy z falsami
-        for(let i = 0; i <= rows; i++){
-            boardArray[i] = <div key={i} className='row'>
-                {arraySliced[i].map((e,j) => {
-                    return (<Card
-                        key={j}
-                        className='containerFlip'
-                        flipped={e.flipped}
-                        id={e.id}
-                        onCheck={this.handleCheckFlip}
-                        index={(4*i)+j}
-                        guessed={e.guessed}
-                     />
-                    );
+            for (let i = 0; i <= rows; i++) {
+                arraySliced[i] = memoryCards.slice((i * widthBoard), widthBoard * (i + 1));
+            }
+            //zrobienie planszy pierwsza petla tworzy wiersze a w danym wierszu mapujemy po tablicy z falsami
+            for (let i = 0; i <= rows; i++) {
+                boardArray[i] = <div key={i} className='row'>
+                    {arraySliced[i].map((e, j) => {
+                        return (
+                            <Card
+                                key={j}
+                                className='containerFlip'
+                                flipped={e.flipped}
+                                id={e.id}
+                                onCheck={this.handleCheckFlip}
+                                index={(widthBoard * i) + j}
+                                guessed={e.guessed}
+                            />
+                        );
 
-                })}
-            </div>
-        }
-        return boardArray;
+                    })}
+                </div>
+            }
+            return boardArray;
+
     };
+
     handleReset = () => {
         //tworzymy nowa mape
         const newBoard = this.createMemoryArray();
         this.setState({
+            allGuessed: false,
             array: newBoard,
         })
     };
 
-    render() {
 
+
+    render() {
+        console.log(this.props.number);
         return (
             <div className='mainContainer'>
                 <div className="board">
                     <button onClick={this.handleReset}>Reset</button>
+                    <p>{this.state.allGuessed}</p>
                     {this.creatingBoard()}
                 </div>
             </div>
