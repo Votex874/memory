@@ -8,9 +8,13 @@ class Board extends Component {
         super(props);
 
         const array = this.createMemoryArray();
+        const indexArray = [];
+        const identifyArray = [];
 
         this.state = {
             array,
+            indexArray,
+            identifyArray,
         };
     }
 
@@ -41,28 +45,64 @@ class Board extends Component {
     };
 
 
-    handleCheckFlip = (i,flipped) => {
-      //funkcja zmienia falsz na prawde w tablicy array
+    handleCheckFlip = (i,flipped,guessed) => {
+      //funkcja zmienia falsz na prawde w tablicy mainArray
+      const {array, indexArray,identifyArray} = this.state;
 
-      const array = [...this.state.array];
+      const mainArray = [...array];
+      //tablica która przechowuje indexy zmienionych kart
+      let iArray = [...indexArray];
+      let idArray = [...identifyArray];
 
-      console.log(array);
-      let numberOfTrues = array.filter(e =>{
-         return e.flipped === true
+
+      //sprawdzam ile w całej tablicy jest true jeżeli mniej niż dwa niech zmienia je dalej
+      //jeżeli mniej niech przestanie
+      let numberOfTrues = mainArray.filter(e =>{
+          return e.flipped === true
       });
-        if(numberOfTrues.length <= 1){
-            if(array[i].flipped === false) {
-                array[i].flipped = true;
-            }
-        }else{}
-      console.log(numberOfTrues.length);
-      console.log();
+      console.log('numberOfTrues' + numberOfTrues.length)
 
+      if(numberOfTrues.length < 2){
+          mainArray[i].flipped = true;
+          idArray.push(mainArray[i].id);
+          iArray = [...indexArray, i];
+          console.log(iArray, 'iArray');
+          console.log(idArray, 'idArray');
+          //sprawdzamy czy id jednej karty jest równe drugiej karcie
+          if(iArray.length === 2){
+              if(idArray[0] === idArray[1]){
+                  console.log("zgadzają się");
+                  console.log(idArray, idArray);
+                  for(let i = 0; i < iArray.length; i++){
+                      mainArray[iArray[i]].guessed = true;
+                      mainArray[iArray[i]].flipped = false;
+                  }
+                  idArray = [];
+                  iArray = [];
+              }else{
+                  console.log("niezgadzaja się");
+                  this.idTimeout = setTimeout(() =>{
+                      for(let i = 0; i < iArray.length; i++){
+                          mainArray[iArray[i]].flipped = false;
+                          console.log(mainArray)
+                      }
+                      this.setState({
+                          array: mainArray,
+                          indexArray: [],
+                          identifyArray: [],
+                      })
+                  },1000);
+              }
+          }
+      }
 
       this.setState({
-          array: array,
+          array: mainArray,
+          indexArray: iArray,
+          identifyArray: idArray,
       })
     };
+
 
 
     creatingBoard = () => {
@@ -89,6 +129,7 @@ class Board extends Component {
                         id={e.id}
                         onCheck={this.handleCheckFlip}
                         index={(4*i)+j}
+                        guessed={e.guessed}
                      />
 
                 })}
@@ -96,7 +137,6 @@ class Board extends Component {
         }
         return boardArray;
     };
-
 
     render() {
 

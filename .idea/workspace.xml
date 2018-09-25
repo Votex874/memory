@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b52222e-016e-447c-82bf-93ce4abdf89b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Card.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Card.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Board.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Board.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Board.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Board.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Board.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Board.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Card.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,8 +24,8 @@
           <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+                <state relative-caret-position="136">
+                  <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -36,23 +33,25 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Board.jsx" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Board.jsx" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Components/Board.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="527">
-                  <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+                <state relative-caret-position="-648">
+                  <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
+                    <element signature="e#310#873#0" />
+                    <element signature="e#897#1092#0" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Card.jsx" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Card.jsx" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Components/Card.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="19">
-                  <caret line="23" column="70" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
+                <state relative-caret-position="240">
+                  <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -95,9 +94,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/Components/Board.scss" />
-        <option value="$PROJECT_DIR$/src/Components/Card.jsx" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/Components/Board.jsx" />
+        <option value="$PROJECT_DIR$/src/Components/Card.jsx" />
       </list>
     </option>
   </component>
@@ -190,17 +189,18 @@
       <updated>1537715790837</updated>
       <workItem from="1537715791969" duration="11192000" />
       <workItem from="1537738234537" duration="3568000" />
-      <workItem from="1537787679285" duration="8232000" />
+      <workItem from="1537787679285" duration="18727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22992000" />
+    <option name="totallyTimeSpent" value="33487000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="5" width="1932" height="804" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14509395" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -212,7 +212,6 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -230,7 +229,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -260,6 +259,8 @@
           <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#310#873#0" />
+            <element signature="e#897#1092#0" />
           </folding>
         </state>
       </provider>
@@ -290,6 +291,8 @@
           <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#310#873#0" />
+            <element signature="e#897#1092#0" />
           </folding>
         </state>
       </provider>
@@ -316,13 +319,6 @@
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/global-types/node_modules/@types/react/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="301" column="8" selection-start-line="301" selection-start-column="8" selection-end-line="301" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Board.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -336,20 +332,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/global-types/node_modules/@types/react/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="581">
+          <caret line="301" column="8" selection-start-line="301" selection-start-column="8" selection-end-line="301" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Card.jsx">
+    <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="23" column="70" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
+        <state relative-caret-position="136">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -358,8 +351,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Board.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+        <state relative-caret-position="-648">
+          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#310#873#0" />
+            <element signature="e#897#1092#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Card.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
