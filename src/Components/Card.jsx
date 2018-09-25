@@ -23,8 +23,9 @@ class Card extends Component {
         //funkcja która na podstawie propsu flipped dodanej nowa klase
         // lub ja usuwa dodanie klasy - daje nam efekt obrócenia karty
         const {index, flipped,guessed} = this.props;
+
+
         if(this.props.guessed){
-            console.log("true");
             return (
                 <div
                     className='cardContainer flipIt'

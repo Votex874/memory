@@ -10,11 +10,13 @@ class Board extends Component {
         const array = this.createMemoryArray();
         const indexArray = [];
         const identifyArray = [];
+        const allGuessed = false;
 
         this.state = {
             array,
             indexArray,
             identifyArray,
+            allGuessed,
         };
     }
 
@@ -60,38 +62,39 @@ class Board extends Component {
       let numberOfTrues = mainArray.filter(e =>{
           return e.flipped === true
       });
-      console.log('numberOfTrues' + numberOfTrues.length)
 
       if(numberOfTrues.length < 2){
           mainArray[i].flipped = true;
           idArray.push(mainArray[i].id);
           iArray = [...indexArray, i];
-          console.log(iArray, 'iArray');
-          console.log(idArray, 'idArray');
           //sprawdzamy czy id jednej karty jest równe drugiej karcie
           if(iArray.length === 2){
               if(idArray[0] === idArray[1]){
-                  console.log("zgadzają się");
-                  console.log(idArray, idArray);
                   for(let i = 0; i < iArray.length; i++){
                       mainArray[iArray[i]].guessed = true;
                       mainArray[iArray[i]].flipped = false;
+                      let numberOfGuessed = mainArray.filter(e =>{
+                          return e.guessed === true
+                      });
+                      if(numberOfGuessed.length === this.props.number){
+                          this.setState({
+                              allGuessed: true,
+                          })
+                      }
                   }
                   idArray = [];
                   iArray = [];
               }else{
-                  console.log("niezgadzaja się");
                   this.idTimeout = setTimeout(() =>{
                       for(let i = 0; i < iArray.length; i++){
                           mainArray[iArray[i]].flipped = false;
-                          console.log(mainArray)
                       }
                       this.setState({
                           array: mainArray,
                           indexArray: [],
                           identifyArray: [],
                       })
-                  },1000);
+                  },750);
               }
           }
       }
@@ -122,7 +125,7 @@ class Board extends Component {
         for(let i = 0; i <= rows; i++){
             boardArray[i] = <div key={i} className='row'>
                 {arraySliced[i].map((e,j) => {
-                    return <Card
+                    return (<Card
                         key={j}
                         className='containerFlip'
                         flipped={e.flipped}
@@ -131,11 +134,19 @@ class Board extends Component {
                         index={(4*i)+j}
                         guessed={e.guessed}
                      />
+                    );
 
                 })}
             </div>
         }
         return boardArray;
+    };
+    handleReset = () => {
+        //tworzymy nowa mape
+        const newBoard = this.createMemoryArray();
+        this.setState({
+            array: newBoard,
+        })
     };
 
     render() {
@@ -143,6 +154,7 @@ class Board extends Component {
         return (
             <div className='mainContainer'>
                 <div className="board">
+                    <button onClick={this.handleReset}>Reset</button>
                     {this.creatingBoard()}
                 </div>
             </div>
