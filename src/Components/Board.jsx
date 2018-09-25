@@ -123,7 +123,7 @@ class Board extends Component {
                 arraySliced[i] = memoryCards.slice((i * widthBoard), widthBoard * (i + 1));
             }
             //zrobienie planszy pierwsza petla tworzy wiersze a w danym wierszu mapujemy po tablicy z falsami
-            for (let i = 0; i <= rows; i++) {
+            for (let i = 0; i < rows; i++) {
                 boardArray[i] = <div key={i} className='row'>
                     {arraySliced[i].map((e, j) => {
                         return (

@@ -8,7 +8,7 @@ class App extends Component {
 
     //
         const idArray = [0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11];
-        const levels = ['12','18','24'];
+        const levels = ['6','12','18'];
         let number = 18;
 
         this.state ={
@@ -41,7 +41,7 @@ class App extends Component {
     return (<div>
             {this.creatingLevels()}
             <Board
-                number={this.state.number}
+                number={this.state.number + 6}
                 idArray={this.state.idArray}
             />
         </div>

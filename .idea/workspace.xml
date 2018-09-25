@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b52222e-016e-447c-82bf-93ce4abdf89b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Board.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Board.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,8 +21,8 @@
           <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="386">
-                  <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+                <state relative-caret-position="170">
+                  <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -35,12 +33,11 @@
           <file leaf-file-name="Board.jsx" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Components/Board.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+                <state relative-caret-position="33">
+                  <caret line="116" column="38" lean-forward="true" selection-start-line="116" selection-start-column="38" selection-end-line="116" selection-end-column="38" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                     <element signature="e#897#1092#0" />
-                    <element signature="e#3478#4889#0" />
                   </folding>
                 </state>
               </provider>
@@ -83,6 +80,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>console.log</find>
+      <find>number</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -94,8 +92,8 @@
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/Components/Card.jsx" />
         <option value="$PROJECT_DIR$/src/Components/Board.scss" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/Components/Board.jsx" />
+        <option value="$PROJECT_DIR$/src/App.js" />
       </list>
     </option>
   </component>
@@ -188,12 +186,12 @@
       <updated>1537715790837</updated>
       <workItem from="1537715791969" duration="11192000" />
       <workItem from="1537738234537" duration="3568000" />
-      <workItem from="1537787679285" duration="28900000" />
+      <workItem from="1537787679285" duration="29222000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43660000" />
+    <option name="totallyTimeSpent" value="43982000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="5" width="1932" height="804" extended-state="0" />
@@ -259,7 +257,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#897#1092#0" />
-            <element signature="e#3478#4889#0" />
           </folding>
         </state>
       </provider>
@@ -291,7 +288,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#897#1092#0" />
-            <element signature="e#3478#4889#0" />
           </folding>
         </state>
       </provider>
@@ -350,20 +346,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Board.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        <state relative-caret-position="33">
+          <caret line="116" column="38" lean-forward="true" selection-start-line="116" selection-start-column="38" selection-end-line="116" selection-end-column="38" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#897#1092#0" />
-            <element signature="e#3478#4889#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+        <state relative-caret-position="170">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
