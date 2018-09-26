@@ -6,45 +6,27 @@ class App extends Component {
     constructor(props){
         super(props);
 
-    //
+
         const idArray = [0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11];
-        const levels = ['6','12','18'];
-        let number = 18;
+        let number = 12;
 
         this.state ={
             idArray,
             number,
-            levels,
         }
     }
 
-    handleChangeValue = e => {
-            this.setState({
-                number: Number(e),
-            });
-    };
 
-    creatingLevels = () => {
-        return this.state.levels.map((e) => {
-            return <div
-                className='level'
-                onClick={() =>this.handleChangeValue(e)}
-                key={e}>
-                {e}
-            </div>
-        })
-    };
 
 
   render() {
 
-    return (<div>
-            {this.creatingLevels()}
+     const  {number, idArray} = this.state;
+    return (
             <Board
-                number={this.state.number + 6}
-                idArray={this.state.idArray}
+                number={number}
+                idArray={idArray}
             />
-        </div>
     );
   }
 }
