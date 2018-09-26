@@ -35,7 +35,7 @@ class Card extends Component {
                             Przód
                         </div>
                         <div className="backCard">
-                            {this.props.id}
+                            <div className={`logo${this.props.id}`}>{this.props.id}</div>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@ class Card extends Component {
             if(this.props.flipped){
                 return (
                     <div
-                        className='cardContainer '
+                        className='cardContainer'
                         onClick={() => this.handleChecked(index, flipped, guessed)}
                     >
                         <div className="card flipIt">
@@ -52,7 +52,7 @@ class Card extends Component {
                                 Przód
                             </div>
                             <div className="backCard">
-                                {this.props.id}
+                                <div className={`logo${this.props.id}`}>{this.props.id}</div>
                             </div>
                         </div>
                     </div>
@@ -68,7 +68,7 @@ class Card extends Component {
                             Przód
                         </div>
                         <div className="backCard">
-                            {this.props.id}
+                            <div className={`logo${this.props.id}`}>{this.props.id}</div>
                         </div>
                     </div>
                 </div>

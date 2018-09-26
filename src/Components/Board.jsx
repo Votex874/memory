@@ -158,20 +158,31 @@ class Board extends Component {
             array: newBoard,
         })
     };
-    handleLevels = (level) => {;
-        const newBoard = this.createMemoryArray(level,  this.props.idArray);
+    handleEasyLevel = () => {
+        const newBoard = this.createMemoryArray(12,  this.props.idArray);
         this.setState({
             allGuessed: false,
             array: newBoard,
-            number: level,
+            number: 12,
         })
     };
-    creatingLevels = () => {
-      const { levels } = this.state;
-      const allLevels = levels;
-
-      
+    handleMediumLevel = () => {
+        const newBoard = this.createMemoryArray(18,  this.props.idArray);
+        this.setState({
+            allGuessed: false,
+            array: newBoard,
+            number: 18,
+        })
     };
+    handleHardLevel = () => {
+        const newBoard = this.createMemoryArray(24,  this.props.idArray);
+        this.setState({
+            allGuessed: false,
+            array: newBoard,
+            number: 24,
+        })
+    };
+
 
 
     render() {
@@ -179,10 +190,14 @@ class Board extends Component {
         return (
             <div className='mainContainer'>
                 <div className="board">
+                    <ul className='levelSelection'>
+                        <li className='level' onClick={this.handleEasyLevel}>Łatwy</li>
+                        <li className='level' onClick={this.handleMediumLevel}>Średni</li>
+                        <li className='level' onClick={this.handleHardLevel}>Trudny</li>
+                    </ul>
                     <button onClick={this.handleReset}>Reset</button>
                     <p>{this.state.allGuessed}</p>
                     {this.creatingBoard(number)}
-                    <div onClick={this.handleLevels}>COSIK</div>
                 </div>
             </div>
         );
