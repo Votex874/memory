@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b52222e-016e-447c-82bf-93ce4abdf89b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo-memoryCard/css.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo-memoryCard/css.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo-memoryCard/html5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo-memoryCard/html5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo-memoryCard/java.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo-memoryCard/java.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo-memoryCard/js.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo-memoryCard/js.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo-memoryCard/mySQL.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo-memoryCard/mySQL.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo-memoryCard/node.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo-memoryCard/node.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo-memoryCard/python.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo-memoryCard/python.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo-memoryCard/react.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo-memoryCard/react.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo-memoryCard/ruby.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo-memoryCard/ruby.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo-memoryCard/vue.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo-memoryCard/vue.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Board.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Board.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Board.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Board.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Board.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Board.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Card.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo-memoryCard/angular.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo-memoryCard/c#.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo-memoryCard/java.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo-memoryCard/mySQL.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo-memoryCard/node.jpg" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -46,8 +36,8 @@
           <file leaf-file-name="Board.jsx" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Components/Board.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="833">
-                  <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+                <state relative-caret-position="446">
+                  <caret line="135" column="83" selection-start-line="135" selection-start-column="83" selection-end-line="135" selection-end-column="83" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -58,8 +48,8 @@
           <file leaf-file-name="Card.jsx" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Components/Card.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
+                <state relative-caret-position="395">
+                  <caret line="34" selection-start-line="34" selection-end-line="34" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -74,8 +64,8 @@
           <file leaf-file-name="Board.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Components/Board.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="351">
-                  <caret line="96" column="15" lean-forward="true" selection-start-line="61" selection-start-column="13" selection-end-line="96" selection-end-column="15" />
+                <state relative-caret-position="255">
+                  <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
                 </state>
               </provider>
             </entry>
@@ -211,12 +201,12 @@
       <workItem from="1537984729785" duration="219000" />
       <workItem from="1538059432050" duration="638000" />
       <workItem from="1538143158310" duration="675000" />
-      <workItem from="1538222067171" duration="1544000" />
+      <workItem from="1538222067171" duration="7659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56040000" />
+    <option name="totallyTimeSpent" value="62155000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="5" width="1932" height="779" extended-state="0" />
@@ -572,8 +562,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Card.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
+        <state relative-caret-position="395">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -582,8 +572,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Board.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+        <state relative-caret-position="446">
+          <caret line="135" column="83" selection-start-line="135" selection-start-column="83" selection-end-line="135" selection-end-column="83" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -592,8 +582,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Board.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="96" column="15" lean-forward="true" selection-start-line="61" selection-start-column="13" selection-end-line="96" selection-end-column="15" />
+        <state relative-caret-position="255">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
         </state>
       </provider>
     </entry>

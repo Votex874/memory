@@ -32,7 +32,7 @@ class Card extends Component {
                 >
                     <div className="card flipIt">
                         <div className="frontCard">
-                            Przód
+
                         </div>
                         <div className="backCard">
                             <div className={`logo${this.props.id}`} />
@@ -49,7 +49,7 @@ class Card extends Component {
                     >
                         <div className="card flipIt">
                             <div className="frontCard">
-                                Przód
+
                             </div>
                             <div className="backCard">
                                 <div className={`logo${this.props.id}`} />
@@ -65,7 +65,7 @@ class Card extends Component {
                 >
                     <div className="card">
                         <div className="frontCard">
-                            Przód
+
                         </div>
                         <div className="backCard">
                             <div className={`logo${this.props.id}`} />

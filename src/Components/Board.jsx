@@ -24,6 +24,18 @@ class Board extends Component {
             widthBoard,
             number,
             levels,
+            styleLevelEasy: {
+                color: '',
+                borderBottom: '',
+            },
+            styleLevelMedium: {
+                color: '',
+                borderBottom: '',
+            },
+            styleLevelHard: {
+                color: '',
+                borderBottom: '',
+            },
             };
     }
 
@@ -121,7 +133,7 @@ class Board extends Component {
                         });
                         if(numberOfGuessed.length === this.state.number){
                             this.setState({
-                                allGuessed: 'wygrałes',
+                                allGuessed: 'Gratulację odgadłeś wszystkie karty ^^',
                             })
                         }
                     }
@@ -161,6 +173,19 @@ class Board extends Component {
             allGuessed: false,
             array: newBoard,
             number: 12,
+            styleLevelEasy: {
+                color: '#fff',
+                borderBottom: '1px solid #fff',
+            },
+            styleLevelMedium: {
+                color: '',
+                borderBottom: '',
+            },
+            styleLevelHard: {
+                color: '',
+                borderBottom: '',
+            },
+
         })
     };
     handleMediumLevel = () => {
@@ -169,6 +194,18 @@ class Board extends Component {
             allGuessed: false,
             array: newBoard,
             number: 18,
+            styleLevelEasy: {
+                color: '',
+                borderBottom: '',
+            },
+            styleLevelMedium: {
+                color: '#fff',
+                borderBottom: '1px solid #fff',
+            },
+            styleLevelHard: {
+                color: '',
+                borderBottom: '',
+            },
         })
     };
     handleHardLevel = () => {
@@ -177,6 +214,18 @@ class Board extends Component {
             allGuessed: false,
             array: newBoard,
             number: 24,
+            styleLevelEasy: {
+                color: '',
+                borderBottom: '',
+            },
+            styleLevelMedium: {
+                color: '',
+                borderBottom: '',
+            },
+            styleLevelHard: {
+                color: '#fff',
+                borderBottom: '1px solid #fff',
+            },
         })
     };
 
@@ -184,17 +233,22 @@ class Board extends Component {
 
     render() {
         const {number} = this.props;
+        const {styleLevelEasy, styleLevelMedium, styleLevelHard} = this.state;
         return (
             <div className='mainContainer'>
                 <div className="board">
                     <ul className='levelSelection'>
-                        <li className='level' onClick={this.handleEasyLevel}>Łatwy</li>
-                        <li className='level' onClick={this.handleMediumLevel}>Średni</li>
-                        <li className='level' onClick={this.handleHardLevel}>Trudny</li>
+                        <li style={styleLevelEasy} className='level' onClick={this.handleEasyLevel}>Łatwy</li>
+                        <li style={styleLevelMedium} className='level' onClick={this.handleMediumLevel}>Średni</li>
+                        <li style={styleLevelHard} className='level' onClick={this.handleHardLevel}>Trudny</li>
                     </ul>
-                    <button onClick={this.handleReset}>Reset</button>
-                    <p>{this.state.allGuessed}</p>
-                    {this.creatingBoard(number)}
+                    <div className="containerBoard">
+                        <div className="result">
+                            <button  className='reset' onClick={this.handleReset}>Zresetuj aktualny poziom</button>
+                            <p className='guessed'>{this.state.allGuessed}</p>
+                        </div>
+                        {this.creatingBoard(number)}
+                    </div>
                 </div>
             </div>
         );
