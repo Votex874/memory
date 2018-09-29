@@ -35,7 +35,7 @@ class Card extends Component {
                             Przód
                         </div>
                         <div className="backCard">
-                            <div className={`logo${this.props.id}`}>{this.props.id}</div>
+                            <div className={`logo${this.props.id}`} />
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@ class Card extends Component {
                                 Przód
                             </div>
                             <div className="backCard">
-                                <div className={`logo${this.props.id}`}>{this.props.id}</div>
+                                <div className={`logo${this.props.id}`} />
                             </div>
                         </div>
                     </div>
@@ -68,7 +68,7 @@ class Card extends Component {
                             Przód
                         </div>
                         <div className="backCard">
-                            <div className={`logo${this.props.id}`}>{this.props.id}</div>
+                            <div className={`logo${this.props.id}`} />
                         </div>
                     </div>
                 </div>

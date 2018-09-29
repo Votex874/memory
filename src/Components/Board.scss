@@ -1,3 +1,11 @@
+@mixin card($url){
+  background-image: url($url);
+  background-size: cover;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+}
+
 .mainContainer {
   .board {
     width: 800px;
@@ -51,11 +59,43 @@
               line-height: 100px;
               text-align: center;
               transform: rotateY(180deg);
-              .logo1{
-                background-color: yellow;
-                width: 50px;
-                height: 50px;
+              .logo0{
+                @include card('../logo-memoryCard/python.jpg')
               }
+              .logo1{
+                @include card('../logo-memoryCard/angular.jpg')
+              }
+              .logo2{
+                @include card('../logo-memoryCard/c.jpg')
+              }
+              .logo3{
+                @include card('../logo-memoryCard/java.jpg')
+              }
+              .logo4{
+                @include card('../logo-memoryCard/node.jpg')
+              }
+              .logo5{
+                @include card('../logo-memoryCard/ruby.jpg')
+              }
+              .logo6{
+                @include card('../logo-memoryCard/css.jpg')
+              }
+              .logo7{
+                @include card('../logo-memoryCard/html5.jpg')
+              }
+              .logo8{
+                @include card('../logo-memoryCard/js.jpg')
+              }
+              .logo9{
+                @include card('../logo-memoryCard/mySQL.jpg')
+              }
+              .logo10{
+                @include card('../logo-memoryCard/vue.jpg')
+              }
+              .logo11{
+                @include card('../logo-memoryCard/react.jpg')
+              }
+
             }
           }
         }

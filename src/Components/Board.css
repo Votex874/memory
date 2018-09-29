@@ -44,7 +44,75 @@
           line-height: 100px;
           text-align: center;
           transform: rotateY(180deg); }
+          .mainContainer .board .row .cardContainer .card .backCard .logo0 {
+            background-image: url("../logo-memoryCard/python.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 50px;
+            height: 50px; }
           .mainContainer .board .row .cardContainer .card .backCard .logo1 {
-            background-color: yellow;
+            background-image: url("../logo-memoryCard/angular.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 50px;
+            height: 50px; }
+          .mainContainer .board .row .cardContainer .card .backCard .logo2 {
+            background-image: url("../logo-memoryCard/c.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 50px;
+            height: 50px; }
+          .mainContainer .board .row .cardContainer .card .backCard .logo3 {
+            background-image: url("../logo-memoryCard/java.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 50px;
+            height: 50px; }
+          .mainContainer .board .row .cardContainer .card .backCard .logo4 {
+            background-image: url("../logo-memoryCard/node.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 50px;
+            height: 50px; }
+          .mainContainer .board .row .cardContainer .card .backCard .logo5 {
+            background-image: url("../logo-memoryCard/ruby.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 50px;
+            height: 50px; }
+          .mainContainer .board .row .cardContainer .card .backCard .logo6 {
+            background-image: url("../logo-memoryCard/css.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 50px;
+            height: 50px; }
+          .mainContainer .board .row .cardContainer .card .backCard .logo7 {
+            background-image: url("../logo-memoryCard/html5.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 50px;
+            height: 50px; }
+          .mainContainer .board .row .cardContainer .card .backCard .logo8 {
+            background-image: url("../logo-memoryCard/js.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 50px;
+            height: 50px; }
+          .mainContainer .board .row .cardContainer .card .backCard .logo9 {
+            background-image: url("../logo-memoryCard/mySQL.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 50px;
+            height: 50px; }
+          .mainContainer .board .row .cardContainer .card .backCard .logo10 {
+            background-image: url("../logo-memoryCard/vue.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 50px;
+            height: 50px; }
+          .mainContainer .board .row .cardContainer .card .backCard .logo11 {
+            background-image: url("../logo-memoryCard/react.jpg");
+            background-size: cover;
+            background-position: center;
             width: 50px;
             height: 50px; }

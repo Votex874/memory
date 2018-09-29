@@ -31,11 +31,9 @@ class Board extends Component {
         //tworzy nam tablice z propsu który bedziemy podawac jako wielkosc tablicy , na podstawie tej tablicy
         // bedzie sprawdzał program czy sa odkryte karty czy nie, przekazuje z propsa id danej karty
         const identifyArray = idArray.slice(0, number);
-        console.log(identifyArray);
         this.shuffle(identifyArray);
 
         let array = [];
-        console.log(identifyArray);
 
         for (let i = 0; i < number; i++) {
             array.push({
@@ -50,7 +48,6 @@ class Board extends Component {
 
         const {widthBoard, array} = this.state;
         const {number} = this.state;
-        console.log(array);
         //pobieram ilosc kart i dziele tak aby wyszly mi wiersze
         const rows = Math.ceil(number / 6);
 
