@@ -1,0 +1,90 @@
+@mixin card($url){
+  background-image: url($url);
+  background-size: cover;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+}
+
+.cardContainer {
+  position: relative;
+  width: 15%;
+  height: 180px;
+  margin: 20px;
+  &:nth-of-type(1){
+    margin-left: 0;
+  }
+  &:nth-of-type(6){
+    margin-right: 0;
+  }
+  .flipIt {
+    transform: rotateY(180deg);
+  }
+  .card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    .frontCard {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      background-image: linear-gradient(to right, #dbba00, #e4c100, #edc900, #f6d000, #ffd800);
+      text-align: center;
+      border-radius: 30px;
+    }
+    .backCard {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      background: none;
+      border: 2px solid #dbba00;
+      border-radius: 30px;
+      text-align: center;
+      transform: rotateY(180deg);
+      .logo0 {
+        @include card('../logo-memoryCard/python.jpg')
+      }
+      .logo1 {
+        @include card('../logo-memoryCard/angular.jpg')
+      }
+      .logo2 {
+        @include card('../logo-memoryCard/c.jpg')
+      }
+      .logo3 {
+        @include card('../logo-memoryCard/swift.jpg')
+      }
+      .logo4 {
+        @include card('../logo-memoryCard/redux.jpg')
+      }
+      .logo5 {
+        @include card('../logo-memoryCard/ruby.jpg')
+      }
+      .logo6 {
+        @include card('../logo-memoryCard/css.jpg')
+      }
+      .logo7 {
+        @include card('../logo-memoryCard/html5.jpg')
+      }
+      .logo8 {
+        @include card('../logo-memoryCard/js.jpg')
+      }
+      .logo9 {
+        @include card('../logo-memoryCard/cc.jpg')
+      }
+      .logo10 {
+        @include card('../logo-memoryCard/vue.jpg')
+      }
+      .logo11 {
+        @include card('../logo-memoryCard/react.jpg')
+      }
+
+    }
+  }
+}

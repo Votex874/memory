@@ -2,166 +2,61 @@
   width: 100%;
   height: 100vh;
   background-image: radial-gradient(circle, #b87c4c, #9d6346, #7f4c3e, #603934, #412728); }
-  .mainContainer .board {
-    width: 1200px;
-    height: 1100px;
+  .mainContainer .container {
+    display: flex;
+    flex-direction: row;
     margin: 0 auto 80px 10%;
     padding-top: 100px; }
-    .mainContainer .board .levelSelection {
-      width: 80%;
-      margin: 0 auto 50px auto;
-      display: flex;
-      justify-content: space-between; }
-      .mainContainer .board .levelSelection .level {
-        font-size: 180%;
-        margin: 20px;
-        list-style: none;
-        color: #FFDE00;
-        border-bottom: 2px solid #FFCB0A;
-        letter-spacing: 2px;
-        cursor: pointer; }
-        .mainContainer .board .levelSelection .level:hover {
-          color: #fff;
-          border-bottom: 2px solid #fff; }
-    .mainContainer .board .containerBoard {
-      width: 90%;
-      margin: 0 auto; }
-      .mainContainer .board .containerBoard .result {
-        display: flex; }
-        .mainContainer .board .containerBoard .result .guessed {
-          font-size: 200%;
-          letter-spacing: 1px;
-          color: #fff;
-          margin: 2px 0 0 100px;
-          transition: 1s; }
-        .mainContainer .board .containerBoard .result .reset {
-          width: 300px;
-          height: 40px;
-          line-height: 40px;
-          font-size: 130%;
-          text-align: center;
-          border-radius: 20px;
-          border: 2px solid #FFDE00;
-          color: #FFDE00;
-          letter-spacing: 1px;
-          background: none;
-          outline: none;
-          cursor: pointer; }
-          .mainContainer .board .containerBoard .result .reset:hover {
-            color: #fff;
-            border: 2px solid #fff; }
-      .mainContainer .board .containerBoard .row {
-        width: 100%;
+    .mainContainer .container .board {
+      width: 1200px;
+      height: 1100px; }
+      .mainContainer .container .board .levelSelection {
+        width: 80%;
+        margin: 0 auto 50px auto;
         display: flex;
-        justify-content: space-between;
-        flex-direction: row; }
-        .mainContainer .board .containerBoard .row .cardContainer {
-          position: relative;
-          width: 15%;
-          height: 180px;
-          margin: 20px; }
-          .mainContainer .board .containerBoard .row .cardContainer:nth-of-type(1) {
-            margin-left: 0; }
-          .mainContainer .board .containerBoard .row .cardContainer:nth-of-type(6) {
-            margin-right: 0; }
-          .mainContainer .board .containerBoard .row .cardContainer .flipIt {
-            transform: rotateY(180deg); }
-          .mainContainer .board .containerBoard .row .cardContainer .card {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            transform-style: preserve-3d;
-            transition: all 0.5s ease; }
-            .mainContainer .board .containerBoard .row .cardContainer .card .frontCard {
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              backface-visibility: hidden;
-              background-image: linear-gradient(to right, #dbba00, #e4c100, #edc900, #f6d000, #ffd800);
-              text-align: center;
-              border-radius: 30px; }
-            .mainContainer .board .containerBoard .row .cardContainer .card .backCard {
-              position: absolute;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              width: 100%;
-              height: 100%;
-              backface-visibility: hidden;
-              background: none;
-              border: 2px solid #dbba00;
-              border-radius: 30px;
-              text-align: center;
-              transform: rotateY(180deg); }
-              .mainContainer .board .containerBoard .row .cardContainer .card .backCard .logo0 {
-                background-image: url("../logo-memoryCard/python.jpg");
-                background-size: cover;
-                background-position: center;
-                width: 100px;
-                height: 100px; }
-              .mainContainer .board .containerBoard .row .cardContainer .card .backCard .logo1 {
-                background-image: url("../logo-memoryCard/angular.jpg");
-                background-size: cover;
-                background-position: center;
-                width: 100px;
-                height: 100px; }
-              .mainContainer .board .containerBoard .row .cardContainer .card .backCard .logo2 {
-                background-image: url("../logo-memoryCard/c.jpg");
-                background-size: cover;
-                background-position: center;
-                width: 100px;
-                height: 100px; }
-              .mainContainer .board .containerBoard .row .cardContainer .card .backCard .logo3 {
-                background-image: url("../logo-memoryCard/swift.jpg");
-                background-size: cover;
-                background-position: center;
-                width: 100px;
-                height: 100px; }
-              .mainContainer .board .containerBoard .row .cardContainer .card .backCard .logo4 {
-                background-image: url("../logo-memoryCard/redux.jpg");
-                background-size: cover;
-                background-position: center;
-                width: 100px;
-                height: 100px; }
-              .mainContainer .board .containerBoard .row .cardContainer .card .backCard .logo5 {
-                background-image: url("../logo-memoryCard/ruby.jpg");
-                background-size: cover;
-                background-position: center;
-                width: 100px;
-                height: 100px; }
-              .mainContainer .board .containerBoard .row .cardContainer .card .backCard .logo6 {
-                background-image: url("../logo-memoryCard/css.jpg");
-                background-size: cover;
-                background-position: center;
-                width: 100px;
-                height: 100px; }
-              .mainContainer .board .containerBoard .row .cardContainer .card .backCard .logo7 {
-                background-image: url("../logo-memoryCard/html5.jpg");
-                background-size: cover;
-                background-position: center;
-                width: 100px;
-                height: 100px; }
-              .mainContainer .board .containerBoard .row .cardContainer .card .backCard .logo8 {
-                background-image: url("../logo-memoryCard/js.jpg");
-                background-size: cover;
-                background-position: center;
-                width: 100px;
-                height: 100px; }
-              .mainContainer .board .containerBoard .row .cardContainer .card .backCard .logo9 {
-                background-image: url("../logo-memoryCard/cc.jpg");
-                background-size: cover;
-                background-position: center;
-                width: 100px;
-                height: 100px; }
-              .mainContainer .board .containerBoard .row .cardContainer .card .backCard .logo10 {
-                background-image: url("../logo-memoryCard/vue.jpg");
-                background-size: cover;
-                background-position: center;
-                width: 100px;
-                height: 100px; }
-              .mainContainer .board .containerBoard .row .cardContainer .card .backCard .logo11 {
-                background-image: url("../logo-memoryCard/react.jpg");
-                background-size: cover;
-                background-position: center;
-                width: 100px;
-                height: 100px; }
+        justify-content: space-between; }
+        .mainContainer .container .board .levelSelection .level {
+          font-size: 180%;
+          margin: 20px;
+          list-style: none;
+          color: #FFDE00;
+          border-bottom: 2px solid #FFCB0A;
+          letter-spacing: 2px;
+          transition: 0.5s;
+          cursor: pointer; }
+          .mainContainer .container .board .levelSelection .level:hover {
+            color: #fff;
+            border-bottom: 2px solid #fff; }
+      .mainContainer .container .board .containerBoard {
+        width: 90%;
+        margin: 0 auto; }
+        .mainContainer .container .board .containerBoard .result {
+          display: flex; }
+          .mainContainer .container .board .containerBoard .result .guessed {
+            font-size: 200%;
+            letter-spacing: 1px;
+            color: #fff;
+            margin: 2px 0 0 10px;
+            transition: 1s; }
+          .mainContainer .container .board .containerBoard .result .reset {
+            width: 300px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 130%;
+            text-align: center;
+            border-radius: 20px;
+            border: 2px solid #FFDE00;
+            color: #FFDE00;
+            letter-spacing: 1px;
+            background: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.2s; }
+            .mainContainer .container .board .containerBoard .result .reset:hover {
+              color: #fff;
+              border: 2px solid #fff; }
+        .mainContainer .container .board .containerBoard .row {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row; }

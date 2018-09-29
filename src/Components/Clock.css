@@ -1,12 +1,10 @@
-.clock{
+.clock {
   width: 200px;
   height: 500px;
   margin-top: 100px;
-  border: 1px solid black;
-  .timer{
+  border: 1px solid black; }
+  .clock .timer {
     padding-top: 2px;
     margin-left: 20px;
     color: #fff;
-    font-size: 200%;
-  }
-}
+    font-size: 200%; }

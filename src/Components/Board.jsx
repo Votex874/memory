@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card'
+import Clock from './Clock'
 import './Board.css'
 
 
@@ -236,19 +237,22 @@ class Board extends Component {
         const {styleLevelEasy, styleLevelMedium, styleLevelHard} = this.state;
         return (
             <div className='mainContainer'>
-                <div className="board">
-                    <ul className='levelSelection'>
-                        <li style={styleLevelEasy} className='level' onClick={this.handleEasyLevel}>Łatwy</li>
-                        <li style={styleLevelMedium} className='level' onClick={this.handleMediumLevel}>Średni</li>
-                        <li style={styleLevelHard} className='level' onClick={this.handleHardLevel}>Trudny</li>
-                    </ul>
-                    <div className="containerBoard">
-                        <div className="result">
-                            <button  className='reset' onClick={this.handleReset}>Zresetuj aktualny poziom</button>
-                            <p className='guessed'>{this.state.allGuessed}</p>
+                <div className="container">
+                    <div className="board">
+                        <ul className='levelSelection'>
+                            <li style={styleLevelEasy} className='level' onClick={this.handleEasyLevel}>Łatwy</li>
+                            <li style={styleLevelMedium} className='level' onClick={this.handleMediumLevel}>Średni</li>
+                            <li style={styleLevelHard} className='level' onClick={this.handleHardLevel}>Trudny</li>
+                        </ul>
+                        <div className="containerBoard">
+                            <div className="result">
+                                <button  className='reset' onClick={this.handleReset}>Zresetuj aktualny poziom</button>
+                                <p className='guessed'>{this.state.allGuessed}</p>
+                            </div>
+                            {this.creatingBoard(number)}
                         </div>
-                        {this.creatingBoard(number)}
                     </div>
+                    <Clock guessed={this.state.allGuessed}/>
                 </div>
             </div>
         );
