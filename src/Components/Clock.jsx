@@ -8,7 +8,7 @@ class Clock extends Component {
         this.state ={
             seconds: 0,
             minutes: 0,
-            hours: 0,
+
         }
     }
 
@@ -19,6 +19,7 @@ class Clock extends Component {
                 seconds: this.state.seconds + 1,
             });
         },1000);
+        this.createTimer();
     };
 
     componentWillUnmount = () => {
@@ -43,7 +44,6 @@ class Clock extends Component {
                     timer = <span>{`${minutes}:${seconds}`}</span>
                 }
             }
-
         }
         else if(minutes < 10){
             if(seconds < 10){
@@ -59,12 +59,11 @@ class Clock extends Component {
                 timer = <span>{`0${minutes}:${seconds}`}</span>
             }
         }else if (minutes === 60){
-            clearInterval(this.idInterval)
+            clearInterval(this.idInterval);
             timer = <span>{`${minutes}:0${seconds}`}</span>
         }else {
             if(seconds < 10){
                 timer = <span>{`${minutes}:0${seconds}`}</span>
-
             }else if (seconds === 60){
                 this.setState({
                     seconds: 0,
@@ -78,11 +77,10 @@ class Clock extends Component {
         return timer;
     };
     render() {
-
         return (
             <div className='clock'>
-                <button onClick={this.handleStartClock} >Włącz timer</button>
                 <span className='timer'>{this.createTimer()}</span>
+                <button onClick={this.handleStartClock} >Włącz timer</button>
             </div>
 
         );

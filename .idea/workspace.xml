@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b52222e-016e-447c-82bf-93ce4abdf89b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Board.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Board.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Board.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Board.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Board.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Board.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Card.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Clock.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Clock.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Clock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Clock.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Clock.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Clock.scss" afterDir="false" />
     </list>
@@ -37,30 +32,14 @@
           <file leaf-file-name="Board.jsx" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Components/Board.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="241" column="26" selection-start-line="241" selection-start-column="26" selection-end-line="241" selection-end-column="26" />
+                <state relative-caret-position="-1124">
+                  <caret line="167" column="28" selection-start-line="167" selection-start-column="28" selection-end-line="167" selection-end-column="28" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
-                    <element signature="e#709#1336#0" />
-                    <element signature="e#1364#2651#0" />
-                    <element signature="e#2674#2869#0" />
-                    <element signature="e#2917#5078#0" />
-                    <element signature="e#5104#5322#0" />
-                    <element signature="e#5352#5552#0" />
-                    <element signature="e#5584#5784#0" />
-                    <element signature="e#5814#6014#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Card.jsx" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Components/Card.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="123">
-                  <caret line="60" column="20" lean-forward="true" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-                  <folding>
-                    <element signature="e#0#41#0" expanded="true" />
+                    <element signature="e#1057#1612#0" />
+                    <element signature="e#1640#2899#0" />
+                    <element signature="e#2922#3117#0" />
+                    <element signature="e#3165#5356#0" />
                   </folding>
                 </state>
               </provider>
@@ -69,8 +48,8 @@
           <file leaf-file-name="Clock.jsx" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Components/Clock.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="334">
-                  <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
+                <state relative-caret-position="697">
+                  <caret line="65" column="63" selection-start-line="65" selection-start-column="63" selection-end-line="65" selection-end-column="63" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -103,8 +82,8 @@
           <file leaf-file-name="Clock.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Components/Clock.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+                <state relative-caret-position="289">
+                  <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -131,9 +110,9 @@
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/Components/Card.jsx" />
         <option value="$PROJECT_DIR$/src/Components/Card.scss" />
-        <option value="$PROJECT_DIR$/src/Components/Board.jsx" />
         <option value="$PROJECT_DIR$/src/Components/Board.scss" />
         <option value="$PROJECT_DIR$/src/Components/Clock.scss" />
+        <option value="$PROJECT_DIR$/src/Components/Board.jsx" />
         <option value="$PROJECT_DIR$/src/Components/Clock.jsx" />
       </list>
     </option>
@@ -238,21 +217,21 @@
       <workItem from="1537984729785" duration="219000" />
       <workItem from="1538059432050" duration="638000" />
       <workItem from="1538143158310" duration="675000" />
-      <workItem from="1538222067171" duration="16723000" />
+      <workItem from="1538222067171" duration="22437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71219000" />
+    <option name="totallyTimeSpent" value="76933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="5" width="1932" height="779" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14509395" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1467793" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3298193" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -278,7 +257,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="11" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -295,14 +274,10 @@
           <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#709#1336#0" />
-            <element signature="e#1364#2651#0" />
-            <element signature="e#2674#2869#0" />
-            <element signature="e#2917#5078#0" />
-            <element signature="e#5104#5322#0" />
-            <element signature="e#5352#5552#0" />
-            <element signature="e#5584#5784#0" />
-            <element signature="e#5814#6014#0" />
+            <element signature="e#1057#1612#0" />
+            <element signature="e#1640#2899#0" />
+            <element signature="e#2922#3117#0" />
+            <element signature="e#3165#5356#0" />
           </folding>
         </state>
       </provider>
@@ -340,14 +315,10 @@
           <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#709#1336#0" />
-            <element signature="e#1364#2651#0" />
-            <element signature="e#2674#2869#0" />
-            <element signature="e#2917#5078#0" />
-            <element signature="e#5104#5322#0" />
-            <element signature="e#5352#5552#0" />
-            <element signature="e#5584#5784#0" />
-            <element signature="e#5814#6014#0" />
+            <element signature="e#1057#1612#0" />
+            <element signature="e#1640#2899#0" />
+            <element signature="e#2922#3117#0" />
+            <element signature="e#3165#5356#0" />
           </folding>
         </state>
       </provider>
@@ -385,14 +356,10 @@
           <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#709#1336#0" />
-            <element signature="e#1364#2651#0" />
-            <element signature="e#2674#2869#0" />
-            <element signature="e#2917#5078#0" />
-            <element signature="e#5104#5322#0" />
-            <element signature="e#5352#5552#0" />
-            <element signature="e#5584#5784#0" />
-            <element signature="e#5814#6014#0" />
+            <element signature="e#1057#1612#0" />
+            <element signature="e#1640#2899#0" />
+            <element signature="e#2922#3117#0" />
+            <element signature="e#3165#5356#0" />
           </folding>
         </state>
       </provider>
@@ -430,14 +397,10 @@
           <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#709#1336#0" />
-            <element signature="e#1364#2651#0" />
-            <element signature="e#2674#2869#0" />
-            <element signature="e#2917#5078#0" />
-            <element signature="e#5104#5322#0" />
-            <element signature="e#5352#5552#0" />
-            <element signature="e#5584#5784#0" />
-            <element signature="e#5814#6014#0" />
+            <element signature="e#1057#1612#0" />
+            <element signature="e#1640#2899#0" />
+            <element signature="e#2922#3117#0" />
+            <element signature="e#3165#5356#0" />
           </folding>
         </state>
       </provider>
@@ -475,14 +438,10 @@
           <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#709#1336#0" />
-            <element signature="e#1364#2651#0" />
-            <element signature="e#2674#2869#0" />
-            <element signature="e#2917#5078#0" />
-            <element signature="e#5104#5322#0" />
-            <element signature="e#5352#5552#0" />
-            <element signature="e#5584#5784#0" />
-            <element signature="e#5814#6014#0" />
+            <element signature="e#1057#1612#0" />
+            <element signature="e#1640#2899#0" />
+            <element signature="e#2922#3117#0" />
+            <element signature="e#3165#5356#0" />
           </folding>
         </state>
       </provider>
@@ -520,14 +479,10 @@
           <caret line="116" column="38" lean-forward="true" selection-start-line="116" selection-start-column="38" selection-end-line="116" selection-end-column="38" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#709#1336#0" />
-            <element signature="e#1364#2651#0" />
-            <element signature="e#2674#2869#0" />
-            <element signature="e#2917#5078#0" />
-            <element signature="e#5104#5322#0" />
-            <element signature="e#5352#5552#0" />
-            <element signature="e#5584#5784#0" />
-            <element signature="e#5814#6014#0" />
+            <element signature="e#1057#1612#0" />
+            <element signature="e#1640#2899#0" />
+            <element signature="e#2922#3117#0" />
+            <element signature="e#3165#5356#0" />
           </folding>
         </state>
       </provider>
@@ -575,14 +530,10 @@
           <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#709#1336#0" />
-            <element signature="e#1364#2651#0" />
-            <element signature="e#2674#2869#0" />
-            <element signature="e#2917#5078#0" />
-            <element signature="e#5104#5322#0" />
-            <element signature="e#5352#5552#0" />
-            <element signature="e#5584#5784#0" />
-            <element signature="e#5814#6014#0" />
+            <element signature="e#1057#1612#0" />
+            <element signature="e#1640#2899#0" />
+            <element signature="e#2922#3117#0" />
+            <element signature="e#3165#5356#0" />
           </folding>
         </state>
       </provider>
@@ -610,14 +561,10 @@
           <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#709#1336#0" />
-            <element signature="e#1364#2651#0" />
-            <element signature="e#2674#2869#0" />
-            <element signature="e#2917#5078#0" />
-            <element signature="e#5104#5322#0" />
-            <element signature="e#5352#5552#0" />
-            <element signature="e#5584#5784#0" />
-            <element signature="e#5814#6014#0" />
+            <element signature="e#1057#1612#0" />
+            <element signature="e#1640#2899#0" />
+            <element signature="e#2922#3117#0" />
+            <element signature="e#3165#5356#0" />
           </folding>
         </state>
       </provider>
@@ -651,6 +598,27 @@
     <entry file="file://$PROJECT_DIR$/../SANSARA_WWW+sekcja (1).psd">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Card.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Board.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Clock.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Card.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -670,47 +638,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Board.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="241" column="26" selection-start-line="241" selection-start-column="26" selection-end-line="241" selection-end-column="26" />
+        <state relative-caret-position="-1124">
+          <caret line="167" column="28" selection-start-line="167" selection-start-column="28" selection-end-line="167" selection-end-column="28" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#709#1336#0" />
-            <element signature="e#1364#2651#0" />
-            <element signature="e#2674#2869#0" />
-            <element signature="e#2917#5078#0" />
-            <element signature="e#5104#5322#0" />
-            <element signature="e#5352#5552#0" />
-            <element signature="e#5584#5784#0" />
-            <element signature="e#5814#6014#0" />
+            <element signature="e#1057#1612#0" />
+            <element signature="e#1640#2899#0" />
+            <element signature="e#2922#3117#0" />
+            <element signature="e#3165#5356#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Card.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Board.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Clock.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Clock.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
+        <state relative-caret-position="697">
+          <caret line="65" column="63" selection-start-line="65" selection-start-column="63" selection-end-line="65" selection-end-column="63" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

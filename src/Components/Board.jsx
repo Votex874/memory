@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card'
-import Clock from './Clock'
+// import Clock from './Clock'
 import './Board.css'
 
 
@@ -252,7 +252,7 @@ class Board extends Component {
                             {this.creatingBoard(number)}
                         </div>
                     </div>
-                    <Clock guessed={this.state.allGuessed}/>
+                    {/*<Clock guessed={this.state.allGuessed}/>*/}
                 </div>
             </div>
         );

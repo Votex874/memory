@@ -1,10 +1,19 @@
 .clock {
-  width: 200px;
+  width: 260px;
   height: 500px;
   margin-top: 100px;
-  border: 1px solid black; }
+  display: flex; }
+  .clock .timerStart {
+    border: none;
+    height: 35px;
+    font-size: 180%;
+    background: none;
+    cursor: pointer;
+    color: #FFDE00;
+    margin: 10px 0;
+    outline: none; }
   .clock .timer {
-    padding-top: 2px;
-    margin-left: 20px;
-    color: #fff;
+    padding-top: 8px;
+    padding-left: 6px;
+    color: #FFDE00;
     font-size: 200%; }
