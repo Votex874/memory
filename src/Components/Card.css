@@ -1,8 +1,8 @@
 .cardContainer {
   position: relative;
-  width: 15%;
-  height: 180px;
-  margin: 20px; }
+  width: 10%;
+  height: 130px;
+  margin: 15px; }
   .cardContainer:nth-of-type(1) {
     margin-left: 0; }
   .cardContainer:nth-of-type(6) {
@@ -40,71 +40,71 @@
         background-image: url("../logo-memoryCard/python.jpg");
         background-size: cover;
         background-position: center;
-        width: 100px;
-        height: 100px; }
+        width: 75px;
+        height: 75px; }
       .cardContainer .card .backCard .logo1 {
         background-image: url("../logo-memoryCard/angular.jpg");
         background-size: cover;
         background-position: center;
-        width: 100px;
-        height: 100px; }
+        width: 75px;
+        height: 75px; }
       .cardContainer .card .backCard .logo2 {
         background-image: url("../logo-memoryCard/c.jpg");
         background-size: cover;
         background-position: center;
-        width: 100px;
-        height: 100px; }
+        width: 75px;
+        height: 75px; }
       .cardContainer .card .backCard .logo3 {
         background-image: url("../logo-memoryCard/swift.jpg");
         background-size: cover;
         background-position: center;
-        width: 100px;
-        height: 100px; }
+        width: 75px;
+        height: 75px; }
       .cardContainer .card .backCard .logo4 {
         background-image: url("../logo-memoryCard/redux.jpg");
         background-size: cover;
         background-position: center;
-        width: 100px;
-        height: 100px; }
+        width: 75px;
+        height: 75px; }
       .cardContainer .card .backCard .logo5 {
         background-image: url("../logo-memoryCard/ruby.jpg");
         background-size: cover;
         background-position: center;
-        width: 100px;
-        height: 100px; }
+        width: 75px;
+        height: 75px; }
       .cardContainer .card .backCard .logo6 {
         background-image: url("../logo-memoryCard/css.jpg");
         background-size: cover;
         background-position: center;
-        width: 100px;
-        height: 100px; }
+        width: 75px;
+        height: 75px; }
       .cardContainer .card .backCard .logo7 {
         background-image: url("../logo-memoryCard/html5.jpg");
         background-size: cover;
         background-position: center;
-        width: 100px;
-        height: 100px; }
+        width: 75px;
+        height: 75px; }
       .cardContainer .card .backCard .logo8 {
         background-image: url("../logo-memoryCard/js.jpg");
         background-size: cover;
         background-position: center;
-        width: 100px;
-        height: 100px; }
+        width: 75px;
+        height: 75px; }
       .cardContainer .card .backCard .logo9 {
         background-image: url("../logo-memoryCard/cc.jpg");
         background-size: cover;
         background-position: center;
-        width: 100px;
-        height: 100px; }
+        width: 75px;
+        height: 75px; }
       .cardContainer .card .backCard .logo10 {
         background-image: url("../logo-memoryCard/vue.jpg");
         background-size: cover;
         background-position: center;
-        width: 100px;
-        height: 100px; }
+        width: 75px;
+        height: 75px; }
       .cardContainer .card .backCard .logo11 {
         background-image: url("../logo-memoryCard/react.jpg");
         background-size: cover;
         background-position: center;
-        width: 100px;
-        height: 100px; }
+        width: 75px;
+        height: 75px; }
