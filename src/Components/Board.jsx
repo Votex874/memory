@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from './Card'
 // import Clock from './Clock'
 import './Board.css'
+import  './reset.css'
 
 
 class Board extends Component {

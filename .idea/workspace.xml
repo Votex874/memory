@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b52222e-016e-447c-82bf-93ce4abdf89b" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/reset.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Board.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Board.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,11 +29,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Board.jsx" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Board.jsx" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Components/Board.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" column="30" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="30" />
+                <state relative-caret-position="68">
+                  <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                     <element signature="e#1057#1612#0" />
@@ -44,13 +45,9 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/build/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="525" selection-start-column="525" selection-end-column="525" />
-                </state>
-              </provider>
+          <file leaf-file-name="reset.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Components/reset.scss">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
         </leaf>
@@ -61,7 +58,7 @@
             <entry file="file://$PROJECT_DIR$/src/Components/Board.scss">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="68">
-                  <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="16" />
+                  <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="16" />
                 </state>
               </provider>
             </entry>
@@ -108,9 +105,9 @@
         <option value="$PROJECT_DIR$/src/Components/Card.scss" />
         <option value="$PROJECT_DIR$/src/Components/Clock.scss" />
         <option value="$PROJECT_DIR$/src/Components/Clock.jsx" />
-        <option value="$PROJECT_DIR$/src/Components/Board.jsx" />
-        <option value="$PROJECT_DIR$/build/index.html" />
         <option value="$PROJECT_DIR$/src/Components/Board.scss" />
+        <option value="$PROJECT_DIR$/build/index.html" />
+        <option value="$PROJECT_DIR$/src/Components/Board.jsx" />
       </list>
     </option>
   </component>
@@ -162,13 +159,20 @@
             <path>
               <item name="memory" type="b2602c69:ProjectViewProjectNode" />
               <item name="memory" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="memory" type="b2602c69:ProjectViewProjectNode" />
               <item name="memory" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="memory" type="b2602c69:ProjectViewProjectNode" />
+              <item name="memory" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="reset.scss" type="620a8d5e:NestingTreeNode" />
             </path>
           </expand>
           <select />
@@ -179,13 +183,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../prework/WRO_FER_S_14_REACT_React" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../prework/SitOnChair" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\seba-\Desktop\memory\src\Components" />
       <recent name="C:\Users\seba-\Desktop\memory\build" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -222,15 +227,16 @@
       <workItem from="1537984729785" duration="219000" />
       <workItem from="1538059432050" duration="638000" />
       <workItem from="1538143158310" duration="675000" />
-      <workItem from="1538222067171" duration="25418000" />
+      <workItem from="1538222067171" duration="25665000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79914000" />
+    <option name="totallyTimeSpent" value="80161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="5" width="1932" height="779" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1467793" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -265,16 +271,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Components/Card.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="37" column="89" selection-start-line="37" selection-start-column="89" selection-end-line="37" selection-end-column="89" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Board.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
@@ -625,10 +621,27 @@
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Board.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="307" selection-start-column="307" selection-end-column="307" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/reset.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Board.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="30" />
+        <state relative-caret-position="68">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#1057#1612#0" />
@@ -636,20 +649,6 @@
             <element signature="e#2922#3117#0" />
             <element signature="e#3165#5356#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="525" selection-start-column="525" selection-end-column="525" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Board.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="16" />
         </state>
       </provider>
     </entry>
