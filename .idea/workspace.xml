@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0b52222e-016e-447c-82bf-93ce4abdf89b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -49,7 +48,7 @@
             <entry file="file://$PROJECT_DIR$/build/index.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state>
-                  <caret column="509" selection-start-column="509" selection-end-column="509" />
+                  <caret column="525" selection-start-column="525" selection-end-column="525" />
                 </state>
               </provider>
             </entry>
@@ -58,11 +57,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Board.scss" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Board.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Components/Board.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+                <state relative-caret-position="68">
+                  <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="16" />
                 </state>
               </provider>
             </entry>
@@ -76,7 +75,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Clock.scss" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Clock.scss" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Components/Clock.scss">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="289">
@@ -107,11 +106,11 @@
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/Components/Card.jsx" />
         <option value="$PROJECT_DIR$/src/Components/Card.scss" />
-        <option value="$PROJECT_DIR$/src/Components/Board.scss" />
         <option value="$PROJECT_DIR$/src/Components/Clock.scss" />
         <option value="$PROJECT_DIR$/src/Components/Clock.jsx" />
         <option value="$PROJECT_DIR$/src/Components/Board.jsx" />
         <option value="$PROJECT_DIR$/build/index.html" />
+        <option value="$PROJECT_DIR$/src/Components/Board.scss" />
       </list>
     </option>
   </component>
@@ -165,20 +164,6 @@
               <item name="memory" type="462c0819:PsiDirectoryNode" />
               <item name="build" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="memory" type="b2602c69:ProjectViewProjectNode" />
-              <item name="memory" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="memory" type="b2602c69:ProjectViewProjectNode" />
-              <item name="memory" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="memory" type="b2602c69:ProjectViewProjectNode" />
@@ -237,16 +222,15 @@
       <workItem from="1537984729785" duration="219000" />
       <workItem from="1538059432050" duration="638000" />
       <workItem from="1538143158310" duration="675000" />
-      <workItem from="1538222067171" duration="24166000" />
+      <workItem from="1538222067171" duration="25418000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78662000" />
+    <option name="totallyTimeSpent" value="79914000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="5" width="1932" height="779" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1467793" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -604,13 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Board.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Clock.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -665,7 +642,14 @@
     <entry file="file://$PROJECT_DIR$/build/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="509" selection-start-column="509" selection-end-column="509" />
+          <caret column="525" selection-start-column="525" selection-end-column="525" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Board.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="16" />
         </state>
       </provider>
     </entry>
