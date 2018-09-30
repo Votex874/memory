@@ -1,7 +1,7 @@
 {
   "name": "memory",
   "version": "0.1.0",
-  "homepage": "https://github.com/Votex874",
+  "homepage": "https://votex874.github.io/memory/",
   "private": true,
   "dependencies": {
     "gh-pages": "^2.0.0",
