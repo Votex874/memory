@@ -16,6 +16,7 @@ class Board extends Component {
         const widthBoard = 6;
         const number = this.props.number;
         const levels = [12,18,24];
+        const nameLevels = ['Łatwy', 'Średni', 'Trudny'];
 
 
         this.state = {
@@ -26,6 +27,7 @@ class Board extends Component {
             widthBoard,
             number,
             levels,
+            nameLevels,
             styleLevelEasy: {
                 color: '',
                 borderBottom: '',
@@ -231,9 +233,35 @@ class Board extends Component {
         })
     };
 
+    handleChangeLevel = (level) => {
+      const newBoard = this.createMemoryArray(level, this.props.idArray);
+      this.setState({
+          allGuessed: false,
+          array: newBoard,
+          number: level,
+      })
+    };
+
+    createLevelList = () => {
+        const {levels, nameLevels} = this.state;
+        const levelArray = [...levels];
+        const nameArray = [...nameLevels];
+
+        return levelArray.map((e,i) => {
+            return <li
+                className='level'
+                key={e}
+                onClick={() => this.handleChangeLevel(e)}
+            >
+                {nameArray[i]}
+                </li>
+        });
+    };
+
 
 
     render() {
+
         const {number} = this.props;
         const {styleLevelEasy, styleLevelMedium, styleLevelHard} = this.state;
         return (
@@ -241,9 +269,7 @@ class Board extends Component {
                 <div className="container">
                     <div className="board">
                         <ul className='levelSelection'>
-                            <li style={styleLevelEasy} className='level' onClick={this.handleEasyLevel}>Łatwy</li>
-                            <li style={styleLevelMedium} className='level' onClick={this.handleMediumLevel}>Średni</li>
-                            <li style={styleLevelHard} className='level' onClick={this.handleHardLevel}>Trudny</li>
+                            {this.createLevelList()}
                         </ul>
                         <div className="containerBoard">
                             <div className="result">

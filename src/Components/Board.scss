@@ -5,12 +5,13 @@
   height: 100vh;
   background-image: radial-gradient(circle, #b87c4c, #9d6346, #7f4c3e, #603934, #412728);
   .container {
+    width: 1000px;
     display: flex;
     flex-direction: row;
-    margin: 0 auto 80px 10%;
+    margin: 0 auto 80px auto;
     padding-top: 40px;
     .board {
-      width: 1000px;
+      width: 100%;
       height: 100%;
       .levelSelection {
         width: 80%;
