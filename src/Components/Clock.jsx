@@ -6,83 +6,71 @@ class Clock extends Component {
         super(props);
 
         this.state ={
-            seconds: 0,
-            minutes: 0,
-
+            sec: 0,
+            min: 0,
+            time: 0,
         }
     }
 
 
-    handleStartClock = () => {
-        this.idInterval = setInterval( () => {
-            this.setState({
-                seconds: this.state.seconds + 1,
-            });
-        },1000);
-        this.createTimer();
+    handleStartClock = (e) => {
+        //przesyła informacje wyżej czy plansza została zresetowana czy nie.
+        if ( typeof this.props.onStart === 'function' ){
+            this.props.onStart(e);
+        }
     };
 
     componentWillUnmount = () => {
         clearInterval(this.idInterval)
     };
 
-    createTimer = () => {
-        const {seconds, minutes} = this.state;
-        let timer;
-        if(this.props.guessed.length > 0){
-            clearInterval(this.idInterval);
-            if(minutes < 10){
-                if(seconds < 10){
-                    timer = <span>{`0${minutes}:0${seconds}`}</span>
-                }else{
-                    timer = <span>{`0${minutes}:${seconds}`}</span>
-                }
-            }else {
-                if(seconds < 10){
-                    timer = <span>{`${minutes}:0${seconds}`}</span>
-                }else{
-                    timer = <span>{`${minutes}:${seconds}`}</span>
-                }
-            }
-        }
-        else if(minutes < 10){
-            if(seconds < 10){
-                timer = <span>{`0${minutes}:0${seconds}`}</span>
 
-            }else if (seconds === 60){
-                this.setState({
-                    seconds: 0,
-                    minutes: this.state.minutes +1,
-                })
-            }
-            else{
+    createTimer = () => {
+        const sec = this.props.seconds;
+        const minutes = ~~(sec / 60);
+        const seconds = sec - (minutes * 60);
+        let timer;
+        console.log(minutes , seconds);
+        if(sec >= 60 && sec <= 600){
+            if(seconds < 10) {
+                timer = <span>{`0${minutes}:0${seconds}`}</span>
+            }else{
                 timer = <span>{`0${minutes}:${seconds}`}</span>
             }
-        }else if (minutes === 60){
-            clearInterval(this.idInterval);
-            timer = <span>{`${minutes}:0${seconds}`}</span>
-        }else {
+
+        }else if(sec < 60){
+            if(seconds < 10){
+                timer = <span>{`0${minutes}:0${seconds}`}</span>
+            }else{
+                timer = <span>{`0${minutes}:${seconds}`}</span>
+            }
+        }else{
             if(seconds < 10){
                 timer = <span>{`${minutes}:0${seconds}`}</span>
-            }else if (seconds === 60){
-                this.setState({
-                    seconds: 0,
-                    minutes: this.state.minutes +1,
-                })
-            }
-            else{
+            }else{
                 timer = <span>{`${minutes}:${seconds}`}</span>
             }
         }
         return timer;
     };
+
+    displayTimer = () => {
+        const {seconds, minutes} = this.state;
+        let timer;
+    };
+
+
+
+
+
     render() {
+
         return (
             <div className='clock'>
+                {/*<span className='timeGuessed'>Odgadłeś karty w: {this.guessedTime()}</span>*/}
                 <span className='timer'>{this.createTimer()}</span>
-                <button onClick={this.handleStartClock} >Włącz timer</button>
+                <button onClick={() => this.handleStartClock(this.props.isReseted)} >Włącz timer</button>
             </div>
-
         );
     }
 }

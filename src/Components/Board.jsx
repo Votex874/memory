@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card'
-// import Clock from './Clock'
+import Clock from './Clock'
 import './Board.css'
 import  './reset.css'
 
@@ -17,6 +17,9 @@ class Board extends Component {
         const number = this.props.number;
         const levels = [12,18,24];
         const nameLevels = ['Łatwy', 'Średni', 'Trudny'];
+        const currentLevel = 'Łatwy';
+        const seconds = 0;
+        const isReseted = false;
 
 
         this.state = {
@@ -28,18 +31,9 @@ class Board extends Component {
             number,
             levels,
             nameLevels,
-            styleLevelEasy: {
-                color: '',
-                borderBottom: '',
-            },
-            styleLevelMedium: {
-                color: '',
-                borderBottom: '',
-            },
-            styleLevelHard: {
-                color: '',
-                borderBottom: '',
-            },
+            currentLevel,
+            seconds,
+            isReseted,
             };
     }
 
@@ -61,7 +55,6 @@ class Board extends Component {
         return array;
     };
     creatingBoard = () => {
-
         const {widthBoard, array} = this.state;
         const {number} = this.state;
         //pobieram ilosc kart i dziele tak aby wyszly mi wiersze
@@ -164,106 +157,77 @@ class Board extends Component {
         })
     };
     handleReset = () => {
-        //tworzymy nowa mape
+        //tworzymy nowa mape + resetuje czas
+        clearInterval(this.idInterval);
         const newBoard = this.createMemoryArray(this.state.number,this.props.idArray);
         this.setState({
             allGuessed: false,
+            isReseted: false,
             array: newBoard,
+            seconds: 0,
         })
     };
-    handleEasyLevel = () => {
-        const newBoard = this.createMemoryArray(12,  this.props.idArray);
-        this.setState({
-            allGuessed: false,
-            array: newBoard,
-            number: 12,
-            styleLevelEasy: {
-                color: '#fff',
-                borderBottom: '1px solid #fff',
-            },
-            styleLevelMedium: {
-                color: '',
-                borderBottom: '',
-            },
-            styleLevelHard: {
-                color: '',
-                borderBottom: '',
-            },
-
-        })
-    };
-    handleMediumLevel = () => {
-        const newBoard = this.createMemoryArray(18,  this.props.idArray);
-        this.setState({
-            allGuessed: false,
-            array: newBoard,
-            number: 18,
-            styleLevelEasy: {
-                color: '',
-                borderBottom: '',
-            },
-            styleLevelMedium: {
-                color: '#fff',
-                borderBottom: '1px solid #fff',
-            },
-            styleLevelHard: {
-                color: '',
-                borderBottom: '',
-            },
-        })
-    };
-    handleHardLevel = () => {
-        const newBoard = this.createMemoryArray(24,  this.props.idArray);
-        this.setState({
-            allGuessed: false,
-            array: newBoard,
-            number: 24,
-            styleLevelEasy: {
-                color: '',
-                borderBottom: '',
-            },
-            styleLevelMedium: {
-                color: '',
-                borderBottom: '',
-            },
-            styleLevelHard: {
-                color: '#fff',
-                borderBottom: '1px solid #fff',
-            },
-        })
-    };
-
-    handleChangeLevel = (level) => {
+    handleChangeLevel = (level,nameLevel) => {
+        //jest wywolywana po nacisnieciu na dany level zwraca nowa plansze oraz resetuje czas
       const newBoard = this.createMemoryArray(level, this.props.idArray);
+      clearInterval(this.idInterval);
       this.setState({
           allGuessed: false,
+          isReseted: false,
           array: newBoard,
           number: level,
+          currentLevel: nameLevel,
+          seconds: 0,
       })
     };
-
+    handleStartClock = (isReseted) => {
+        //isReseted mowi nam czy zegar zostal zresetowany jak nie niech uruchomi inteval jezli tak niech go zatrzyma
+        //i zresetuje czas
+        if(isReseted === false) {
+            this.idInterval = setInterval(() => {
+                this.setState({
+                    seconds: this.state.seconds + 1,
+                    isReseted: true,
+                });
+            }, 1000);
+        }else if(this.state.allGuessed === true){
+            clearInterval(this.idInterval);
+            this.setState({
+                seconds: 0,
+                isReseted: false,
+            })
+        }
+        else{
+            clearInterval(this.idInterval);
+                this.setState({
+                    seconds: 0,
+                    isReseted: false,
+                })
+        }
+    };
     createLevelList = () => {
+        //tworzy liste poziomow z funkcja ktora zmienia ilosc kart na planszy
         const {levels, nameLevels} = this.state;
         const levelArray = [...levels];
         const nameArray = [...nameLevels];
+        // for (let i = 0; i < levelArray.length; i++){
+        //     localStorage.setItem(levelArray[i],'0');
+        // }
 
         return levelArray.map((e,i) => {
             return <li
                 className='level'
                 key={e}
-                onClick={() => this.handleChangeLevel(e)}
+                onClick={() => this.handleChangeLevel(e,nameArray[i])}
             >
                 {nameArray[i]}
-                </li>
+            </li>
         });
     };
 
-
-
     render() {
+        const {seconds,number,currentLevel,allGuessed,isReseted} = this.state;
 
-        const {number} = this.props;
-        const {styleLevelEasy, styleLevelMedium, styleLevelHard} = this.state;
         return (
             <div className='mainContainer'>
                 <div className="container">
@@ -276,10 +240,17 @@ class Board extends Component {
                                 <button  className='reset' onClick={this.handleReset}>Zresetuj aktualny poziom</button>
                                 <p className='guessed'>{this.state.allGuessed}</p>
                             </div>
-                            {this.creatingBoard(number)}
+                            {this.creatingBoard()}
                         </div>
                     </div>
-                    {/*<Clock guessed={this.state.allGuessed}/>*/}
+                    <Clock
+                        seconds={seconds}
+                        level={number}
+                        currentLevel={currentLevel}
+                        guessed={allGuessed}
+                        onStart={this.handleStartClock}
+                        isReseted={isReseted}
+                    />
                 </div>
             </div>
         );
