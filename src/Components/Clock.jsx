@@ -30,7 +30,6 @@ class Clock extends Component {
         const minutes = ~~(sec / 60);
         const seconds = sec - (minutes * 60);
         let timer;
-        console.log(minutes , seconds);
         if(sec >= 60 && sec <= 600){
             if(seconds < 10) {
                 timer = <span>{`0${minutes}:0${seconds}`}</span>
@@ -69,7 +68,7 @@ class Clock extends Component {
             <div className='clock'>
                 {/*<span className='timeGuessed'>Odgadłeś karty w: {this.guessedTime()}</span>*/}
                 <span className='timer'>{this.createTimer()}</span>
-                <button onClick={() => this.handleStartClock(this.props.isReseted)} >Włącz timer</button>
+                <button disabled={this.props.disabled} onClick={() => this.handleStartClock(this.props.isReseted)} >Włącz timer</button>
             </div>
         );
     }

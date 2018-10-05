@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b52222e-016e-447c-82bf-93ce4abdf89b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Game.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Board.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Board.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Clock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Clock.jsx" afterDir="false" />
     </list>
@@ -37,12 +34,11 @@
           <file leaf-file-name="Board.jsx" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Components/Board.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="986">
-                  <caret line="197" column="14" selection-start-line="197" selection-start-column="14" selection-end-line="197" selection-end-column="14" />
+                <state relative-caret-position="404">
+                  <caret line="207" column="31" selection-start-line="207" selection-start-column="31" selection-end-line="207" selection-end-column="31" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                     <element signature="e#1009#1564#0" />
-                    <element signature="e#1592#2850#0" />
                     <element signature="e#2873#3068#0" />
                     <element signature="e#5333#5661#0" />
                     <element signature="e#5708#6118#0" />
@@ -54,8 +50,8 @@
           <file leaf-file-name="Clock.jsx" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Components/Clock.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+                <state relative-caret-position="287">
+                  <caret line="65" selection-start-line="65" selection-end-line="65" />
                 </state>
               </provider>
             </entry>
@@ -109,8 +105,8 @@
         <option value="$PROJECT_DIR$/src/Components/Board.scss" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/Components/Game.jsx" />
-        <option value="$PROJECT_DIR$/src/Components/Board.jsx" />
         <option value="$PROJECT_DIR$/src/Components/Clock.jsx" />
+        <option value="$PROJECT_DIR$/src/Components/Board.jsx" />
       </list>
     </option>
   </component>
@@ -221,12 +217,12 @@
       <workItem from="1538222067171" duration="27077000" />
       <workItem from="1538503981984" duration="605000" />
       <workItem from="1538651759734" duration="8863000" />
-      <workItem from="1538662768278" duration="14862000" />
+      <workItem from="1538662768278" duration="18018000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105903000" />
+    <option name="totallyTimeSpent" value="109059000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="5" width="1932" height="779" extended-state="0" />
@@ -261,7 +257,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <option name="time" value="19" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -282,7 +278,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#1009#1564#0" />
-            <element signature="e#1592#2850#0" />
             <element signature="e#2873#3068#0" />
             <element signature="e#5333#5661#0" />
             <element signature="e#5708#6118#0" />
@@ -321,7 +316,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#1009#1564#0" />
-            <element signature="e#1592#2850#0" />
             <element signature="e#2873#3068#0" />
             <element signature="e#5333#5661#0" />
             <element signature="e#5708#6118#0" />
@@ -360,7 +354,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#1009#1564#0" />
-            <element signature="e#1592#2850#0" />
             <element signature="e#2873#3068#0" />
             <element signature="e#5333#5661#0" />
             <element signature="e#5708#6118#0" />
@@ -399,7 +392,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#1009#1564#0" />
-            <element signature="e#1592#2850#0" />
             <element signature="e#2873#3068#0" />
             <element signature="e#5333#5661#0" />
             <element signature="e#5708#6118#0" />
@@ -438,7 +430,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#1009#1564#0" />
-            <element signature="e#1592#2850#0" />
             <element signature="e#2873#3068#0" />
             <element signature="e#5333#5661#0" />
             <element signature="e#5708#6118#0" />
@@ -484,7 +475,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#1009#1564#0" />
-            <element signature="e#1592#2850#0" />
             <element signature="e#2873#3068#0" />
             <element signature="e#5333#5661#0" />
             <element signature="e#5708#6118#0" />
@@ -516,7 +506,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#1009#1564#0" />
-            <element signature="e#1592#2850#0" />
             <element signature="e#2873#3068#0" />
             <element signature="e#5333#5661#0" />
             <element signature="e#5708#6118#0" />
@@ -604,6 +593,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Clock.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -614,21 +610,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Clock.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Board.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="197" column="14" selection-start-line="197" selection-start-column="14" selection-end-line="197" selection-end-column="14" />
+        <state relative-caret-position="404">
+          <caret line="207" column="31" selection-start-line="207" selection-start-column="31" selection-end-line="207" selection-end-column="31" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#1009#1564#0" />
-            <element signature="e#1592#2850#0" />
             <element signature="e#2873#3068#0" />
             <element signature="e#5333#5661#0" />
             <element signature="e#5708#6118#0" />

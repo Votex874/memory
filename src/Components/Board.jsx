@@ -20,9 +20,11 @@ class Board extends Component {
         const currentLevel = 'Łatwy';
         const seconds = 0;
         const isReseted = false;
+        const disabled = false;
 
 
         this.state = {
+            disabled,
             array,
             indexArray,
             identifyArray,
@@ -108,12 +110,14 @@ class Board extends Component {
         let iArray = [...indexArray];
         let idArray = [...identifyArray];
 
-
         //sprawdzam ile w całej tablicy jest true jeżeli mniej niż dwa niech zmienia je dalej
         //jeżeli mniej niech przestanie
         let numberOfTrues = mainArray.filter(e =>{
             return e.flipped === true
         });
+        const pos = this.state.array.map(e => {
+            return e.guessed }).indexOf(true);
+        console.log(pos);
 
         if(numberOfTrues.length < 2){
             mainArray[i].flipped = true;
@@ -129,8 +133,10 @@ class Board extends Component {
                             return e.guessed === true
                         });
                         if(numberOfGuessed.length === this.state.number){
+                            clearInterval(this.idInterval);
                             this.setState({
-                                allGuessed: 'Gratulację odgadłeś wszystkie karty ^^',
+                                allGuessed: true,
+                                seconds: 0,
                             })
                         }
                     }
@@ -142,6 +148,7 @@ class Board extends Component {
                             mainArray[iArray[i]].flipped = false;
                         }
                         this.setState({
+                            disabled: pos > 3 ? true : false,
                             array: mainArray,
                             indexArray: [],
                             identifyArray: [],
@@ -151,6 +158,7 @@ class Board extends Component {
             }
         }
         this.setState({
+
             array: mainArray,
             indexArray: iArray,
             identifyArray: idArray,
@@ -158,14 +166,8 @@ class Board extends Component {
     };
     handleReset = () => {
         //tworzymy nowa mape + resetuje czas
-        clearInterval(this.idInterval);
-        const newBoard = this.createMemoryArray(this.state.number,this.props.idArray);
-        this.setState({
-            allGuessed: false,
-            isReseted: false,
-            array: newBoard,
-            seconds: 0,
-        })
+        clearInterval(this.idInterval)
+        this.makeReset()
     };
     handleChangeLevel = (level,nameLevel) => {
         //jest wywolywana po nacisnieciu na dany level zwraca nowa plansze oraz resetuje czas
@@ -183,19 +185,21 @@ class Board extends Component {
     handleStartClock = (isReseted) => {
         //isReseted mowi nam czy zegar zostal zresetowany jak nie niech uruchomi inteval jezli tak niech go zatrzyma
         //i zresetuje czas
-        if(isReseted === false) {
+
+        if(this.state.allGuessed === true){
+            clearInterval(this.idInterval);
+            this.setState({
+                seconds: 0,
+                isReseted: true,
+            })
+        }else if(isReseted === false) {
             this.idInterval = setInterval(() => {
                 this.setState({
                     seconds: this.state.seconds + 1,
                     isReseted: true,
                 });
             }, 1000);
-        }else if(this.state.allGuessed === true){
-            clearInterval(this.idInterval);
-            this.setState({
-                seconds: 0,
-                isReseted: false,
-            })
+            this.makeReset();
         }
         else{
             clearInterval(this.idInterval);
@@ -224,9 +228,20 @@ class Board extends Component {
             </li>
         });
     };
+    makeReset = () => {
+        //tworzymy nowa mape + resetuje czas
+
+        const newBoard = this.createMemoryArray(this.state.number,this.props.idArray);
+        this.setState({
+            allGuessed: false,
+            isReseted: false,
+            array: newBoard,
+            seconds: 0,
+        })
+    };
 
     render() {
-        const {seconds,number,currentLevel,allGuessed,isReseted} = this.state;
+        const {seconds,number,currentLevel,allGuessed,isReseted,disabled} = this.state;
 
         return (
             <div className='mainContainer'>
@@ -244,6 +259,7 @@ class Board extends Component {
                         </div>
                     </div>
                     <Clock
+                        disabled={disabled}
                         seconds={seconds}
                         level={number}
                         currentLevel={currentLevel}
