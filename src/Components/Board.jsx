@@ -233,7 +233,14 @@ class Board extends Component {
             seconds: 0,
         })
     };
+    getData = () => {
 
+        fetch('http://localhost:3001/cars').then( resp => {
+        return resp.json();
+        }).then( obj => {
+            console.log(obj[0].id)
+        });
+    };
     render() {
         const {seconds,number,currentLevel,allGuessed,isReseted,timer} = this.state;
         return (
@@ -261,6 +268,7 @@ class Board extends Component {
                         isReseted={isReseted}
                     />
                 </div>
+                {this.getData()}
             </div>
         );
     }
