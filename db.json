@@ -1,10 +1,23 @@
 {
-  "cars": [
+  "bestTime": [
     {
       "id": 1 ,
-      "name": "Gallardo"
-    ,
-      "brand": "Lamborghini"
+      "time": "230"
+    },
+    {
+      "id": 2,
+      "time": "255"
+    },
+    {
+      "id": 3,
+      "time": "301"
+    }
+  ],
+  "users":[
+    {
+      "id": 1,
+      "name": "Waldek",
+      "time": "203"
     }
   ]
 }

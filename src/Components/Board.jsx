@@ -18,6 +18,8 @@ class Board extends Component {
         const levels = [12,18,24];
         const nameLevels = ['Łatwy', 'Średni', 'Trudny'];
         const currentLevel = 'Łatwy';
+        const bestTimes = {};
+        const dataLoading = true;
         const seconds = 0;
         const timer = 0;
         const isReseted = false;
@@ -35,6 +37,8 @@ class Board extends Component {
             seconds,
             isReseted,
             timer,
+            bestTimes,
+            dataLoading,
             };
     }
 
@@ -233,16 +237,41 @@ class Board extends Component {
             seconds: 0,
         })
     };
-    getData = () => {
 
-        fetch('http://localhost:3001/cars').then( resp => {
-        return resp.json();
-        }).then( obj => {
-            console.log(obj[0].id)
-        });
+    componentDidMount = () => {
+      this.getData();
+
     };
+
+    getData = () => {
+        fetch('http://localhost:3001/bestTime')
+        .then( resp => resp.json())
+        .then( parsedResp => parsedResp.map( user => (
+            {
+                id: user.id,
+                time: user.time,
+            }
+        )))
+        .then( users => this.setState({
+            bestTimes: users,
+            dataLoading: false,
+        }));
+    };
+
+    checkLoading = () => {
+        if(!this.state.dataLoading){
+            return this.state.bestTimes.map(besttime => {
+                return <div key={besttime.id}>{besttime.id}</div>
+            })
+        }else{
+           return null
+        }
+    };
+
+
     render() {
-        const {seconds,number,currentLevel,allGuessed,isReseted,timer} = this.state;
+    console.log(this.state.bestTimes);
+        const {seconds,number,currentLevel,allGuessed,isReseted,timer, dataLoading ,bestTimes} = this.state;
         return (
             <div className='mainContainer'>
                 <div className="container">
@@ -268,7 +297,9 @@ class Board extends Component {
                         isReseted={isReseted}
                     />
                 </div>
-                {this.getData()}
+                <div>
+                    {this.checkLoading()}
+                </div>
             </div>
         );
     }
