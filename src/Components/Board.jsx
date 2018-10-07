@@ -19,12 +19,10 @@ class Board extends Component {
         const nameLevels = ['Łatwy', 'Średni', 'Trudny'];
         const currentLevel = 'Łatwy';
         const seconds = 0;
+        const timer = 0;
         const isReseted = false;
-        const disabled = false;
-
 
         this.state = {
-            disabled,
             array,
             indexArray,
             identifyArray,
@@ -36,6 +34,7 @@ class Board extends Component {
             currentLevel,
             seconds,
             isReseted,
+            timer,
             };
     }
 
@@ -115,9 +114,6 @@ class Board extends Component {
         let numberOfTrues = mainArray.filter(e =>{
             return e.flipped === true
         });
-        const pos = this.state.array.map(e => {
-            return e.guessed }).indexOf(true);
-        console.log(pos);
 
         if(numberOfTrues.length < 2){
             mainArray[i].flipped = true;
@@ -135,6 +131,7 @@ class Board extends Component {
                         if(numberOfGuessed.length === this.state.number){
                             clearInterval(this.idInterval);
                             this.setState({
+                                timer: this.state.seconds,
                                 allGuessed: true,
                                 seconds: 0,
                             })
@@ -148,7 +145,6 @@ class Board extends Component {
                             mainArray[iArray[i]].flipped = false;
                         }
                         this.setState({
-                            disabled: pos > 3 ? true : false,
                             array: mainArray,
                             indexArray: [],
                             identifyArray: [],
@@ -158,7 +154,6 @@ class Board extends Component {
             }
         }
         this.setState({
-
             array: mainArray,
             indexArray: iArray,
             identifyArray: idArray,
@@ -166,7 +161,7 @@ class Board extends Component {
     };
     handleReset = () => {
         //tworzymy nowa mape + resetuje czas
-        clearInterval(this.idInterval)
+        clearInterval(this.idInterval);
         this.makeReset()
     };
     handleChangeLevel = (level,nameLevel) => {
@@ -230,7 +225,6 @@ class Board extends Component {
     };
     makeReset = () => {
         //tworzymy nowa mape + resetuje czas
-
         const newBoard = this.createMemoryArray(this.state.number,this.props.idArray);
         this.setState({
             allGuessed: false,
@@ -241,8 +235,7 @@ class Board extends Component {
     };
 
     render() {
-        const {seconds,number,currentLevel,allGuessed,isReseted,disabled} = this.state;
-
+        const {seconds,number,currentLevel,allGuessed,isReseted,timer} = this.state;
         return (
             <div className='mainContainer'>
                 <div className="container">
@@ -259,7 +252,7 @@ class Board extends Component {
                         </div>
                     </div>
                     <Clock
-                        disabled={disabled}
+                        timer={timer}
                         seconds={seconds}
                         level={number}
                         currentLevel={currentLevel}

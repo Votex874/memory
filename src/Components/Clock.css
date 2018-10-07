@@ -1,19 +1,19 @@
 .clock {
-  width: 260px;
+  width: 360px;
   height: 500px;
   margin-top: 100px;
-  display: flex; }
-  .clock .timerStart {
-    border: none;
-    height: 35px;
-    font-size: 180%;
-    background: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 150%;
+  color: #FFDE00; }
+  .clock .startTimer {
+    text-align: center;
+    border: 3px dotted #fff;
     cursor: pointer;
-    color: #FFDE00;
-    margin: 10px 0;
-    outline: none; }
-  .clock .timer {
-    padding-top: 8px;
-    padding-left: 6px;
-    color: #FFDE00;
-    font-size: 200%; }
+    margin: 10px 0; }
+  .clock .timer span {
+    padding-left: 25px; }
+  .clock .timeGuessed {
+    margin: 10px 0; }
+    .clock .timeGuessed span {
+      padding-left: 9px; }

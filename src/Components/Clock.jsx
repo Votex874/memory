@@ -2,16 +2,6 @@ import React, { Component } from 'react';
 import './Clock.css';
 
 class Clock extends Component {
-    constructor(props){
-        super(props);
-
-        this.state ={
-            sec: 0,
-            min: 0,
-            time: 0,
-        }
-    }
-
 
     handleStartClock = (e) => {
         //przesyła informacje wyżej czy plansza została zresetowana czy nie.
@@ -24,9 +14,8 @@ class Clock extends Component {
         clearInterval(this.idInterval)
     };
 
-
-    createTimer = () => {
-        const sec = this.props.seconds;
+    createTimer = (time) => {
+        const sec = time;
         const minutes = ~~(sec / 60);
         const seconds = sec - (minutes * 60);
         let timer;
@@ -53,22 +42,12 @@ class Clock extends Component {
         return timer;
     };
 
-    displayTimer = () => {
-        const {seconds, minutes} = this.state;
-        let timer;
-    };
-
-
-
-
-
     render() {
-
         return (
             <div className='clock'>
-                {/*<span className='timeGuessed'>Odgadłeś karty w: {this.guessedTime()}</span>*/}
-                <span className='timer'>{this.createTimer()}</span>
-                <button disabled={this.props.disabled} onClick={() => this.handleStartClock(this.props.isReseted)} >Włącz timer</button>
+                <button className='startTimer' onClick={() => this.handleStartClock(this.props.isReseted)} >Start</button>
+                <span className='timer'>Aktualny czas: <span>{this.createTimer(this.props.seconds)}</span></span>
+                <span className='timeGuessed'>Odgadłeś karty w: <span>{this.createTimer(this.props.timer)}</span></span>
             </div>
         );
     }
