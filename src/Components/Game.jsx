@@ -14,7 +14,7 @@ class Game extends Component {
         const displayStyle = 'block';
         const overflowStyle = 'hidden';
         const userName = '';
-        const times = {};
+        const times = false;
         const innerHeight = (window.innerHeight) + 150 + 'px';
 
         this.state ={

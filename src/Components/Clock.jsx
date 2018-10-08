@@ -42,14 +42,54 @@ class Clock extends Component {
         return timer;
     };
 
+    createListOfBestTime = () => {
+      const {data,currentLevel} = this.props;
+      let list;
+      console.log(typeof data)
+      if(data) {
+          switch (currentLevel) {
+              case 'Łatwy':
+                  list = data.easy.map( e => {
+                     return <li className='bestTime' key={e.id}>
+                        {this.createTimer(e.time)}
+                  </li>
+                  });
+                  break;
+              case 'Średni':
+                  list = data.medium.map( e => {
+                      return <li className='bestTime' key={e.id}>
+                          {this.createTimer(e.time)}
+                      </li>
+                  });
+                  break;
+              case 'Trudny':
+                  list = data.hard.map( e => {
+                      return <li className='bestTime' key={e.id}>
+                          {this.createTimer(e.time)}
+                      </li>
+                  });
+                  break;
+
+              default:
+                  list = null;
+                  break;
+          }
+      }else{
+          list = null;
+      }
+      return list
+    };
+
     render() {
-        console.log(this.props.data);
         return (
             <div className='clock'>
                 <button className='startTimer' onClick={() => this.handleStartClock(this.props.isReseted)} >Start</button>
                 <span className='currentUser'>Aktualnie gra: <span>{this.props.userName}</span></span>
                 <span className='timer'>Aktualny czas: <span>{this.createTimer(this.props.seconds)}</span></span>
                 <span className='timeGuessed'>Odgadłeś karty w: <span>{this.createTimer(this.props.timer)}</span></span>
+                <ul>
+                    {this.createListOfBestTime()}
+                </ul>
             </div>
         );
     }
