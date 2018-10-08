@@ -14,8 +14,12 @@ class Game extends Component {
         const displayStyle = 'block';
         const overflowStyle = 'hidden';
         const userName = '';
+        const times = {};
+        const innerHeight = (window.innerHeight) + 150 + 'px';
 
         this.state ={
+            innerHeight,
+            times,
             idArray,
             number,
             valueInputName,
@@ -45,16 +49,32 @@ class Game extends Component {
         }
     };
 
+    componentDidMount = () => {
+        this.getData();
+
+    };
+
+    getData = () => {
+        fetch('http://localhost:3001/bestTimes')
+            .then( resp => resp.json())
+            .then( bestTimes => this.setState({
+                times: bestTimes,
+            }));
+    };
+
 
     render() {
-
-        const  {number, idArray,valueInputName,displayStyle,overflowStyle,userName} = this.state;
+        const  {number, idArray,valueInputName,displayStyle,overflowStyle,userName,times,innerHeight} = this.state;
+        console.log(innerHeight);
         return (
             <div className='gameContainer' style={{overflow: overflowStyle}}>
                 <div className="disableAll" style={{display: displayStyle}}>
 
                 </div>
-                <div className="box" style={{display: displayStyle}}>
+                <div className="box" style={{
+                    display: displayStyle,
+                    left: innerHeight,
+                }}>
                     <span className='popUpText'>Podaj swoje imię / nick</span>
                     <form onSubmit={this.handleSubmit}>
                         <label>
@@ -67,6 +87,7 @@ class Game extends Component {
                     number={number}
                     idArray={idArray}
                     userName={userName}
+                    time={times}
                 />
             </div>
         );

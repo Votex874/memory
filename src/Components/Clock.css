@@ -1,5 +1,5 @@
 .clock {
-  width: 360px;
+  width: 500px;
   height: 500px;
   margin-top: 100px;
   display: flex;
@@ -7,13 +7,19 @@
   font-size: 150%;
   color: #FFDE00; }
   .clock .startTimer {
+    width: 80%;
     text-align: center;
     border: 3px dotted #fff;
     cursor: pointer;
-    margin: 10px 0; }
+    margin: 10px 10%; }
   .clock .timer span {
     padding-left: 25px; }
   .clock .timeGuessed {
     margin: 10px 0; }
     .clock .timeGuessed span {
       padding-left: 9px; }
+  .clock .currentUser {
+    width: 100%;
+    margin: 0 0 10px 0; }
+    .clock .currentUser span {
+      padding-left: 25px; }

@@ -6,7 +6,7 @@
     width: 1100px;
     display: flex;
     flex-direction: row;
-    margin: 0 auto 80px auto;
+    margin: 0 50px 80px 50px;
     padding-top: 40px; }
     .mainContainer .container .board {
       width: 100%;

@@ -1,23 +1,52 @@
 {
-  "bestTime": [
+"bestTimes":
+  {
+  "easy": [
     {
-      "id": 1 ,
-      "time": "230"
+      "id": 1,
+      "time": "23"
     },
     {
       "id": 2,
-      "time": "255"
+      "time": "25"
     },
     {
       "id": 3,
-      "time": "301"
+      "time": "30"
     }
   ],
-  "users":[
+  "medium": [
     {
       "id": 1,
-      "name": "Waldek",
-      "time": "203"
+      "time": "47"
+    },
+    {
+      "id": 2,
+      "time": "56"
+    },
+    {
+      "id": 3,
+      "time": "71"
+    }
+  ],
+  "hard": [
+    {
+      "id": 1,
+      "time": "141"
+    },
+    {
+      "id": 2,
+      "time": "158"
+    },
+    {
+      "id": 3,
+      "time": "196"
     }
   ]
+},
+  "users":{
+
+  }
 }
+
+
