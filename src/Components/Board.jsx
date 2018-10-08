@@ -135,7 +135,8 @@ class Board extends Component {
                                 timer: this.state.seconds,
                                 allGuessed: true,
                                 seconds: 0,
-                            })
+                            });
+
                         }
                     }
                     idArray = [];
@@ -158,7 +159,8 @@ class Board extends Component {
             array: mainArray,
             indexArray: iArray,
             identifyArray: idArray,
-        })
+        });
+        this.checkIfBeat(this.state.seconds)
     };
     handleReset = () => {
         //tworzymy nowa mape + resetuje czas
@@ -235,12 +237,54 @@ class Board extends Component {
         })
     };
 
+    checkIfBeat = (currentTime) => {
+        const {time} = this.props;
+        let bestTime = [];
+        let arrayBestTimes = [];
+        if(time){
+            for (let i = 0; i < 3; i++){
+                arrayBestTimes.push(time[i].time)
+            }
+            if(currentTime < arrayBestTimes[0]) {
+                let holdNumberOne = arrayBestTimes[0];
+                let holdNumberTwo = arrayBestTimes[1];
+                arrayBestTimes[0] = currentTime;
+                arrayBestTimes[1] = holdNumberOne;
+                arrayBestTimes[2] = holdNumberTwo;
+            }
+            else if(currentTime < arrayBestTimes[1]) {
+                let holdNumberOne = arrayBestTimes[1];
+                arrayBestTimes[1] = currentTime;
+                arrayBestTimes[2] = holdNumberOne;
+            }
+            else if(currentTime < arrayBestTimes[2]) {
+                arrayBestTimes[2] = currentTime;
+            }
+
+            bestTime = arrayBestTimes.map((e,i) => {
+                return {
+                    id: i,
+                    time: `${e}`,
+                }
+            });
+            console.log(bestTime, arrayBestTimes)
+
+            fetch('http://localhost:3001/bestTimes/easy', {
+                method : 'POST',
+                body: JSON.stringify( bestTime )
+            });
+
+        }else {
+            return null;
+        }
+    };
 
 
 
     render() {
         const {seconds,number,currentLevel,allGuessed,isReseted,timer} = this.state;
-        const {userName,time} = this.props;
+        const {userName,hardTime,mediumTime,easyTime} = this.props;
+        console.log(time);
         return (
             <div className='mainContainer'>
                 <div className="container">
@@ -257,7 +301,9 @@ class Board extends Component {
                         </div>
                     </div>
                     <Clock
-                        timer={timer}
+                        easyTime={easyTime}
+                        mediumTime={mediumTime}
+                        hardTime={hardTime}
                         seconds={seconds}
                         level={number}
                         currentLevel={currentLevel}

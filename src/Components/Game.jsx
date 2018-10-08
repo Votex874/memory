@@ -14,12 +14,16 @@ class Game extends Component {
         const displayStyle = 'block';
         const overflowStyle = 'hidden';
         const userName = '';
-        const times = false;
+        const easyTime = false;
+        const mediumTime = false;
+        const hardTime = false;
         const innerHeight = (window.innerHeight) + 150 + 'px';
 
         this.state ={
+            easyTime,
+            mediumTime,
+            hardTime,
             innerHeight,
-            times,
             idArray,
             number,
             valueInputName,
@@ -55,17 +59,28 @@ class Game extends Component {
     };
 
     getData = () => {
-        fetch('http://localhost:3001/bestTimes')
+        fetch('http://localhost:3001/easy')
             .then( resp => resp.json())
             .then( bestTimes => this.setState({
-                times: bestTimes,
+                easyTime: bestTimes,
+            }));
+        fetch('http://localhost:3001/medium')
+            .then( resp => resp.json())
+            .then( bestTimes => this.setState({
+                mediumTime: bestTimes,
+            }));
+        fetch('http://localhost:3001/hard')
+            .then( resp => resp.json())
+            .then( bestTimes => this.setState({
+                hardTime: bestTimes,
+                isLoading: true,
             }));
     };
 
 
+
     render() {
-        const  {number, idArray,valueInputName,displayStyle,overflowStyle,userName,times,innerHeight} = this.state;
-        console.log(innerHeight);
+        const  {number, idArray,valueInputName,displayStyle,overflowStyle,userName,easyTime,hardTime,mediumTime,innerHeight} = this.state;
         return (
             <div className='gameContainer' style={{overflow: overflowStyle}}>
                 <div className="disableAll" style={{display: displayStyle}}>
@@ -87,7 +102,9 @@ class Game extends Component {
                     number={number}
                     idArray={idArray}
                     userName={userName}
-                    time={times}
+                    easyTime={easyTime}
+                    mediumTime={mediumTime}
+                    hardTime={hardTime}
                 />
             </div>
         );

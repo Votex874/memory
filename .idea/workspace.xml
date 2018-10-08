@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b52222e-016e-447c-82bf-93ce4abdf89b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Board.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Board.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Clock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Clock.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Game.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Game.jsx" afterDir="false" />
     </list>
@@ -34,8 +36,8 @@
           <file leaf-file-name="Game.jsx" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Components/Game.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+                <state relative-caret-position="294">
+                  <caret line="104" column="20" selection-start-line="104" selection-start-column="20" selection-end-line="106" selection-end-column="39" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -43,17 +45,16 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Board.jsx" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Board.jsx" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Components/Board.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+                <state relative-caret-position="304">
+                  <caret line="305" column="43" selection-start-line="305" selection-start-column="43" selection-end-line="305" selection-end-column="43" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                     <element signature="e#1052#1607#0" />
                     <element signature="e#1635#2893#0" />
                     <element signature="e#2916#3111#0" />
-                    <element signature="e#3159#5476#0" />
                     <element signature="e#5502#5619#0" />
                     <element signature="e#5666#6076#0" />
                     <element signature="e#6116#6943#0" />
@@ -64,11 +65,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Clock.jsx" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Clock.jsx" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Components/Clock.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="559">
-                  <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+                <state relative-caret-position="306">
+                  <caret line="64" column="30" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
                 </state>
               </provider>
             </entry>
@@ -76,8 +77,8 @@
           <file leaf-file-name="db.json" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/db.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="765">
-                  <caret line="45" column="2" lean-forward="true" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
+                <state relative-caret-position="372">
+                  <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
                 </state>
               </provider>
             </entry>
@@ -137,13 +138,13 @@
         <option value="$PROJECT_DIR$/build/index.html" />
         <option value="$PROJECT_DIR$/src/Components/Card.scss" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/db.json" />
         <option value="$PROJECT_DIR$/src/Components/GameStyle.scss" />
         <option value="$PROJECT_DIR$/src/Components/Board.scss" />
         <option value="$PROJECT_DIR$/src/Components/Clock.scss" />
-        <option value="$PROJECT_DIR$/src/Components/Board.jsx" />
-        <option value="$PROJECT_DIR$/src/Components/Game.jsx" />
+        <option value="$PROJECT_DIR$/db.json" />
         <option value="$PROJECT_DIR$/src/Components/Clock.jsx" />
+        <option value="$PROJECT_DIR$/src/Components/Game.jsx" />
+        <option value="$PROJECT_DIR$/src/Components/Board.jsx" />
       </list>
     </option>
   </component>
@@ -255,18 +256,18 @@
       <workItem from="1538503981984" duration="605000" />
       <workItem from="1538651759734" duration="8863000" />
       <workItem from="1538662768278" duration="21356000" />
-      <workItem from="1538915912134" duration="14409000" />
+      <workItem from="1538915912134" duration="23947000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126806000" />
+    <option name="totallyTimeSpent" value="136344000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="5" width="1932" height="779" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1467793" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.1467793" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3298193" />
@@ -286,6 +287,27 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1467793" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TypeScript" order="9" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3298193" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -308,7 +330,6 @@
             <element signature="e#1052#1607#0" />
             <element signature="e#1635#2893#0" />
             <element signature="e#2916#3111#0" />
-            <element signature="e#3159#5476#0" />
             <element signature="e#5502#5619#0" />
             <element signature="e#5666#6076#0" />
             <element signature="e#6116#6943#0" />
@@ -351,7 +372,6 @@
             <element signature="e#1052#1607#0" />
             <element signature="e#1635#2893#0" />
             <element signature="e#2916#3111#0" />
-            <element signature="e#3159#5476#0" />
             <element signature="e#5502#5619#0" />
             <element signature="e#5666#6076#0" />
             <element signature="e#6116#6943#0" />
@@ -394,7 +414,6 @@
             <element signature="e#1052#1607#0" />
             <element signature="e#1635#2893#0" />
             <element signature="e#2916#3111#0" />
-            <element signature="e#3159#5476#0" />
             <element signature="e#5502#5619#0" />
             <element signature="e#5666#6076#0" />
             <element signature="e#6116#6943#0" />
@@ -437,7 +456,6 @@
             <element signature="e#1052#1607#0" />
             <element signature="e#1635#2893#0" />
             <element signature="e#2916#3111#0" />
-            <element signature="e#3159#5476#0" />
             <element signature="e#5502#5619#0" />
             <element signature="e#5666#6076#0" />
             <element signature="e#6116#6943#0" />
@@ -480,7 +498,6 @@
             <element signature="e#1052#1607#0" />
             <element signature="e#1635#2893#0" />
             <element signature="e#2916#3111#0" />
-            <element signature="e#3159#5476#0" />
             <element signature="e#5502#5619#0" />
             <element signature="e#5666#6076#0" />
             <element signature="e#6116#6943#0" />
@@ -530,7 +547,6 @@
             <element signature="e#1052#1607#0" />
             <element signature="e#1635#2893#0" />
             <element signature="e#2916#3111#0" />
-            <element signature="e#3159#5476#0" />
             <element signature="e#5502#5619#0" />
             <element signature="e#5666#6076#0" />
             <element signature="e#6116#6943#0" />
@@ -566,7 +582,6 @@
             <element signature="e#1052#1607#0" />
             <element signature="e#1635#2893#0" />
             <element signature="e#2916#3111#0" />
-            <element signature="e#3159#5476#0" />
             <element signature="e#5502#5619#0" />
             <element signature="e#5666#6076#0" />
             <element signature="e#6116#6943#0" />
@@ -663,46 +678,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Clock.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="64" column="30" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Game.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+        <state relative-caret-position="294">
+          <caret line="104" column="20" selection-start-line="104" selection-start-column="20" selection-end-line="106" selection-end-column="39" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="2" lean-forward="true" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Board.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        <state relative-caret-position="304">
+          <caret line="305" column="43" selection-start-line="305" selection-start-column="43" selection-end-line="305" selection-end-column="43" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#1052#1607#0" />
             <element signature="e#1635#2893#0" />
             <element signature="e#2916#3111#0" />
-            <element signature="e#3159#5476#0" />
             <element signature="e#5502#5619#0" />
             <element signature="e#5666#6076#0" />
             <element signature="e#6116#6943#0" />
             <element signature="e#6973#7584#0" />
             <element signature="e#7608#7896#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Clock.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
         </state>
       </provider>
     </entry>
