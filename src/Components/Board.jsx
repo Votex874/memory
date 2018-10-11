@@ -136,7 +136,7 @@ class Board extends Component {
                                 allGuessed: true,
                                 seconds: 0,
                             });
-
+                            this.checkIfBeat(this.state.seconds);
                         }
                     }
                     idArray = [];
@@ -160,7 +160,7 @@ class Board extends Component {
             indexArray: iArray,
             identifyArray: idArray,
         });
-        this.checkIfBeat(this.state.seconds)
+        this.checkIfBeat(this.state.seconds);
     };
     handleReset = () => {
         //tworzymy nowa mape + resetuje czas
@@ -238,45 +238,100 @@ class Board extends Component {
     };
 
     checkIfBeat = (currentTime) => {
-        const {time} = this.props;
+        const {easyTime,mediumTime,hardTime} = this.props;
+        const {currentLevel} = this.state;
+        let actuallTime;
+        let actuallLevel;
+        let id;
+
+
+        switch (currentLevel) {
+            case 'Łatwy':
+                actuallTime = this.replaceBestTime(currentTime,easyTime);
+                actuallLevel = 'easy';
+                id = 1;
+                fetch(`http://localhost:3001/bestTimes/${id}`, {
+                    method: 'put',
+                    headers: {'Content-Type': 'application/json; charset=UTF-8'},
+                    body: JSON.stringify( {easy: actuallTime} )
+                })
+                    .then( resp => {
+                        console.log(resp)
+                    })
+                break;
+            case 'Średni':
+                actuallTime = this.replaceBestTime(currentTime,mediumTime);
+                actuallLevel = 'medium';
+                id = 2;
+                fetch(`http://localhost:3001/bestTimes/${id}`, {
+                    method: 'put',
+                    headers: {'Content-Type': 'application/json; charset=UTF-8'},
+                    body: JSON.stringify( {medium: actuallTime} )
+                })
+                    .then( resp => {
+                        console.log(resp)
+                    })
+                break;
+            case 'Trudny':
+                actuallTime = this.replaceBestTime(currentTime,hardTime);
+                actuallLevel = 'hard';
+                id = 3;
+                fetch(`http://localhost:3001/bestTimes/${id}`, {
+                    method: 'put',
+                    headers: {'Content-Type': 'application/json; charset=UTF-8'},
+                    body: JSON.stringify( {hard: actuallTime} )
+                })
+                    .then( resp => {
+                        console.log(resp)
+                    })
+                break;
+            default:
+                actuallTime = null;
+                actuallLevel = null;
+                break;
+            }
+
+            console.log(JSON.stringify(actuallTime));
+            console.log(actuallTime)
+        console.log(this.props.easyTime);
+        console.log(`http://localhost:3001/${actuallLevel}`);
+
+
+
+
+
+        };
+    replaceBestTime = (currentTime, currentData) =>{
         let bestTime = [];
         let arrayBestTimes = [];
-        if(time){
-            for (let i = 0; i < 3; i++){
-                arrayBestTimes.push(time[i].time)
-            }
-            if(currentTime < arrayBestTimes[0]) {
-                let holdNumberOne = arrayBestTimes[0];
-                let holdNumberTwo = arrayBestTimes[1];
-                arrayBestTimes[0] = currentTime;
-                arrayBestTimes[1] = holdNumberOne;
-                arrayBestTimes[2] = holdNumberTwo;
-            }
-            else if(currentTime < arrayBestTimes[1]) {
-                let holdNumberOne = arrayBestTimes[1];
-                arrayBestTimes[1] = currentTime;
-                arrayBestTimes[2] = holdNumberOne;
-            }
-            else if(currentTime < arrayBestTimes[2]) {
-                arrayBestTimes[2] = currentTime;
-            }
-
-            bestTime = arrayBestTimes.map((e,i) => {
-                return {
-                    id: i,
-                    time: `${e}`,
-                }
-            });
-            console.log(bestTime, arrayBestTimes)
-
-            fetch('http://localhost:3001/bestTimes/easy', {
-                method : 'POST',
-                body: JSON.stringify( bestTime )
-            });
-
-        }else {
-            return null;
+        console.log(currentTime)
+        console.log(currentData)
+        for (let i = 0; i < 3; i++){
+            arrayBestTimes.push(currentData.easy[i].time)
         }
+        if(currentTime < arrayBestTimes[0]) {
+            let holdNumberOne = arrayBestTimes[0];
+            let holdNumberTwo = arrayBestTimes[1];
+            arrayBestTimes[0] = currentTime;
+            arrayBestTimes[1] = holdNumberOne;
+            arrayBestTimes[2] = holdNumberTwo;
+        }
+        else if(currentTime < arrayBestTimes[1]) {
+            let holdNumberOne = arrayBestTimes[1];
+            arrayBestTimes[1] = currentTime;
+            arrayBestTimes[2] = holdNumberOne;
+        }
+        else if(currentTime < arrayBestTimes[2]) {
+            arrayBestTimes[2] = currentTime;
+        }
+
+        bestTime = arrayBestTimes.map((e,i) => {
+            return {
+                id: i +1,
+                time: `${e}`,
+            }
+        });
+        return bestTime
     };
 
 
@@ -284,7 +339,7 @@ class Board extends Component {
     render() {
         const {seconds,number,currentLevel,allGuessed,isReseted,timer} = this.state;
         const {userName,hardTime,mediumTime,easyTime} = this.props;
-        console.log(time);
+
         return (
             <div className='mainContainer'>
                 <div className="container">
@@ -304,6 +359,7 @@ class Board extends Component {
                         easyTime={easyTime}
                         mediumTime={mediumTime}
                         hardTime={hardTime}
+                        timer={timer}
                         seconds={seconds}
                         level={number}
                         currentLevel={currentLevel}
@@ -311,7 +367,6 @@ class Board extends Component {
                         onStart={this.handleStartClock}
                         isReseted={isReseted}
                         userName={userName}
-                        data={time}
                     />
                 </div>
                 <div>

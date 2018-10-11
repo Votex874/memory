@@ -43,26 +43,26 @@ class Clock extends Component {
     };
 
     createListOfBestTime = () => {
-      const {data,currentLevel} = this.props;
+      const {easyTime,mediumTime,hardTime,currentLevel} = this.props;
       let list;
-      if(data) {
+      if(easyTime && mediumTime && hardTime) {
           switch (currentLevel) {
               case 'Łatwy':
-                  list = data.map( e => {
+                  list = easyTime.easy.map( e => {
                      return <li className='bestTime' key={e.id}>
                         {this.createTimer(e.time)}
                   </li>
                   });
                   break;
               case 'Średni':
-                  list = data.map( e => {
+                  list = mediumTime.medium.map( e => {
                       return <li className='bestTime' key={e.id}>
                           {this.createTimer(e.time)}
                       </li>
                   });
                   break;
               case 'Trudny':
-                  list = data.map( e => {
+                  list = hardTime.hard.map( e => {
                       return <li className='bestTime' key={e.id}>
                           {this.createTimer(e.time)}
                       </li>

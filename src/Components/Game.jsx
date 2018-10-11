@@ -38,7 +38,6 @@ class Game extends Component {
           valueInputName: event.target.value,
       })
     };
-
     handleSubmit = (event) =>{
         event.preventDefault();
         if(this.state.valueInputName.length > 0){
@@ -52,24 +51,23 @@ class Game extends Component {
             return null;
         }
     };
-
     componentDidMount = () => {
         this.getData();
 
     };
 
     getData = () => {
-        fetch('http://localhost:3001/easy')
+        fetch('http://localhost:3001/bestTimes/1')
             .then( resp => resp.json())
             .then( bestTimes => this.setState({
                 easyTime: bestTimes,
             }));
-        fetch('http://localhost:3001/medium')
+        fetch('http://localhost:3001/bestTimes/2')
             .then( resp => resp.json())
             .then( bestTimes => this.setState({
                 mediumTime: bestTimes,
             }));
-        fetch('http://localhost:3001/hard')
+        fetch('http://localhost:3001/bestTimes/3')
             .then( resp => resp.json())
             .then( bestTimes => this.setState({
                 hardTime: bestTimes,
