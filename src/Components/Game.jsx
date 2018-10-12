@@ -17,7 +17,7 @@ class Game extends Component {
         const easyTime = false;
         const mediumTime = false;
         const hardTime = false;
-        const innerHeight = (window.innerHeight) + 150 + 'px';
+        const innerHeight = (window.innerHeight) + 150;
 
         this.state ={
             easyTime,
@@ -73,6 +73,10 @@ class Game extends Component {
                 hardTime: bestTimes,
                 isLoading: true,
             }));
+
+        fetch('http://localhost:3001/users')
+            .then( resp => resp.json())
+            .then( usersName => console.log(usersName[0].name));
     };
 
 
@@ -86,7 +90,7 @@ class Game extends Component {
                 </div>
                 <div className="box" style={{
                     display: displayStyle,
-                    left: innerHeight,
+                    left: `${innerHeight}px`,
                 }}>
                     <span className='popUpText'>Podaj swoje imię / nick</span>
                     <form onSubmit={this.handleSubmit}>

@@ -51,6 +51,7 @@ class Clock extends Component {
                   list = easyTime.easy.map( e => {
                      return <li className='bestTime' key={e.id}>
                         {this.createTimer(e.time)}
+                         <span className='userName'>{e.user}</span>
                   </li>
                   });
                   break;
@@ -58,6 +59,7 @@ class Clock extends Component {
                   list = mediumTime.medium.map( e => {
                       return <li className='bestTime' key={e.id}>
                           {this.createTimer(e.time)}
+                          <span className='userName'>{e.user}</span>
                       </li>
                   });
                   break;
@@ -65,6 +67,7 @@ class Clock extends Component {
                   list = hardTime.hard.map( e => {
                       return <li className='bestTime' key={e.id}>
                           {this.createTimer(e.time)}
+                          <span className='userName'>{e.user}</span>
                       </li>
                   });
                   break;

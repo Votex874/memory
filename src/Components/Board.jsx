@@ -160,7 +160,6 @@ class Board extends Component {
             indexArray: iArray,
             identifyArray: idArray,
         });
-        this.checkIfBeat(this.state.seconds);
     };
     handleReset = () => {
         //tworzymy nowa mape + resetuje czas
@@ -240,101 +239,93 @@ class Board extends Component {
     checkIfBeat = (currentTime) => {
         const {easyTime,mediumTime,hardTime} = this.props;
         const {currentLevel} = this.state;
-        let actuallTime;
-        let actuallLevel;
-        let id;
-
+        let currentTarget;
 
         switch (currentLevel) {
             case 'Łatwy':
-                actuallTime = this.replaceBestTime(currentTime,easyTime);
-                actuallLevel = 'easy';
-                id = 1;
-                fetch(`http://localhost:3001/bestTimes/${id}`, {
+                currentTarget = this.replaceBestTime(currentTime,easyTime,'easy');
+                fetch(`http://localhost:3001/bestTimes/1`, {
                     method: 'put',
                     headers: {'Content-Type': 'application/json; charset=UTF-8'},
-                    body: JSON.stringify( {easy: actuallTime} )
-                })
-                    .then( resp => {
-                        console.log(resp)
-                    })
+                    body: JSON.stringify( {easy: currentTarget} )
+                });
                 break;
             case 'Średni':
-                actuallTime = this.replaceBestTime(currentTime,mediumTime);
-                actuallLevel = 'medium';
-                id = 2;
-                fetch(`http://localhost:3001/bestTimes/${id}`, {
+                currentTarget = this.replaceBestTime(currentTime,mediumTime,'medium');
+                fetch(`http://localhost:3001/bestTimes/2`, {
                     method: 'put',
                     headers: {'Content-Type': 'application/json; charset=UTF-8'},
-                    body: JSON.stringify( {medium: actuallTime} )
-                })
-                    .then( resp => {
-                        console.log(resp)
-                    })
+                    body: JSON.stringify( {medium: currentTarget} )
+                });
+
                 break;
             case 'Trudny':
-                actuallTime = this.replaceBestTime(currentTime,hardTime);
-                actuallLevel = 'hard';
-                id = 3;
-                fetch(`http://localhost:3001/bestTimes/${id}`, {
+                currentTarget = this.replaceBestTime(currentTime,hardTime, 'hard');
+                fetch(`http://localhost:3001/bestTimes/3`, {
                     method: 'put',
                     headers: {'Content-Type': 'application/json; charset=UTF-8'},
-                    body: JSON.stringify( {hard: actuallTime} )
-                })
-                    .then( resp => {
-                        console.log(resp)
-                    })
+                    body: JSON.stringify( {hard: currentTarget} )
+                });
                 break;
             default:
-                actuallTime = null;
-                actuallLevel = null;
+                currentTarget = null;
                 break;
             }
-
-            console.log(JSON.stringify(actuallTime));
-            console.log(actuallTime)
-        console.log(this.props.easyTime);
-        console.log(`http://localhost:3001/${actuallLevel}`);
-
-
-
-
-
         };
-    replaceBestTime = (currentTime, currentData) =>{
-        let bestTime = [];
+    replaceBestTime = (currentTime, currentData,currentLevel) =>{
         let arrayBestTimes = [];
-        console.log(currentTime)
-        console.log(currentData)
-        for (let i = 0; i < 3; i++){
-            arrayBestTimes.push(currentData.easy[i].time)
+
+        switch (currentLevel) {
+            case 'easy':
+                for (let i = 0; i < 3; i++){
+                    arrayBestTimes.push({
+                        time: currentData.easy[i].time,
+                        user: currentData.easy[i].user
+                    })
+                }
+                break;
+            case 'medium':
+                for (let i = 0; i < 3; i++) {
+                    arrayBestTimes.push({
+                        time: currentData.medium[i].time,
+                        user: currentData.medium[i].user
+                    })
+                }
+                break;
+            case 'hard':
+                for (let i = 0; i < 3; i++){
+                    arrayBestTimes.push({
+                        time: currentData.hard[i].time,
+                        user: currentData.hard[i].user
+                    })
+                }
+                break;
+            default:
+                arrayBestTimes = null;
         }
-        if(currentTime < arrayBestTimes[0]) {
-            let holdNumberOne = arrayBestTimes[0];
-            let holdNumberTwo = arrayBestTimes[1];
-            arrayBestTimes[0] = currentTime;
+        if(currentTime < arrayBestTimes[0].time) {
+            let holdNumberOne = {time: arrayBestTimes[0].time, user: arrayBestTimes[0].user};
+            let holdNumberTwo = {time: arrayBestTimes[1].time, user: arrayBestTimes[1].user};
+            arrayBestTimes[0] = {time: currentTime, user: this.props.userName};
             arrayBestTimes[1] = holdNumberOne;
             arrayBestTimes[2] = holdNumberTwo;
         }
-        else if(currentTime < arrayBestTimes[1]) {
-            let holdNumberOne = arrayBestTimes[1];
-            arrayBestTimes[1] = currentTime;
+        else if(currentTime < arrayBestTimes[1].time) {
+            let holdNumberOne = {time: arrayBestTimes[1].time, user: arrayBestTimes[1].user};
+            arrayBestTimes[1] = {time: currentTime, user: this.props.userName};
             arrayBestTimes[2] = holdNumberOne;
         }
-        else if(currentTime < arrayBestTimes[2]) {
-            arrayBestTimes[2] = currentTime;
+        else if(currentTime < arrayBestTimes[2].time) {
+            arrayBestTimes[2] = {time: currentTime, user: this.props.userName};
         }
-
-        bestTime = arrayBestTimes.map((e,i) => {
+        return arrayBestTimes.map((e,i) => {
             return {
                 id: i +1,
-                time: `${e}`,
+                time: e.time,
+                user: e.user
             }
         });
-        return bestTime
     };
-
-
 
     render() {
         const {seconds,number,currentLevel,allGuessed,isReseted,timer} = this.state;
