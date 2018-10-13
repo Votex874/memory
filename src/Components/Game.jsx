@@ -18,8 +18,13 @@ class Game extends Component {
         const mediumTime = false;
         const hardTime = false;
         const innerHeight = (window.innerHeight) + 150;
+        const users = null;
+        const userTime = null;
+        const isUserInAPI = false;
 
         this.state ={
+            userTime,
+            users,
             easyTime,
             mediumTime,
             hardTime,
@@ -50,10 +55,24 @@ class Game extends Component {
         }else{
             return null;
         }
+        fetch('http://localhost:3001/users')
+            .then( resp => resp.json())
+            .then( usersName => {
+                this.setState({
+                    users: usersName
+                });
+                usersName.forEach((e) => {
+                    if(e.name.indexOf(this.state.userName) > -1) {
+                        this.setState({
+                            userTime: e.time,
+                            isUserInAPI: true,
+                        })
+                        }
+                })
+            })
     };
     componentDidMount = () => {
         this.getData();
-
     };
 
     getData = () => {
@@ -73,16 +92,12 @@ class Game extends Component {
                 hardTime: bestTimes,
                 isLoading: true,
             }));
-
-        fetch('http://localhost:3001/users')
-            .then( resp => resp.json())
-            .then( usersName => console.log(usersName[0].name));
     };
 
 
 
     render() {
-        const  {number, idArray,valueInputName,displayStyle,overflowStyle,userName,easyTime,hardTime,mediumTime,innerHeight} = this.state;
+        const  {number, idArray,valueInputName,displayStyle,overflowStyle,userName,easyTime,hardTime,mediumTime,innerHeight,userTime,isUserInAPI} = this.state;
         return (
             <div className='gameContainer' style={{overflow: overflowStyle}}>
                 <div className="disableAll" style={{display: displayStyle}}>
@@ -104,9 +119,11 @@ class Game extends Component {
                     number={number}
                     idArray={idArray}
                     userName={userName}
+                    userTime={userTime}
                     easyTime={easyTime}
                     mediumTime={mediumTime}
                     hardTime={hardTime}
+                    isUserInAPI={isUserInAPI}
                 />
             </div>
         );

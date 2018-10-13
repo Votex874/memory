@@ -15,18 +15,18 @@ class Clock extends Component {
     };
 
     createTimer = (time) => {
-        const sec = time;
-        const minutes = ~~(sec / 60);
-        const seconds = sec - (minutes * 60);
+        const wholeTime = time;
+        const minutes = ~~(wholeTime / 60);
+        const seconds = wholeTime - (minutes * 60);
         let timer;
-        if(sec >= 60 && sec <= 600){
+        if(wholeTime >= 60 && wholeTime <= 600){
             if(seconds < 10) {
                 timer = <span>{`0${minutes}:0${seconds}`}</span>
             }else{
                 timer = <span>{`0${minutes}:${seconds}`}</span>
             }
 
-        }else if(sec < 60){
+        }else if(wholeTime < 60){
             if(seconds < 10){
                 timer = <span>{`0${minutes}:0${seconds}`}</span>
             }else{
@@ -82,13 +82,26 @@ class Clock extends Component {
       return list
     };
 
+    createGuessedTime = () => {
+      const {userTime, timer} = this.props;
+      let currentTime;
+      if(userTime === null){
+          currentTime = timer;
+      }else if(timer !== 0 && timer < userTime) {
+          currentTime = timer
+      }else{
+          currentTime = userTime
+      }
+        return  this.createTimer(currentTime);
+    };
+
     render() {
         return (
             <div className='clock'>
                 <button className='startTimer' onClick={() => this.handleStartClock(this.props.isReseted)} >Start</button>
                 <span className='currentUser'>Aktualnie gra: <span>{this.props.userName}</span></span>
                 <span className='timer'>Aktualny czas: <span>{this.createTimer(this.props.seconds)}</span></span>
-                <span className='timeGuessed'>Odgadłeś karty w: <span>{this.createTimer(this.props.timer)}</span></span>
+                <span className='timeGuessed'>Odgadłeś karty w: <span>{this.createGuessedTime()}</span></span>
                 <ul>
                     {this.createListOfBestTime()}
                 </ul>

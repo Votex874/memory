@@ -23,6 +23,7 @@ class Board extends Component {
         const isReseted = false;
 
 
+
         this.state = {
             array,
             indexArray,
@@ -241,9 +242,12 @@ class Board extends Component {
         const {currentLevel} = this.state;
         let currentTarget;
 
+        this.checkIfUserWas(currentTime);
+
         switch (currentLevel) {
             case 'Łatwy':
                 currentTarget = this.replaceBestTime(currentTime,easyTime,'easy');
+                console.log(currentTarget)
                 fetch(`http://localhost:3001/bestTimes/1`, {
                     method: 'put',
                     headers: {'Content-Type': 'application/json; charset=UTF-8'},
@@ -274,6 +278,7 @@ class Board extends Component {
         };
     replaceBestTime = (currentTime, currentData,currentLevel) =>{
         let arrayBestTimes = [];
+        const {userName} = this.props;
 
         switch (currentLevel) {
             case 'easy':
@@ -306,17 +311,17 @@ class Board extends Component {
         if(currentTime < arrayBestTimes[0].time) {
             let holdNumberOne = {time: arrayBestTimes[0].time, user: arrayBestTimes[0].user};
             let holdNumberTwo = {time: arrayBestTimes[1].time, user: arrayBestTimes[1].user};
-            arrayBestTimes[0] = {time: currentTime, user: this.props.userName};
+            arrayBestTimes[0] = {time: currentTime, user: userName};
             arrayBestTimes[1] = holdNumberOne;
             arrayBestTimes[2] = holdNumberTwo;
         }
         else if(currentTime < arrayBestTimes[1].time) {
             let holdNumberOne = {time: arrayBestTimes[1].time, user: arrayBestTimes[1].user};
-            arrayBestTimes[1] = {time: currentTime, user: this.props.userName};
+            arrayBestTimes[1] = {time: currentTime, user: userName};
             arrayBestTimes[2] = holdNumberOne;
         }
         else if(currentTime < arrayBestTimes[2].time) {
-            arrayBestTimes[2] = {time: currentTime, user: this.props.userName};
+            arrayBestTimes[2] = {time: currentTime, user: userName};
         }
         return arrayBestTimes.map((e,i) => {
             return {
@@ -326,11 +331,23 @@ class Board extends Component {
             }
         });
     };
+    checkIfUserWas = (currentTime) => {
+      if(!this.props.isUserInAPI){
+          const name = this.props.userName;
+          fetch(`http://localhost:3001/users`, {
+              method: 'post',
+              headers: {'Content-Type': 'application/json; charset=UTF-8'},
+              body: JSON.stringify( {
+                  name: name,
+                  time: currentTime
+              } )
+          })
+      }
+    };
 
     render() {
         const {seconds,number,currentLevel,allGuessed,isReseted,timer} = this.state;
-        const {userName,hardTime,mediumTime,easyTime} = this.props;
-
+        const {userName,hardTime,mediumTime,easyTime,userTime} = this.props;
         return (
             <div className='mainContainer'>
                 <div className="container">
@@ -358,6 +375,7 @@ class Board extends Component {
                         onStart={this.handleStartClock}
                         isReseted={isReseted}
                         userName={userName}
+                        userTime={userTime}
                     />
                 </div>
                 <div>

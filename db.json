@@ -4,18 +4,18 @@
       "easy": [
         {
           "id": 1,
-          "time": 14,
-          "user": "Sebastian Soroczyński "
+          "time": 11,
+          "user": "cosik"
         },
         {
           "id": 2,
-          "time": 18,
-          "user": "Sebastian Soroczyński  "
+          "time": 11,
+          "user": "cosik"
         },
         {
           "id": 3,
-          "time": 19,
-          "user": "Marcin Majkut"
+          "time": 14,
+          "user": "Sebastian Soroczyński "
         }
       ],
       "id": 1
@@ -64,7 +64,33 @@
   "users": [
     {
       "id": 1,
-      "name": "Sebek"
+      "name": "urban",
+      "time": 20
+    },
+    {
+      "name": "ogrodek",
+      "time": 20,
+      "id": 2
+    },
+    {
+      "name": "urbann",
+      "time": 16,
+      "id": 3
+    },
+    {
+      "name": "Martyna to głąb",
+      "time": 13,
+      "id": 4
+    },
+    {
+      "name": "cosik",
+      "time": 23,
+      "id": 5
+    },
+    {
+      "name": "co tam",
+      "time": 19,
+      "id": 6
     }
   ]
 }
