@@ -4,18 +4,18 @@
       "easy": [
         {
           "id": 1,
-          "time": 11,
-          "user": "cosik"
+          "time": 9,
+          "user": "Sebastian Soroczyński  "
         },
         {
           "id": 2,
-          "time": 11,
-          "user": "cosik"
+          "time": 9,
+          "user": "Jarek"
         },
         {
           "id": 3,
-          "time": 14,
-          "user": "Sebastian Soroczyński "
+          "time": 11,
+          "user": "cosik"
         }
       ],
       "id": 1
@@ -34,8 +34,8 @@
         },
         {
           "id": 3,
-          "time": 31,
-          "user": "Sebastian Soroczyński  "
+          "time": 321,
+          "user": "urban"
         }
       ],
       "id": 2
@@ -54,7 +54,7 @@
         },
         {
           "id": 3,
-          "time": 39,
+          "time": 391,
           "user": "Sebastian Soroczyński  "
         }
       ],
@@ -68,29 +68,14 @@
       "time": 20
     },
     {
-      "name": "ogrodek",
-      "time": 20,
+      "name": "Jarek",
+      "time": 15,
       "id": 2
     },
     {
-      "name": "urbann",
-      "time": 16,
-      "id": 3
-    },
-    {
-      "name": "Martyna to głąb",
-      "time": 13,
-      "id": 4
-    },
-    {
       "name": "cosik",
-      "time": 23,
-      "id": 5
-    },
-    {
-      "name": "co tam",
-      "time": 19,
-      "id": 6
+      "time": 0,
+      "id": 3
     }
   ]
 }

@@ -9,20 +9,18 @@ class Board extends Component {
     constructor(props){
         super(props);
 
-        const array = this.createMemoryArray(this.props.number,this.props.idArray);
-        const indexArray = [];
-        const identifyArray = [];
-        const allGuessed = false;
-        const widthBoard = 6;
-        const number = this.props.number;
-        const levels = [12,18,24];
-        const nameLevels = ['Łatwy', 'Średni', 'Trudny'];
-        const currentLevel = 'Łatwy';
+        const array = this.createMemoryArray(this.props.number,this.props.idArray); //tworzenie planszy na podstawie ilosci kart i indexow
+        const indexArray = []; // pusta tablica ktora przechowywuje indexy
+        const identifyArray = []; //pusta tablica przechowuje id
+        const allGuessed = false; //wartosc czy plansza zostala odgadnieta
+        const widthBoard = 6; // ilosc w jednym rzedzie kart
+        const number = this.props.number; //numer ustawiony domyslnie na poziom easy
+        const levels = [12,18,24]; //tablica przetrzymujaca ilosc kart
+        const nameLevels = ['Łatwy', 'Średni', 'Trudny']; //tablica z nazwami poziomów
+        const currentLevel = 'Łatwy'; //obecny poziom
         const seconds = 0;
-        const timer = 0;
-        const isReseted = false;
-
-
+        const timer = 0; //zmienna przetrzymujaca czas z jaka uzytkownik odgadl plansze
+        const isReseted = false; //przechowuje infomacje czy uzytkownik zresetował mape
 
         this.state = {
             array,
@@ -45,9 +43,7 @@ class Board extends Component {
         // bedzie sprawdzał program czy sa odkryte karty czy nie, przekazuje z propsa id danej karty
         const identifyArray = idArray.slice(0, number);
         this.shuffle(identifyArray);
-
         let array = [];
-
         for (let i = 0; i < number; i++) {
             array.push({
                 flipped: false,
@@ -58,6 +54,7 @@ class Board extends Component {
         return array;
     };
     creatingBoard = () => {
+        //tworzy mape pojedynczych kart
         const {widthBoard, array} = this.state;
         const {number} = this.state;
         //pobieram ilosc kart i dziele tak aby wyszly mi wiersze
@@ -103,9 +100,10 @@ class Board extends Component {
     };
 
     handleCheckFlip = (i,flipped,guessed) => {
+        //funkcja jest wywolywana gdy uzytkownik klika daną karte po kliknieciu karta jednej karty sprawdzany jest index
+        //z druga kliknieta karta o ile sa takie same karty pozostaja odkryte
         //funkcja zmienia falsz na prawde w tablicy mainArray
         const {array, indexArray,identifyArray} = this.state;
-
         const mainArray = [...array];
         //tablica która przechowuje indexy zmienionych kart
         let iArray = [...indexArray];
@@ -183,7 +181,6 @@ class Board extends Component {
     handleStartClock = (isReseted) => {
         //isReseted mowi nam czy zegar zostal zresetowany jak nie niech uruchomi inteval jezli tak niech go zatrzyma
         //i zresetuje czas
-
         if(this.state.allGuessed === true){
             clearInterval(this.idInterval);
             this.setState({
@@ -212,10 +209,6 @@ class Board extends Component {
         const {levels, nameLevels} = this.state;
         const levelArray = [...levels];
         const nameArray = [...nameLevels];
-        // for (let i = 0; i < levelArray.length; i++){
-        //     localStorage.setItem(levelArray[i],'0');
-        // }
-
         return levelArray.map((e,i) => {
             return <li
                 className='level'
@@ -225,6 +218,59 @@ class Board extends Component {
                 {nameArray[i]}
             </li>
         });
+    };
+    checkIfBeat = (currentTime) => {
+        // sprawdza czy czas zostal pobity z porownaniu z zapisanym czasem w json serverze jezeli tak updatuje go
+        const {user,wholeTime} = this.props;
+        const {currentLevel} = this.state;
+        let currentTarget;
+        if(currentTime < user.time || user.time === 0){
+            this.checkIfUserWas(currentTime,user.id);
+        }
+        switch (currentLevel) {
+            case 'Łatwy':
+                currentTarget = this.replaceBestTime(currentTime,wholeTime[0],'easy');
+                fetch(`http://localhost:3001/bestTimes/1`, {
+                    method: 'put',
+                    headers: {'Content-Type': 'application/json; charset=UTF-8'},
+                    body: JSON.stringify( {easy: currentTarget} )
+                });
+                break;
+            case 'Średni':
+                currentTarget = this.replaceBestTime(currentTime,wholeTime[1],'medium');
+                fetch(`http://localhost:3001/bestTimes/2`, {
+                    method: 'put',
+                    headers: {'Content-Type': 'application/json; charset=UTF-8'},
+                    body: JSON.stringify( {medium: currentTarget} )
+                });
+
+                break;
+            case 'Trudny':
+                currentTarget = this.replaceBestTime(currentTime,wholeTime[2], 'hard');
+                fetch(`http://localhost:3001/bestTimes/3`, {
+                    method: 'put',
+                    headers: {'Content-Type': 'application/json; charset=UTF-8'},
+                    body: JSON.stringify( {hard: currentTarget} )
+                });
+                break;
+            default:
+                currentTarget = null;
+                break;
+        }
+    };
+    checkIfUserWas = (currentTime, id) => {
+        //zostanie zaktualizowy czas uzytkownika
+        if(this.props.isUserInAPI){
+            const name = this.props.userName;
+            fetch(`http://localhost:3001/users/${id}`, {
+                method: 'put',
+                headers: {'Content-Type': 'application/json; charset=UTF-8'},
+                body: JSON.stringify( {
+                    name: name,
+                    time: currentTime
+                })
+            })
+        }
     };
     makeReset = () => {
         //tworzymy nowa mape + resetuje czas
@@ -236,50 +282,11 @@ class Board extends Component {
             seconds: 0,
         })
     };
-
-    checkIfBeat = (currentTime) => {
-        const {easyTime,mediumTime,hardTime} = this.props;
-        const {currentLevel} = this.state;
-        let currentTarget;
-
-        this.checkIfUserWas(currentTime);
-
-        switch (currentLevel) {
-            case 'Łatwy':
-                currentTarget = this.replaceBestTime(currentTime,easyTime,'easy');
-                console.log(currentTarget)
-                fetch(`http://localhost:3001/bestTimes/1`, {
-                    method: 'put',
-                    headers: {'Content-Type': 'application/json; charset=UTF-8'},
-                    body: JSON.stringify( {easy: currentTarget} )
-                });
-                break;
-            case 'Średni':
-                currentTarget = this.replaceBestTime(currentTime,mediumTime,'medium');
-                fetch(`http://localhost:3001/bestTimes/2`, {
-                    method: 'put',
-                    headers: {'Content-Type': 'application/json; charset=UTF-8'},
-                    body: JSON.stringify( {medium: currentTarget} )
-                });
-
-                break;
-            case 'Trudny':
-                currentTarget = this.replaceBestTime(currentTime,hardTime, 'hard');
-                fetch(`http://localhost:3001/bestTimes/3`, {
-                    method: 'put',
-                    headers: {'Content-Type': 'application/json; charset=UTF-8'},
-                    body: JSON.stringify( {hard: currentTarget} )
-                });
-                break;
-            default:
-                currentTarget = null;
-                break;
-            }
-        };
     replaceBestTime = (currentTime, currentData,currentLevel) =>{
+        //na podstawie wybranego poziomiu tworzy tablice oraz jezeli czas w ktorym uzytkownik odgadl plansze jest mniejszy niz z API zostaje
+        //przeslany do funkcji ktora go zaaktualizuje
         let arrayBestTimes = [];
         const {userName} = this.props;
-
         switch (currentLevel) {
             case 'easy':
                 for (let i = 0; i < 3; i++){
@@ -331,23 +338,11 @@ class Board extends Component {
             }
         });
     };
-    checkIfUserWas = (currentTime) => {
-      if(!this.props.isUserInAPI){
-          const name = this.props.userName;
-          fetch(`http://localhost:3001/users`, {
-              method: 'post',
-              headers: {'Content-Type': 'application/json; charset=UTF-8'},
-              body: JSON.stringify( {
-                  name: name,
-                  time: currentTime
-              } )
-          })
-      }
-    };
 
     render() {
         const {seconds,number,currentLevel,allGuessed,isReseted,timer} = this.state;
-        const {userName,hardTime,mediumTime,easyTime,userTime} = this.props;
+        const {userName,user,wholeTime} = this.props;
+
         return (
             <div className='mainContainer'>
                 <div className="container">
@@ -364,9 +359,6 @@ class Board extends Component {
                         </div>
                     </div>
                     <Clock
-                        easyTime={easyTime}
-                        mediumTime={mediumTime}
-                        hardTime={hardTime}
                         timer={timer}
                         seconds={seconds}
                         level={number}
@@ -375,7 +367,8 @@ class Board extends Component {
                         onStart={this.handleStartClock}
                         isReseted={isReseted}
                         userName={userName}
-                        userTime={userTime}
+                        user={user}
+                        wholeTime={wholeTime}
                     />
                 </div>
                 <div>

@@ -5,7 +5,6 @@ import './Card.css'
 class Card extends Component {
     constructor(props){
         super(props);
-
         const flippedClass = this.addFlippedClass();
 
         this.state = {
@@ -23,8 +22,6 @@ class Card extends Component {
         //funkcja która na podstawie propsu flipped dodanej nowa klase
         // lub ja usuwa dodanie klasy - daje nam efekt obrócenia karty
         const {index, flipped,guessed} = this.props;
-
-
         if(this.props.guessed){
             return (
                 <div

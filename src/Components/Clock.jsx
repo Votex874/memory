@@ -15,6 +15,7 @@ class Clock extends Component {
     };
 
     createTimer = (time) => {
+        //tworzy wyglada zerowy 00:00
         const wholeTime = time;
         const minutes = ~~(wholeTime / 60);
         const seconds = wholeTime - (minutes * 60);
@@ -43,12 +44,12 @@ class Clock extends Component {
     };
 
     createListOfBestTime = () => {
-      const {easyTime,mediumTime,hardTime,currentLevel} = this.props;
+      const {currentLevel,wholeTime} = this.props;
       let list;
-      if(easyTime && mediumTime && hardTime) {
+      if(wholeTime) {
           switch (currentLevel) {
               case 'Łatwy':
-                  list = easyTime.easy.map( e => {
+                  list = wholeTime[0].easy.map( e => {
                      return <li className='bestTime' key={e.id}>
                         {this.createTimer(e.time)}
                          <span className='userName'>{e.user}</span>
@@ -56,7 +57,7 @@ class Clock extends Component {
                   });
                   break;
               case 'Średni':
-                  list = mediumTime.medium.map( e => {
+                  list = wholeTime[1].medium.map( e => {
                       return <li className='bestTime' key={e.id}>
                           {this.createTimer(e.time)}
                           <span className='userName'>{e.user}</span>
@@ -64,14 +65,13 @@ class Clock extends Component {
                   });
                   break;
               case 'Trudny':
-                  list = hardTime.hard.map( e => {
+                  list = wholeTime[2].hard.map( e => {
                       return <li className='bestTime' key={e.id}>
                           {this.createTimer(e.time)}
                           <span className='userName'>{e.user}</span>
                       </li>
                   });
                   break;
-
               default:
                   list = null;
                   break;
@@ -83,14 +83,14 @@ class Clock extends Component {
     };
 
     createGuessedTime = () => {
-      const {userTime, timer} = this.props;
+      const {user, timer} = this.props;
       let currentTime;
-      if(userTime === null){
+      if(user.time === undefined){
           currentTime = timer;
-      }else if(timer !== 0 && timer < userTime) {
+      }else if(timer !== 0 && timer < user.time) {
           currentTime = timer
       }else{
-          currentTime = userTime
+          currentTime = user.time
       }
         return  this.createTimer(currentTime);
     };
@@ -101,7 +101,7 @@ class Clock extends Component {
                 <button className='startTimer' onClick={() => this.handleStartClock(this.props.isReseted)} >Start</button>
                 <span className='currentUser'>Aktualnie gra: <span>{this.props.userName}</span></span>
                 <span className='timer'>Aktualny czas: <span>{this.createTimer(this.props.seconds)}</span></span>
-                <span className='timeGuessed'>Odgadłeś karty w: <span>{this.createGuessedTime()}</span></span>
+                <span className='timeGuessed'>Twój najlepszy czas to: <span>{this.createGuessedTime()}</span></span>
                 <ul>
                     {this.createListOfBestTime()}
                 </ul>
