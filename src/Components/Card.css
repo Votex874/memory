@@ -1,8 +1,8 @@
 .cardContainer {
   position: relative;
-  width: 11%;
-  height: 130px;
-  margin: 15px; }
+  width: 14%;
+  height: 80%;
+  margin: 15px 0; }
   .cardContainer:nth-of-type(1) {
     margin-left: 0; }
   .cardContainer:nth-of-type(6) {
@@ -22,7 +22,7 @@
       backface-visibility: hidden;
       background-image: linear-gradient(to right, #dbba00, #e4c100, #edc900, #f6d000, #ffd800);
       text-align: center;
-      border-radius: 30px; }
+      border-radius: 10px; }
     .cardContainer .card .backCard {
       position: absolute;
       display: flex;
@@ -33,7 +33,7 @@
       backface-visibility: hidden;
       background: none;
       border: 2px solid #dbba00;
-      border-radius: 30px;
+      border-radius: 10px;
       text-align: center;
       transform: rotateY(180deg); }
       .cardContainer .card .backCard .logo0 {

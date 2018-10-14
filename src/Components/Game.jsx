@@ -16,7 +16,6 @@ class Game extends Component {
         const easyTime = false; //3 najlepsze czasy na poziomie easy
         const mediumTime = false; //3 najlepsze czasy na poziomie medium
         const hardTime = false; //3 najlepsze czasy na poziomie hard
-        const innerHeight = (window.innerHeight) + 150; // do poprawki
         const isUserInAPI = false; //wiadomosc czy uzytkownik znajduje sie w api
         const user = ""; //zmienna ktora przechowuje id oraz czas uzytkownika
         const wholeTime = false;
@@ -28,7 +27,6 @@ class Game extends Component {
             easyTime,
             mediumTime,
             hardTime,
-            innerHeight,
             idArray,
             number,
             valueInputName,
@@ -98,7 +96,7 @@ class Game extends Component {
 
     render() {
         const {
-          number, idArray,valueInputName,displayStyle,overflowStyle,userName,innerHeight,isUserInAPI,user,wholeTime
+          number, idArray,valueInputName,displayStyle,overflowStyle,userName,isUserInAPI,user,wholeTime
         } = this.state;
         return (
             <div className='gameContainer' style={{overflow: overflowStyle}}>
@@ -106,14 +104,14 @@ class Game extends Component {
                 </div>
                 <div className="box" style={{
                     display: displayStyle,
-                    left: `${innerHeight}px`,
                 }}>
-                    <span className='popUpText'>Podaj swoje imię / nick</span>
-                    <form onSubmit={this.handleSubmit}>
+                    <span className='popUpText'>Witaj w memory-game, wybierz swój poziom i staraj się o uzyskanie najlepszego wyniku.</span>
+                    <span className='popUpName'>Podaj swój nick</span>
+                    <form className='formUserName' onSubmit={this.handleSubmit}>
                         <label>
                             <input className='inputName' type="text" name="name" value={valueInputName} onChange={this.handleChangeInputName} />
                         </label>
-                        <input type="submit" value="Wyślij" />
+                        <input className='sendUserName' type="submit" value="Dodaj" />
                     </form>
                 </div>
                 <Board

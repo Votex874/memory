@@ -1,63 +1,58 @@
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%; }
+  to {
+    -webkit-mask-position: -50%; } }
+
 .mainContainer {
-  width: 100%;
-  height: 100vh;
-  background-image: radial-gradient(circle, #b87c4c, #9d6346, #7f4c3e, #603934, #412728); }
+  width: 100%; }
   .mainContainer .container {
-    width: 1100px;
+    width: 90%;
+    margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    margin: 0 50px 80px 50px;
-    padding-top: 40px; }
+    flex-direction: row; }
     .mainContainer .container .board {
       width: 100%;
       height: 100%; }
       .mainContainer .container .board .levelSelection {
-        width: 80%;
-        margin: 0 auto 50px auto;
+        width: 100%;
+        margin: 20px 0;
         display: flex;
         justify-content: space-between; }
         .mainContainer .container .board .levelSelection .level {
-          font-size: 180%;
-          margin: 20px;
+          width: 30%;
+          font-size: 1.4rem;
           list-style: none;
-          color: #FFDE00;
-          border-bottom: 2px solid #FFCB0A;
+          color: #FFF;
           letter-spacing: 2px;
-          transition: 0.5s;
           cursor: pointer; }
           .mainContainer .container .board .levelSelection .level:hover {
-            color: #fff;
-            border-bottom: 2px solid #fff; }
-      .mainContainer .container .board .containerBoard {
-        width: 90%;
-        margin: 0 auto; }
-        .mainContainer .container .board .containerBoard .result {
-          display: flex; }
-          .mainContainer .container .board .containerBoard .result .guessed {
-            font-size: 200%;
-            letter-spacing: 1px;
-            color: #fff;
-            margin: 2px 0 0 10px;
-            transition: 1s; }
-          .mainContainer .container .board .containerBoard .result .reset {
-            width: 300px;
-            height: 40px;
-            line-height: 40px;
-            font-size: 130%;
-            text-align: center;
-            border-radius: 20px;
-            border: 2px solid #FFDE00;
-            color: #FFDE00;
-            letter-spacing: 1px;
-            background: none;
-            outline: none;
-            cursor: pointer;
-            transition: 0.2s; }
-            .mainContainer .container .board .containerBoard .result .reset:hover {
-              color: #fff;
-              border: 2px solid #fff; }
-        .mainContainer .container .board .containerBoard .row {
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-          flex-direction: row; }
+            -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
+            -webkit-mask-size: 200%;
+            animation: shine 3s infinite; }
+    .mainContainer .container .containerBoard {
+      width: 100%; }
+      .mainContainer .container .containerBoard .result {
+        display: flex;
+        justify-content: center; }
+        .mainContainer .container .containerBoard .result .reset {
+          text-align: center;
+          letter-spacing: 1px;
+          color: #fff;
+          padding: 4px 10px;
+          border-radius: 10px;
+          letter-spacing: 1px;
+          border: 2px solid #fff;
+          background: none;
+          outline: none;
+          cursor: pointer; }
+          .mainContainer .container .containerBoard .result .reset:hover {
+            -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.5) 30%, #000 50%, rgba(0, 0, 0, 0.5) 70%);
+            -webkit-mask-size: 200%;
+            animation: shine 3s infinite; }
+      .mainContainer .container .containerBoard .row {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row; }

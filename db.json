@@ -4,18 +4,18 @@
       "easy": [
         {
           "id": 1,
-          "time": 9,
+          "time": 0,
           "user": "Sebastian Soroczyński  "
         },
         {
           "id": 2,
           "time": 9,
-          "user": "Jarek"
+          "user": "Sebastian Soroczyński  "
         },
         {
           "id": 3,
-          "time": 11,
-          "user": "cosik"
+          "time": 9,
+          "user": "Jarek"
         }
       ],
       "id": 1
@@ -76,6 +76,46 @@
       "name": "cosik",
       "time": 0,
       "id": 3
+    },
+    {
+      "name": " ",
+      "time": 0,
+      "id": 4
+    },
+    {
+      "name": "f",
+      "time": 0,
+      "id": 5
+    },
+    {
+      "name": "Izak",
+      "time": 0,
+      "id": 6
+    },
+    {
+      "name": "Kacper jaro jarocinski",
+      "time": 0,
+      "id": 7
+    },
+    {
+      "name": "Jasny gwint",
+      "time": 0,
+      "id": 8
+    },
+    {
+      "name": "Sebastian Soroczyński  ",
+      "time": 0,
+      "id": 9
+    },
+    {
+      "name": "fsd",
+      "time": 0,
+      "id": 10
+    },
+    {
+      "name": "dfs",
+      "time": 0,
+      "id": 11
     }
   ]
 }
