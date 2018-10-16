@@ -2,18 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b52222e-016e-447c-82bf-93ce4abdf89b" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Board.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Board.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Board.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Board.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Board.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Board.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Card.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Card.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Game.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Game.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/GameStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/GameStyle.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameStyle.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Clock.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Clock.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Clock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Clock.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Clock.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Clock.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo-memoryCard/zad_elem.pdf" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,11 +32,8 @@
           <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
+                <state relative-caret-position="51">
                   <caret line="3" selection-start-line="3" selection-end-line="3" />
-                  <folding>
-                    <element signature="e#0#41#0" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -44,7 +41,7 @@
           <file leaf-file-name="Game.jsx" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Components/Game.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="110">
+                <state relative-caret-position="1785">
                   <caret line="107" column="133" selection-start-line="107" selection-start-column="133" selection-end-line="107" selection-end-column="133" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
@@ -53,23 +50,33 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Board.jsx" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Board.jsx" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Components/Board.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="399">
-                  <caret line="354" column="94" selection-start-line="354" selection-start-column="94" selection-end-line="354" selection-end-column="94" />
+                <state relative-caret-position="154">
+                  <caret line="353" column="50" selection-start-line="353" selection-start-column="50" selection-end-line="353" selection-end-column="50" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
+                    <element signature="e#1496#2049#0" />
+                    <element signature="e#2077#3375#0" />
+                    <element signature="e#3398#3593#0" />
+                    <element signature="e#3641#6224#0" />
+                    <element signature="e#6414#6824#0" />
+                    <element signature="e#6864#7690#0" />
+                    <element signature="e#7720#8205#0" />
+                    <element signature="e#8242#9930#0" />
+                    <element signature="e#9974#10432#0" />
+                    <element signature="e#10810#13054#0" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Clock.jsx" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Clock.jsx" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Components/Clock.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1819">
-                  <caret line="111" selection-start-line="111" selection-end-line="111" />
+                <state relative-caret-position="491">
+                  <caret line="121" column="59" selection-start-line="121" selection-start-column="59" selection-end-line="121" selection-end-column="59" />
                 </state>
               </provider>
             </entry>
@@ -96,11 +103,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Board.scss" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Board.scss" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Components/Board.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="379">
-                  <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+                <state>
+                  <caret selection-end-line="8" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Clock.scss" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Components/Clock.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="493">
+                  <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -108,17 +124,8 @@
           <file leaf-file-name="Card.scss" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Components/Card.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Clock.scss" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Components/Clock.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="474">
-                  <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+                <state relative-caret-position="389">
+                  <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
                 </state>
               </provider>
             </entry>
@@ -146,18 +153,18 @@
       <list>
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/Components/Clock.scss" />
         <option value="$PROJECT_DIR$/build/index.html" />
         <option value="$PROJECT_DIR$/src/Components/Card.jsx" />
         <option value="$PROJECT_DIR$/db.json" />
-        <option value="$PROJECT_DIR$/src/Components/Clock.jsx" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/Components/Game.jsx" />
         <option value="$PROJECT_DIR$/src/Components/GameStyle.scss" />
-        <option value="$PROJECT_DIR$/src/Components/Board.jsx" />
         <option value="$PROJECT_DIR$/src/Components/Card.scss" />
         <option value="$PROJECT_DIR$/src/Components/Board.scss" />
+        <option value="$PROJECT_DIR$/src/Components/Board.jsx" />
+        <option value="$PROJECT_DIR$/src/Components/Clock.scss" />
+        <option value="$PROJECT_DIR$/src/Components/Clock.jsx" />
       </list>
     </option>
   </component>
@@ -212,6 +219,12 @@
               <item name="memory" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="memory" type="b2602c69:ProjectViewProjectNode" />
+              <item name="memory" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -220,18 +233,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../optAd360-tasks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jakies wlasne projekty/todolist" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\seba-\Desktop\memory\src" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\seba-\Desktop\memory\src\Components" />
       <recent name="C:\Users\seba-\Desktop\memory\build" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\seba-\Desktop\memory\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -273,12 +286,14 @@
       <workItem from="1539254307514" duration="5801000" />
       <workItem from="1539346461734" duration="25322000" />
       <workItem from="1539457192517" duration="3905000" />
-      <workItem from="1539521877999" duration="12059000" />
+      <workItem from="1539521877999" duration="17184000" />
+      <workItem from="1539684892014" duration="1282000" />
+      <workItem from="1539710080689" duration="1770000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196396000" />
+    <option name="totallyTimeSpent" value="204573000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="5" width="1932" height="813" extended-state="0" />
@@ -323,6 +338,16 @@
           <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#1496#2049#0" />
+            <element signature="e#2077#3375#0" />
+            <element signature="e#3398#3593#0" />
+            <element signature="e#3641#6224#0" />
+            <element signature="e#6414#6824#0" />
+            <element signature="e#6864#7690#0" />
+            <element signature="e#7720#8205#0" />
+            <element signature="e#8242#9930#0" />
+            <element signature="e#9974#10432#0" />
+            <element signature="e#10810#13054#0" />
           </folding>
         </state>
       </provider>
@@ -357,6 +382,16 @@
           <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#1496#2049#0" />
+            <element signature="e#2077#3375#0" />
+            <element signature="e#3398#3593#0" />
+            <element signature="e#3641#6224#0" />
+            <element signature="e#6414#6824#0" />
+            <element signature="e#6864#7690#0" />
+            <element signature="e#7720#8205#0" />
+            <element signature="e#8242#9930#0" />
+            <element signature="e#9974#10432#0" />
+            <element signature="e#10810#13054#0" />
           </folding>
         </state>
       </provider>
@@ -391,6 +426,16 @@
           <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#1496#2049#0" />
+            <element signature="e#2077#3375#0" />
+            <element signature="e#3398#3593#0" />
+            <element signature="e#3641#6224#0" />
+            <element signature="e#6414#6824#0" />
+            <element signature="e#6864#7690#0" />
+            <element signature="e#7720#8205#0" />
+            <element signature="e#8242#9930#0" />
+            <element signature="e#9974#10432#0" />
+            <element signature="e#10810#13054#0" />
           </folding>
         </state>
       </provider>
@@ -425,6 +470,16 @@
           <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#1496#2049#0" />
+            <element signature="e#2077#3375#0" />
+            <element signature="e#3398#3593#0" />
+            <element signature="e#3641#6224#0" />
+            <element signature="e#6414#6824#0" />
+            <element signature="e#6864#7690#0" />
+            <element signature="e#7720#8205#0" />
+            <element signature="e#8242#9930#0" />
+            <element signature="e#9974#10432#0" />
+            <element signature="e#10810#13054#0" />
           </folding>
         </state>
       </provider>
@@ -459,6 +514,16 @@
           <caret line="116" column="38" lean-forward="true" selection-start-line="116" selection-start-column="38" selection-end-line="116" selection-end-column="38" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#1496#2049#0" />
+            <element signature="e#2077#3375#0" />
+            <element signature="e#3398#3593#0" />
+            <element signature="e#3641#6224#0" />
+            <element signature="e#6414#6824#0" />
+            <element signature="e#6864#7690#0" />
+            <element signature="e#7720#8205#0" />
+            <element signature="e#8242#9930#0" />
+            <element signature="e#9974#10432#0" />
+            <element signature="e#10810#13054#0" />
           </folding>
         </state>
       </provider>
@@ -500,6 +565,16 @@
           <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#1496#2049#0" />
+            <element signature="e#2077#3375#0" />
+            <element signature="e#3398#3593#0" />
+            <element signature="e#3641#6224#0" />
+            <element signature="e#6414#6824#0" />
+            <element signature="e#6864#7690#0" />
+            <element signature="e#7720#8205#0" />
+            <element signature="e#8242#9930#0" />
+            <element signature="e#9974#10432#0" />
+            <element signature="e#10810#13054#0" />
           </folding>
         </state>
       </provider>
@@ -527,6 +602,16 @@
           <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#1496#2049#0" />
+            <element signature="e#2077#3375#0" />
+            <element signature="e#3398#3593#0" />
+            <element signature="e#3641#6224#0" />
+            <element signature="e#6414#6824#0" />
+            <element signature="e#6864#7690#0" />
+            <element signature="e#7720#8205#0" />
+            <element signature="e#8242#9930#0" />
+            <element signature="e#9974#10432#0" />
+            <element signature="e#10810#13054#0" />
           </folding>
         </state>
       </provider>
@@ -559,11 +644,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="51">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -588,13 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Clock.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -610,7 +685,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Game.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
+        <state relative-caret-position="1785">
           <caret line="107" column="133" selection-start-line="107" selection-start-column="133" selection-end-line="107" selection-end-column="133" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -625,34 +700,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Card.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Board.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Board.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="354" column="94" selection-start-line="354" selection-start-column="94" selection-end-line="354" selection-end-column="94" />
+        <state relative-caret-position="154">
+          <caret line="353" column="50" selection-start-line="353" selection-start-column="50" selection-end-line="353" selection-end-column="50" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#1496#2049#0" />
+            <element signature="e#2077#3375#0" />
+            <element signature="e#3398#3593#0" />
+            <element signature="e#3641#6224#0" />
+            <element signature="e#6414#6824#0" />
+            <element signature="e#6864#7690#0" />
+            <element signature="e#7720#8205#0" />
+            <element signature="e#8242#9930#0" />
+            <element signature="e#9974#10432#0" />
+            <element signature="e#10810#13054#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Clock.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+        <state relative-caret-position="493">
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Card.scss">
+    <entry file="file://$PROJECT_DIR$/src/Components/Clock.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Board.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+        <state relative-caret-position="491">
+          <caret line="121" column="59" selection-start-line="121" selection-start-column="59" selection-end-line="121" selection-end-column="59" />
         </state>
       </provider>
     </entry>

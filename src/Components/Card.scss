@@ -1,9 +1,10 @@
 @mixin card($url){
   background-image: url($url);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
-  width: 75px;
-  height: 75px;
+  width: 40px;
+  height: 40px;
 }
 
 .cardContainer {
@@ -31,7 +32,7 @@
       width: 100%;
       height: 100%;
       backface-visibility: hidden;
-      background-image: linear-gradient(to right, #dbba00, #e4c100, #edc900, #f6d000, #ffd800);
+      background-color: #eee;
       text-align: center;
       border-radius: 10px;
     }
@@ -44,7 +45,7 @@
       height: 100%;
       backface-visibility: hidden;
       background: none;
-      border: 2px solid #dbba00;
+      border: 2px solid #eee;
       border-radius: 10px;
       text-align: center;
       transform: rotateY(180deg);
@@ -84,7 +85,63 @@
       .logo11 {
         @include card('../logo-memoryCard/react.jpg')
       }
+    }
+  }
+}
 
+@media only screen and (min-width: 426px) and (max-width: 768px){
+  .cardContainer {
+    .card{
+     .backCard{
+       .logo0 {
+         width: 50px;
+         height: 50px;
+       }
+       .logo1 {
+         width: 50px;
+         height: 50px;
+       }
+       .logo2 {
+         width: 50px;
+         height: 50px;
+       }
+       .logo3 {
+         width: 50px;
+         height: 50px;
+       }
+       .logo4 {
+         width: 50px;
+         height: 50px;
+       }
+       .logo5 {
+         width: 50px;
+         height: 50px;
+       }
+       .logo6 {
+         width: 50px;
+         height: 50px;
+       }
+       .logo7 {
+         width: 50px;
+         height: 50px;
+       }
+       .logo8 {
+         width: 50px;
+         height: 50px;
+       }
+       .logo9 {
+         width: 50px;
+         height: 50px;
+       }
+       .logo10 {
+         width: 50px;
+         height: 50px;
+       }
+       .logo11 {
+         width: 50px;
+         height: 50px;
+       }
+     }
     }
   }
 }

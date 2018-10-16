@@ -351,24 +351,22 @@ class Board extends Component {
                             {this.createLevelList()}
                         </ul>
                         <div className="containerBoard">
-                            <div className="result">
-                                <button  className='reset' onClick={this.handleReset}>Zresetuj poziom</button>
-                            </div>
                             {this.creatingBoard()}
                         </div>
                     </div>
-                    {/*<Clock*/}
-                        {/*timer={timer}*/}
-                        {/*seconds={seconds}*/}
-                        {/*level={number}*/}
-                        {/*currentLevel={currentLevel}*/}
-                        {/*guessed={allGuessed}*/}
-                        {/*onStart={this.handleStartClock}*/}
-                        {/*isReseted={isReseted}*/}
-                        {/*userName={userName}*/}
-                        {/*user={user}*/}
-                        {/*wholeTime={wholeTime}*/}
-                    {/*/>*/}
+                    <Clock
+                        timer={timer}
+                        seconds={seconds}
+                        level={number}
+                        currentLevel={currentLevel}
+                        guessed={allGuessed}
+                        onStart={this.handleStartClock}
+                        onReset={this.handleReset}
+                        isReseted={isReseted}
+                        userName={userName}
+                        user={user}
+                        wholeTime={wholeTime}
+                    />
                 </div>
                 <div>
                 </div>

@@ -10,6 +10,13 @@ class Clock extends Component {
         }
     };
 
+    handleReset = () => {
+        //przesyła informacje wyżej czy plansza została zresetowana czy nie.
+        if ( typeof this.props.onReset === 'function' ){
+            this.props.onReset("dupa");
+        }
+    };
+
     componentWillUnmount = () => {
         clearInterval(this.idInterval)
     };
@@ -98,10 +105,24 @@ class Clock extends Component {
     render() {
         return (
             <div className='clock'>
-                <button className='startTimer' onClick={() => this.handleStartClock(this.props.isReseted)} >Start</button>
-                <span className='currentUser'>Aktualnie gra: <span>{this.props.userName}</span></span>
-                <span className='timer'>Aktualny czas: <span>{this.createTimer(this.props.seconds)}</span></span>
-                <span className='timeGuessed'>Twój najlepszy czas to: <span>{this.createGuessedTime()}</span></span>
+                <div className='handleBtns'>
+                    <button className='startTimer' onClick={() => this.handleStartClock(this.props.isReseted)} >Start</button>
+                    <button className='reset' onClick={() => this.handleReset()}>Zresetuj poziom</button>
+                </div>
+                <div className="handleTimes">
+                    <span className='currentUser'>Aktualnie gra: </span>
+                    <span>{this.props.userName}</span>
+                </div>
+                <div className="handleTimes">
+                    <span className='timer'>Aktualny czas: </span>
+                    <span>{this.createTimer(this.props.seconds)}</span>
+                </div>
+                <div className="handleTimes">
+                    <span className='timeGuessed'>Twój najlepszy czas to: </span>
+                    <span>{this.createGuessedTime()}</span>
+                </div>
+
+
                 <ul>
                     {this.createListOfBestTime()}
                 </ul>
