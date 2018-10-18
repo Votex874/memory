@@ -17,41 +17,112 @@
     justify-content: space-between;
     margin-bottom: 1rem; }
     .clock .handleBtns .reset {
-      width: 54%;
+      width: 30%;
       text-align: center;
       letter-spacing: 1px;
       color: #fff;
       padding: 4px 10px;
-      border-bottom: 2px solid #fff;
+      border: 2px solid #fff;
       background: none;
       outline: none;
-      cursor: pointer; }
-      .clock .handleBtns .reset:hover {
-        -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.5) 30%, #000 50%, rgba(0, 0, 0, 0.5) 70%);
-        -webkit-mask-size: 200%;
-        animation: shine 3s infinite; }
+      cursor: pointer;
+      border-radius: 20px;
+      -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.5) 30%, #000 50%, rgba(0, 0, 0, 0.5) 70%);
+      -webkit-mask-size: 200%;
+      animation: shine 3s infinite; }
     .clock .handleBtns .startTimer {
       width: 30%;
       text-align: center;
       letter-spacing: 1px;
       color: #fff;
       padding: 4px 10px;
-      border-bottom: 2px solid #fff;
       background: none;
       outline: none;
-      cursor: pointer; }
-      .clock .handleBtns .startTimer:hover {
-        -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.5) 30%, #000 50%, rgba(0, 0, 0, 0.5) 70%);
-        -webkit-mask-size: 200%;
-        animation: shine 3s infinite; }
-  .clock .timer span {
-    padding-left: 25px; }
-  .clock .timeGuessed {
-    margin: 10px 0; }
-    .clock .timeGuessed span {
-      padding-left: 9px; }
-  .clock .currentUser {
+      cursor: pointer;
+      border: 2px solid #fff;
+      border-radius: 20px;
+      -webkit-mask-image: linear-gradient(-75deg, rgba(255, 255, 255, 0.5) 30%, #fff 50%, rgba(255, 255, 255, 0.5) 70%);
+      -webkit-mask-size: 200%;
+      animation: shine 3s infinite; }
+  .clock .handleTimes {
+    display: flex;
     width: 100%;
-    margin: 0 0 10px 0; }
-    .clock .currentUser span {
-      padding-left: 25px; }
+    justify-content: space-between;
+    border-bottom: 2px dotted #fff;
+    line-height: 40px;
+    word-wrap: break-word; }
+    .clock .handleTimes .showCurrentUser {
+      width: 76%;
+      letter-spacing: 0;
+      text-align: right; }
+  .clock .showBestTimes {
+    margin: 10px 0;
+    display: flex;
+    cursor: pointer; }
+    .clock .showBestTimes .showTimes {
+      display: block;
+      margin-right: 8px; }
+    .clock .showBestTimes i {
+      margin-top: 3px; }
+      .clock .showBestTimes i:hover {
+        color: #555; }
+  .clock .handleBestTime {
+    display: flex;
+    flex-direction: column;
+    max-height: 250px;
+    overflow-y: hidden;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.5, 1, 0.5, 1); }
+    .clock .handleBestTime .bestTime {
+      display: flex;
+      justify-content: space-between;
+      border: 2px solid #fff;
+      padding: 8px; }
+      .clock .handleBestTime .bestTime .containerTimeIndex {
+        display: flex;
+        flex-direction: row; }
+        .clock .handleBestTime .bestTime .containerTimeIndex .numberOfBestTime {
+          margin-right: 10px;
+          padding-right: 5px;
+          border-right: 2px solid #fff; }
+      .clock .handleBestTime .bestTime:nth-of-type(1) {
+        border-bottom: none; }
+      .clock .handleBestTime .bestTime:nth-of-type(2) {
+        border-bottom: none; }
+      .clock .handleBestTime .bestTime .userTime {
+        border-left: 2px solid #fff;
+        padding-left: 10px; }
+  .clock .closed {
+    max-height: 0; }
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  .clock {
+    font-size: 140%; } }
+
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+  .clock {
+    font-size: 140%;
+    display: flex;
+    flex-direction: column; }
+    .clock .holdingAllTime {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      .clock .holdingAllTime .holdingTimes {
+        width: 44%; }
+        .clock .holdingAllTime .holdingTimes .handleTimes {
+          line-height: 54px; }
+      .clock .holdingAllTime .holdingBestTimes {
+        width: 50%; } }
+
+@media only screen and (min-width: 1025px) {
+  .clock {
+    margin-top: 106px;
+    font-size: 140%;
+    display: flex;
+    flex-direction: column; }
+    .clock .holdingAllTime .holdingTimes .handleTimes {
+      line-height: 46px; }
+    .clock .holdingAllTime .holdingBestTimes {
+      margin-top: 40px; } }

@@ -64,9 +64,63 @@
 @media only screen and (min-width: 426px) and (max-width: 768px) {
   .mainContainer {
     .container {
+      .board{
+        .levelSelection{
+          .level {
+            font-size: 170%;
+          }
+        }
+      }
       .containerBoard {
         .row {
           height: 120px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+  .mainContainer {
+    .container {
+      .board{
+        .levelSelection{
+          .level {
+            font-size: 190%;
+          }
+        }
+      }
+      .containerBoard {
+        .row {
+          height: 170px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .mainContainer {
+    .container {
+      width: 1024px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .board{
+        width: 68%;
+        .levelSelection{
+          margin: 30px 0;
+          .level{
+            font-size: 180%;
+          }
+        }
+      }
+      .clock{
+        width: 28%;
+      }
+      .containerBoard{
+        .row{
+          height: 190px;
         }
       }
     }

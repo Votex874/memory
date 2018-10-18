@@ -133,7 +133,6 @@ class Board extends Component {
                             this.setState({
                                 timer: this.state.seconds,
                                 allGuessed: true,
-                                seconds: 0,
                             });
                             this.checkIfBeat(this.state.seconds);
                         }
@@ -186,7 +185,7 @@ class Board extends Component {
             this.setState({
                 seconds: 0,
                 isReseted: true,
-            })
+            });
         }else if(isReseted === false) {
             this.idInterval = setInterval(() => {
                 this.setState({
@@ -194,15 +193,15 @@ class Board extends Component {
                     isReseted: true,
                 });
             }, 1000);
-            this.makeReset();
         }
         else{
             clearInterval(this.idInterval);
                 this.setState({
                     seconds: 0,
                     isReseted: false,
-                })
+                });
         }
+        this.makeReset();
     };
     createLevelList = () => {
         //tworzy liste poziomow z funkcja ktora zmienia ilosc kart na planszy
@@ -221,42 +220,62 @@ class Board extends Component {
     };
     checkIfBeat = (currentTime) => {
         // sprawdza czy czas zostal pobity z porownaniu z zapisanym czasem w json serverze jezeli tak updatuje go
-        const {user,wholeTime} = this.props;
-        const {currentLevel} = this.state;
-        let currentTarget;
-        if(currentTime < user.time || user.time === 0){
-            this.checkIfUserWas(currentTime,user.id);
+        const {user,wholeTime,userName} = this.props;
+        if (currentTime < user.time || user.time === 0) {
+            this.checkIfUserWas(currentTime, user.id);
         }
-        switch (currentLevel) {
-            case 'Łatwy':
-                currentTarget = this.replaceBestTime(currentTime,wholeTime[0],'easy');
-                fetch(`http://localhost:3001/bestTimes/1`, {
-                    method: 'put',
-                    headers: {'Content-Type': 'application/json; charset=UTF-8'},
-                    body: JSON.stringify( {easy: currentTarget} )
-                });
-                break;
-            case 'Średni':
-                currentTarget = this.replaceBestTime(currentTime,wholeTime[1],'medium');
-                fetch(`http://localhost:3001/bestTimes/2`, {
-                    method: 'put',
-                    headers: {'Content-Type': 'application/json; charset=UTF-8'},
-                    body: JSON.stringify( {medium: currentTarget} )
-                });
+        if(!this.state.isUserInAPI && currentTime !== 0){
+            fetch(`http://localhost:3001/users`, {
+                method: 'post',
+                headers: {'Content-Type': 'application/json; charset=UTF-8'},
+                body: JSON.stringify( {
+                    name: userName,
+                    time: currentTime,
+                })
+            })
+        }
+        if(!(currentTime < wholeTime[0].easy[0].time && currentTime < wholeTime[0].easy[1].time &&currentTime < wholeTime[0].easy[2].time &&
+            currentTime < wholeTime[1].medium[0].time && currentTime < wholeTime[1].medium[1].time &&currentTime < wholeTime[1].medium[2].time &&
+            currentTime < wholeTime[2].hard[0].time && currentTime < wholeTime[2].hard[1].time &&currentTime < wholeTime[2].hard[2].time
+        )){
+            return null;
+        }
+        else {
+            const {currentLevel} = this.state;
+            let currentTarget;
+            switch (currentLevel) {
+                case 'Łatwy':
+                    currentTarget = this.replaceBestTime(currentTime, wholeTime[0], 'easy');
+                    fetch(`http://localhost:3001/bestTimes/1`, {
+                        method: 'put',
+                        headers: {'Content-Type': 'application/json; charset=UTF-8'},
+                        body: JSON.stringify({easy: currentTarget})
+                    });
+                    break;
+                case 'Średni':
+                    currentTarget = this.replaceBestTime(currentTime, wholeTime[1], 'medium');
+                    fetch(`http://localhost:3001/bestTimes/2`, {
+                        method: 'put',
+                        headers: {'Content-Type': 'application/json; charset=UTF-8'},
+                        body: JSON.stringify({medium: currentTarget})
+                    });
 
-                break;
-            case 'Trudny':
-                currentTarget = this.replaceBestTime(currentTime,wholeTime[2], 'hard');
-                fetch(`http://localhost:3001/bestTimes/3`, {
-                    method: 'put',
-                    headers: {'Content-Type': 'application/json; charset=UTF-8'},
-                    body: JSON.stringify( {hard: currentTarget} )
-                });
-                break;
-            default:
-                currentTarget = null;
-                break;
+                    break;
+                case 'Trudny':
+                    currentTarget = this.replaceBestTime(currentTime, wholeTime[2], 'hard');
+                    fetch(`http://localhost:3001/bestTimes/3`, {
+                        method: 'put',
+                        headers: {'Content-Type': 'application/json; charset=UTF-8'},
+                        body: JSON.stringify({hard: currentTarget})
+                    });
+                    break;
+                default:
+                    currentTarget = null;
+                    break;
+            }
         }
+        console.log("niema usera i trzeba go dodac")
+
     };
     checkIfUserWas = (currentTime, id) => {
         //zostanie zaktualizowy czas uzytkownika

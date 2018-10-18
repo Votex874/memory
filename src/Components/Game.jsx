@@ -65,16 +65,16 @@ class Game extends Component {
                             user: e,
                         })}
                 });
-                if(!this.state.isUserInAPI){
-                    fetch(`http://localhost:3001/users`, {
-                        method: 'post',
-                        headers: {'Content-Type': 'application/json; charset=UTF-8'},
-                        body: JSON.stringify( {
-                            name: this.state.userName,
-                            time: 0
-                        })
-                    })
-                }
+                // if(!this.state.isUserInAPI){
+                //     fetch(`http://localhost:3001/users`, {
+                //         method: 'post',
+                //         headers: {'Content-Type': 'application/json; charset=UTF-8'},
+                //         body: JSON.stringify( {
+                //             name: this.state.userName,
+                //             time: 0
+                //         })
+                //     })
+                // }
             })
     };
     componentDidMount = () => {

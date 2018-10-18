@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 import './Clock.css';
+import 'font-awesome/css/font-awesome.min.css';
 
 class Clock extends Component {
+    constructor(props){
+        super(props)
+
+        this.state ={
+            addClosedClass: 'handleBestTime closed',
+            classShowArrow: 'fa fa-caret-down',
+        }
+    }
 
     handleStartClock = (e) => {
         //przesyła informacje wyżej czy plansza została zresetowana czy nie.
@@ -58,24 +67,33 @@ class Clock extends Component {
               case 'Łatwy':
                   list = wholeTime[0].easy.map( e => {
                      return <li className='bestTime' key={e.id}>
-                        {this.createTimer(e.time)}
-                         <span className='userName'>{e.user}</span>
+                         <div className="containerTimeIndex">
+                             <div className="numberOfBestTime">{`${e.id}.`}</div>
+                             <span className='xuserName'>{e.user}</span>
+                         </div>
+                         <span className='userTime'>{this.createTimer(e.time)}</span>
                   </li>
                   });
                   break;
               case 'Średni':
                   list = wholeTime[1].medium.map( e => {
                       return <li className='bestTime' key={e.id}>
-                          {this.createTimer(e.time)}
-                          <span className='userName'>{e.user}</span>
+                          <div className="containerTimeIndex">
+                              <div className="numberOfBestTime">{`${e.id}.`}</div>
+                              <span className='userName'>{e.user}</span>
+                          </div>
+                          <span className='userTime'>{this.createTimer(e.time)}</span>
                       </li>
                   });
                   break;
               case 'Trudny':
                   list = wholeTime[2].hard.map( e => {
                       return <li className='bestTime' key={e.id}>
-                          {this.createTimer(e.time)}
-                          <span className='userName'>{e.user}</span>
+                          <div className="containerTimeIndex">
+                              <div className="numberOfBestTime">{`${e.id}.`}</div>
+                              <span className='userName'>{e.user}</span>
+                          </div>
+                          <span className='userTime'>{this.createTimer(e.time)}</span>
                       </li>
                   });
                   break;
@@ -102,30 +120,50 @@ class Clock extends Component {
         return  this.createTimer(currentTime);
     };
 
+    handleShowBestTimes = () => {
+        const {addClosedClass,classShowArrow } = this.state;
+        this.setState({
+            addClosedClass: addClosedClass === 'handleBestTime closed' ? 'handleBestTime' : 'handleBestTime closed',
+            classShowArrow: classShowArrow === 'fa fa-caret-down' ?  'fa fa-caret-up' : 'fa fa-caret-down',
+        })
+    };
+
     render() {
+        const {addClosedClass,classShowArrow } = this.state;
+        const {seconds,userName,isReseted} = this.props;
         return (
             <div className='clock'>
-                <div className='handleBtns'>
-                    <button className='startTimer' onClick={() => this.handleStartClock(this.props.isReseted)} >Start</button>
-                    <button className='reset' onClick={() => this.handleReset()}>Zresetuj poziom</button>
+                <div className="holdingBtns">
+                    <div className='handleBtns'>
+                        <button className='startTimer' onClick={() => this.handleStartClock(isReseted)} >Start</button>
+                        <button className='reset' onClick={() => this.handleReset()}>Reset</button>
+                    </div>
                 </div>
-                <div className="handleTimes">
-                    <span className='currentUser'>Aktualnie gra: </span>
-                    <span>{this.props.userName}</span>
+                <div className="holdingAllTime">
+                    <div className="holdingTimes">
+                        <div className="handleTimes">
+                            <span className='currentUser'>Gracz: </span>
+                            <span className='showCurrentUser'>{userName}</span>
+                        </div>
+                        <div className="handleTimes">
+                            <span className='timer'>Aktualny czas: </span>
+                            <span className='showTimeCurrent'>{this.createTimer(seconds)}</span>
+                        </div>
+                        <div className="handleTimes">
+                            <span className='timeGuessed'>Twój najlepszy czas: </span>
+                            <span className='showTimeGuessed' >{this.createGuessedTime()}</span>
+                        </div>
+                    </div>
+                    <div className="holdingBestTimes">
+                        <div className="showBestTimes" onClick={this.handleShowBestTimes}>
+                            <span className='showTimes'>Zobacz najlepsze czasy</span>
+                            <i className={classShowArrow} />
+                        </div>
+                        <ul  className={addClosedClass}>
+                            {this.createListOfBestTime()}
+                        </ul>
+                    </div>
                 </div>
-                <div className="handleTimes">
-                    <span className='timer'>Aktualny czas: </span>
-                    <span>{this.createTimer(this.props.seconds)}</span>
-                </div>
-                <div className="handleTimes">
-                    <span className='timeGuessed'>Twój najlepszy czas to: </span>
-                    <span>{this.createGuessedTime()}</span>
-                </div>
-
-
-                <ul>
-                    {this.createListOfBestTime()}
-                </ul>
             </div>
         );
     }

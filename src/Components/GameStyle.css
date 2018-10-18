@@ -2,7 +2,7 @@
   overflow: auto;
   color: #fff;
   letter-spacing: 1px;
-  background: #04005C; }
+  background-image: linear-gradient(to right bottom, #005248, #327857, #6b9e5e, #afc264, #ffe171); }
   .gameContainer .disableAll {
     display: block;
     width: 100%;
@@ -55,3 +55,7 @@
         .gameContainer .box .formUserName .sendUserName:hover {
           color: #fff;
           background-color: #555; }
+
+@media only screen and (min-width: 1025px) {
+  .gameContainer {
+    height: 100vh; } }
