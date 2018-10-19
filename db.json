@@ -54,8 +54,8 @@
         },
         {
           "id": 3,
-          "time": 391,
-          "user": "Sebastian Soroczyński  "
+          "time": 39,
+          "user": "12345"
         }
       ],
       "id": 3
@@ -71,6 +71,21 @@
       "name": "4",
       "time": 18,
       "id": 2
+    },
+    {
+      "name": "123",
+      "time": 54,
+      "id": 3
+    },
+    {
+      "name": "12345",
+      "time": 39,
+      "id": 4
+    },
+    {
+      "name": "Sebastian Soroczyńsk",
+      "time": 15,
+      "id": 5
     }
   ]
 }

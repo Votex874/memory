@@ -37,84 +37,84 @@
       text-align: center;
       transform: rotateY(180deg); }
       .cardContainer .card .backCard .logo0 {
-        background-image: url("../logo-memoryCard/python.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 40px;
-        height: 40px; }
-      .cardContainer .card .backCard .logo1 {
         background-image: url("../logo-memoryCard/angular.jpg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
         width: 40px;
         height: 40px; }
-      .cardContainer .card .backCard .logo2 {
+      .cardContainer .card .backCard .logo1 {
         background-image: url("../logo-memoryCard/c.jpg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
         width: 40px;
         height: 40px; }
-      .cardContainer .card .backCard .logo3 {
-        background-image: url("../logo-memoryCard/swift.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 40px;
-        height: 40px; }
-      .cardContainer .card .backCard .logo4 {
-        background-image: url("../logo-memoryCard/redux.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 40px;
-        height: 40px; }
-      .cardContainer .card .backCard .logo5 {
-        background-image: url("../logo-memoryCard/ruby.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 40px;
-        height: 40px; }
-      .cardContainer .card .backCard .logo6 {
-        background-image: url("../logo-memoryCard/css.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 40px;
-        height: 40px; }
-      .cardContainer .card .backCard .logo7 {
-        background-image: url("../logo-memoryCard/html5.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 40px;
-        height: 40px; }
-      .cardContainer .card .backCard .logo8 {
-        background-image: url("../logo-memoryCard/js.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 40px;
-        height: 40px; }
-      .cardContainer .card .backCard .logo9 {
+      .cardContainer .card .backCard .logo2 {
         background-image: url("../logo-memoryCard/cc.jpg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
         width: 40px;
         height: 40px; }
+      .cardContainer .card .backCard .logo3 {
+        background-image: url("../logo-memoryCard/css.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 40px;
+        height: 40px; }
+      .cardContainer .card .backCard .logo4 {
+        background-image: url("../logo-memoryCard/html5.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 40px;
+        height: 40px; }
+      .cardContainer .card .backCard .logo5 {
+        background-image: url("../logo-memoryCard/js.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 40px;
+        height: 40px; }
+      .cardContainer .card .backCard .logo6 {
+        background-image: url("../logo-memoryCard/python.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 40px;
+        height: 40px; }
+      .cardContainer .card .backCard .logo7 {
+        background-image: url("../logo-memoryCard/react.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 40px;
+        height: 40px; }
+      .cardContainer .card .backCard .logo8 {
+        background-image: url("../logo-memoryCard/redux.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 40px;
+        height: 40px; }
+      .cardContainer .card .backCard .logo9 {
+        background-image: url("../logo-memoryCard/ruby.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 40px;
+        height: 40px; }
       .cardContainer .card .backCard .logo10 {
-        background-image: url("../logo-memoryCard/vue.jpg");
+        background-image: url("../logo-memoryCard/swift.jpg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
         width: 40px;
         height: 40px; }
       .cardContainer .card .backCard .logo11 {
-        background-image: url("../logo-memoryCard/react.jpg");
+        background-image: url("../logo-memoryCard/vue.jpg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -158,3 +158,41 @@
   .cardContainer .card .backCard .logo11 {
     width: 50px;
     height: 50px; } }
+
+@media only screen and (min-width: 769px) {
+  .cardContainer .card .backCard .logo0 {
+    width: 70px;
+    height: 70px; }
+  .cardContainer .card .backCard .logo1 {
+    width: 70px;
+    height: 70px; }
+  .cardContainer .card .backCard .logo2 {
+    width: 70px;
+    height: 70px; }
+  .cardContainer .card .backCard .logo3 {
+    width: 70px;
+    height: 70px; }
+  .cardContainer .card .backCard .logo4 {
+    width: 70px;
+    height: 70px; }
+  .cardContainer .card .backCard .logo5 {
+    width: 70px;
+    height: 70px; }
+  .cardContainer .card .backCard .logo6 {
+    width: 70px;
+    height: 70px; }
+  .cardContainer .card .backCard .logo7 {
+    width: 70px;
+    height: 70px; }
+  .cardContainer .card .backCard .logo8 {
+    width: 70px;
+    height: 70px; }
+  .cardContainer .card .backCard .logo9 {
+    width: 70px;
+    height: 70px; }
+  .cardContainer .card .backCard .logo10 {
+    width: 70px;
+    height: 70px; }
+  .cardContainer .card .backCard .logo11 {
+    width: 70px;
+    height: 70px; } }

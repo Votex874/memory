@@ -19,7 +19,7 @@
     background-color: #3176FF;
     border-radius: 20px;
     width: 300px;
-    height: 150px;
+    height: 160px;
     z-index: 11;
     top: 300px;
     left: calc(50% - 150px); }
@@ -37,6 +37,11 @@
       text-align: center;
       display: block;
       font-size: 1.4rem; }
+      .gameContainer .box .popUpName .popUpTip {
+        margin-top: 8px;
+        display: block;
+        font-size: 50%;
+        text-align: center; }
     .gameContainer .box .formUserName {
       width: 100%;
       margin: 14px 0 0 35px; }

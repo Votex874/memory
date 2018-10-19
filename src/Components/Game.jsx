@@ -45,7 +45,7 @@ class Game extends Component {
         //po podaniu swojej nazwy uzytkownika zmieniaja sie style popupa oraz pobierany jest czas uzytkownika oraz jego id
         // o ile byl juz wczesniej w bazie
         event.preventDefault();
-        if(this.state.valueInputName.length > 0){
+        if(this.state.valueInputName.length > 0 && this.state.valueInputName.length < 21){
             this.setState({
                 userName: this.state.valueInputName,
                 valueInputName: '',
@@ -65,16 +65,6 @@ class Game extends Component {
                             user: e,
                         })}
                 });
-                // if(!this.state.isUserInAPI){
-                //     fetch(`http://localhost:3001/users`, {
-                //         method: 'post',
-                //         headers: {'Content-Type': 'application/json; charset=UTF-8'},
-                //         body: JSON.stringify( {
-                //             name: this.state.userName,
-                //             time: 0
-                //         })
-                //     })
-                // }
             })
     };
     componentDidMount = () => {
@@ -106,7 +96,9 @@ class Game extends Component {
                     display: displayStyle,
                 }}>
                     <span className='popUpText'>Witaj w memory-game, wybierz swój poziom i staraj się o uzyskanie najlepszego wyniku.</span>
-                    <span className='popUpName'>Podaj swój nick</span>
+                    <span className='popUpName'>Podaj swój nick
+                        <span className='popUpTip'>Nick powinien mieć nie więcej niż 20 znaków</span>
+                    </span>
                     <form className='formUserName' onSubmit={this.handleSubmit}>
                         <label>
                             <input className='inputName' type="text" name="name" value={valueInputName} onChange={this.handleChangeInputName} />

@@ -1,3 +1,18 @@
+$url: (
+        0: 'angular',
+        1: 'c',
+        2: 'cc',
+        3: 'css',
+        4: 'html5',
+        5: 'js',
+        6: 'python',
+        7: 'react',
+        8: 'redux',
+        9: 'ruby',
+        10: 'swift',
+        11: 'vue',
+);
+
 @mixin card($url){
   background-image: url($url);
   background-size: contain;
@@ -49,41 +64,10 @@
       border-radius: 10px;
       text-align: center;
       transform: rotateY(180deg);
-      .logo0 {
-        @include card('../logo-memoryCard/python.jpg')
-      }
-      .logo1 {
-        @include card('../logo-memoryCard/angular.jpg')
-      }
-      .logo2 {
-        @include card('../logo-memoryCard/c.jpg')
-      }
-      .logo3 {
-        @include card('../logo-memoryCard/swift.jpg')
-      }
-      .logo4 {
-        @include card('../logo-memoryCard/redux.jpg')
-      }
-      .logo5 {
-        @include card('../logo-memoryCard/ruby.jpg')
-      }
-      .logo6 {
-        @include card('../logo-memoryCard/css.jpg')
-      }
-      .logo7 {
-        @include card('../logo-memoryCard/html5.jpg')
-      }
-      .logo8 {
-        @include card('../logo-memoryCard/js.jpg')
-      }
-      .logo9 {
-        @include card('../logo-memoryCard/cc.jpg')
-      }
-      .logo10 {
-        @include card('../logo-memoryCard/vue.jpg')
-      }
-      .logo11 {
-        @include card('../logo-memoryCard/react.jpg')
+      @for $i from 0 through 11 {
+        .logo#{$i} {
+          @include card('../logo-memoryCard/#{map-get($url, $i)}.jpg')
+        }
       }
     }
   }
@@ -93,55 +77,27 @@
   .cardContainer {
     .card{
      .backCard{
-       .logo0 {
-         width: 50px;
-         height: 50px;
-       }
-       .logo1 {
-         width: 50px;
-         height: 50px;
-       }
-       .logo2 {
-         width: 50px;
-         height: 50px;
-       }
-       .logo3 {
-         width: 50px;
-         height: 50px;
-       }
-       .logo4 {
-         width: 50px;
-         height: 50px;
-       }
-       .logo5 {
-         width: 50px;
-         height: 50px;
-       }
-       .logo6 {
-         width: 50px;
-         height: 50px;
-       }
-       .logo7 {
-         width: 50px;
-         height: 50px;
-       }
-       .logo8 {
-         width: 50px;
-         height: 50px;
-       }
-       .logo9 {
-         width: 50px;
-         height: 50px;
-       }
-       .logo10 {
-         width: 50px;
-         height: 50px;
-       }
-       .logo11 {
-         width: 50px;
-         height: 50px;
+       @for $i from 0 through 11 {
+         .logo#{$i} {
+           width: 50px;
+           height: 50px;
+         }
        }
      }
+    }
+  }
+}
+@media only screen and (min-width: 769px) {
+  .cardContainer {
+    .card{
+      .backCard{
+        @for $i from 0 through 11 {
+          .logo#{$i} {
+            width: 70px;
+            height: 70px;
+          }
+        }
+      }
     }
   }
 }

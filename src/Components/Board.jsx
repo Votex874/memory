@@ -234,9 +234,9 @@ class Board extends Component {
                 })
             })
         }
-        if(!(currentTime < wholeTime[0].easy[0].time && currentTime < wholeTime[0].easy[1].time &&currentTime < wholeTime[0].easy[2].time &&
-            currentTime < wholeTime[1].medium[0].time && currentTime < wholeTime[1].medium[1].time &&currentTime < wholeTime[1].medium[2].time &&
-            currentTime < wholeTime[2].hard[0].time && currentTime < wholeTime[2].hard[1].time &&currentTime < wholeTime[2].hard[2].time
+        if(!(currentTime < wholeTime[0].easy[0].time || currentTime < wholeTime[0].easy[1].time || currentTime < wholeTime[0].easy[2].time ||
+            currentTime < wholeTime[1].medium[0].time || currentTime < wholeTime[1].medium[1].time || currentTime < wholeTime[1].medium[2].time  ||
+            currentTime < wholeTime[2].hard[0].time || currentTime < wholeTime[2].hard[1].time || currentTime < wholeTime[2].hard[2].time
         )){
             return null;
         }
