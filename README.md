@@ -7,6 +7,7 @@ Game of matching cards. The logo of the cards presents different languages and f
 * SASS
 * WEBPACK
 * JSON SERVER 
+* RWD
 
 ### IN FUTURE
 I would like to create a database based on mongoDB. At the moment I'm learning node js with express js and mongoDB. So that the user does not have to run the json server by himself.
