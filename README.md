@@ -12,7 +12,7 @@ Game of matching cards. The logo of the cards presents different languages and f
 I would like to create a database based on mongoDB. At the moment I'm learning node js with express js and mongoDB. So that the user does not have to run the json server by himself.
 
 #### HOW TO RUN YOUR OWN JSON SERVER
-* we need to install the server, we use the command for this `npm install -g json-server`
+* we need to install the server, we use the command for this `npm install -g json-server --port 3001`
 * we must create a db.json file or download it from here: https://drive.google.com/open?id=1YLiMuXMDZLWdLyu_Ptl-A8KpXZDmKTdH
 * if you create db.json file you need to paste content from the link above
 * when you have the file ready, use this command `json-server --watch db.json`
